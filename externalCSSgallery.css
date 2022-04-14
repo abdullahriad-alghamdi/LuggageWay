@@ -23,6 +23,9 @@
 
 .body{
    margin-top: 10%;
+   margin-bottom: 10%;
+   margin-left: 10%;
+   margin-right: 10%;
 }
 
 .center{
@@ -258,9 +261,9 @@
       }
 
       .navigation-bar {
-         width: 100%;  /* i'm assuming full width */
-         height: 80px; /* change it to desired width */
-         background-color: rgb(255, 255, 255); /* change to desired color */
+         width: 100%;  
+         height: 80px; 
+         background-color: rgb(255, 255, 255); 
          margin-top: -10%;
       }
      .logo {
@@ -269,14 +272,14 @@
          width: 500px;
          height: 200px;
          margin-right: 200px;
-         margin-top: -50px;    /* if you want it vertically middle of the navbar. */
+         margin-top: -50px;    
      }
      .navigation-bar > a {
          display: inline-block;
          vertical-align: top;
          margin-right: 1px;
-         height: 80px;        /* if you want it to take the full height of the bar */
-         line-height: 80px;    /* if you want it vertically middle of the navbar */
+         height: 80px;        
+         line-height: 80px;    
          border: 2px solid #2AA5A3;
          background-color: #2AA5A3;
          border-radius: 20%;
@@ -298,3 +301,48 @@
          color: rgb(0, 0, 0);
          background-color: #2AA5A3;
          text-decoration: none;
+       }
+
+.sitemap{
+   margin-left: 5%;
+   margin-top: -25%;
+   border: 2px solid #444;
+   border-radius: 20%;
+   background-color: #65717173;
+   height: 290px;
+   width: 250px;
+   text-align: center;
+   
+}
+.sitemap > h3{
+   margin-right: 5%;
+   font: bold;
+}
+.sitemap >p>a{
+   margin-right: 5%;
+}
+
+.sitemap > p > a:link {
+   color: rgb(255, 255, 255);
+  
+   text-decoration: none;
+   
+ }
+ .sitemap > p > a:visited {
+   color: rgb(255, 255, 255);
+  
+   text-decoration: none;
+ }
+ .sitemap > p > a:hover {
+   color: rgb(0, 0, 0);
+   background-color: #2AA5A3;
+   text-decoration: none;
+ }
+
+ .f-logo{
+    float:right;
+    border: 2px solid #00171F;
+    background-color: #65717173;
+    height: 290px;
+    width: 250px;
+ }
