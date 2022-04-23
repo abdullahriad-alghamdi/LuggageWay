@@ -7,7 +7,7 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: -114px 61px;
     transition-duration: 0.4s;
     cursor: pointer;
     float: right;
@@ -302,11 +302,12 @@ li a {
 
 .navigation-bar>a {
     display: inline-block;
-    vertical-align: -35px;
+    vertical-align: -60px;
     margin-right: -5px;
-    height: 35px;
-    width: 150px;
-    line-height: 35px;
+    margin: 0px 202px 0px -207px;
+    height: 40px;
+    width: 225px;
+    line-height: 45px;
     border: 2px solid #2AA5A3;
     background-color: #2AA5A3;
     border-radius: 0%;
