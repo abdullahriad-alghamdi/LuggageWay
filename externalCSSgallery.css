@@ -331,7 +331,6 @@ li a {
 }
 
 
-
 .sitemap {
     margin-left: 5%;
     margin-top: -25%;
@@ -408,8 +407,13 @@ li a {
 }
 
 .login-box{
-
-    border: 1px solid black;
-    border-color: #E0FFFF ;
+    height: 500px;
+    width: 800px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 60px;
+    top: 50%;
+   left: 23%;
     position: absolute;
+    
 }
+
