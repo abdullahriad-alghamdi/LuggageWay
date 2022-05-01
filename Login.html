@@ -1,108 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="externalCSSgallery.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="externalCSSgallery.css" />
     <title>LuggageWay</title>
-</head>
+    <style>
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
 
-<body>
+  <body>
     <!--menu-->
-    <div class="logo">
-
-
-
-    </div>
+    <div class="logo"></div>
 
     <nav class="navigation-bar">
-        <img src="img/Logo.png" alt="LuggageWay" class="logo">
+      <img src="img/Logo.png" alt="LuggageWay" class="logo" />
 
-        <a href="home.html" id="navLeft"> Home </a>
-        <a href="about us.html"> About Us </a>
-        <a href="Recruitment.html">  Recruitment  </a>
+      <a href="home.html" id="navLeft"> Home </a>
+      <a href="about us.html"> About Us </a>
+      <a href="Recruitment.html"> Recruitment </a>
 
-        <a href="contact us.html" id="navRight"> Contact Us</a>
+      <a href="contact us.html" id="navRight"> Contact Us</a>
 
-        <button type="button" class="button_login">Login</button>
+      <button
+        onclick="window.location.href='Login.html';"
+        type="button"
+        class="button_login"
+      >
+        Login
+      </button>
     </nav>
-
 
     <!--body-->
 
+    <div class="body-signup">
+      <img
+        src="img\Login-background.png"
+        alt="Backgroun airplane"
+        class="login_background"
+      />
 
-   
-
-    <div class="body">
-
-      <img src="img\Login-background.png" alt="Backgroun airplane" class="login_background" >
-      
       <div class="login-box">
-       
-<form action="/action_page.php" method="post">
-    <div class="topiccontainer">
-      <h1>Login</h1>
-    </div>
-  
-    <div class="typecontainer">
-        <h3> &nbsp; &nbsp;User Type 
-        <select id="usertype" name="usertype" size="1">
-            <option value="INVALID">------------------</option>
-            <option value="">Clinet</option>
-            <option value="Agent">Agent</option>
-        </select></h3>
-      </div>
+        <form action="/action_page.php" method="post">
+          <div class="topiccontainer">
+            <h1>Login</h1>
+          </div>
 
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-  
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-          
-      <button type="submit" class="login_submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-  
-    <div class="container" style="background-color:#f1f1f1">
-      
-      <span class="psw">Did you forget your <a href="#">password?</a></span>
-    </div>
-  </form>
-      </div>
+          <div class="typecontainer">
+            <h3>
+              &nbsp; &nbsp;User Type
+              <select id="usertype" name="usertype" size="1">
+                <option value="INVALID">------------------</option>
+                <option value="">Clinet</option>
+                <option value="Agent">Agent</option>
+                <option value="Admin">Admin</option>
+              </select>
+            </h3>
+          </div>
 
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input
+              type="text"
+              placeholder="Enter Username"
+              name="uname"
+              required
+            />
+
+            <label for="psw"><b>Password</b></label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              name="psw"
+              required
+            />
+
+            <button type="submit" class="login_submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember" />
+              Remember me
+            </label>
+          </div>
+
+          <div class="container" style="background-color: #f1f1f1">
+            <span class="psw">
+              You don't have an
+              <a
+                style="text-decoration: none; font-size: 16px"
+                href="Sign_up.html"
+                >account?</a
+              ></span
+            >
+          </div>
+        </form>
+      </div>
     </div>
     <!--footer-->
-    <div class="footer">
+    <div>
+      <img
+        src="img/footer.png"
+        alt="footer logo"
+        style="width: 100%; height: 400px"
+      />
 
+      <div class="sitemap">
+        <p id="s">Sitemap</p>
+        <p><a href="home.html"> Home </a></p>
+        <p><a href="about us.html"> About Us </a></p>
+        <p><a href="Recruitment.html"> Recruitment </a></p>
+        <p><a href="contact us.html"> Contact Us</a></p>
+      </div>
 
-
-        <img src="img/footer.png" alt="footer logo" style="width: 100%; height: 400px;">
-
-        <div class="sitemap">
-            <p id="s">Sitemap</p>
-            <p><a href="home.html"> Home </a></p>
-            <p><a href="about us.html"> About Us </a></p>
-            <p><a href="Recruitment.html">  Recruitment  </a></p>
-            <p><a href="contact us.html"> Contact Us</a></p>
-        </div>
-
-        <div class="f-logo">
-
-            <img src="img/Logo.png" alt="LuggageWay">
-            <p><a href="mailto:LuggageWay@gmail.com">Email</a></p>
-            <p><a href="tel:+966531858067">Call us now</a></p>
-
-
-
-        </div>
-
+      <div class="f-logo">
+        <img src="img/Logo.png" alt="LuggageWay" class="logo-foot" />
+        <p class="logo-foottext">
+          <a href="mailto:LuggageWay@gmail.com">Email</a>
+        </p>
+        <p class="logo-foottext"><a href="tel:+966531858067">Call us now</a></p>
+      </div>
     </div>
-
-
-</body>
-
+  </body>
 </html>
