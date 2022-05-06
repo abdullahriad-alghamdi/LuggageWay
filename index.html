@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuggageWay</title>
+    <!-- Swiper css file link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- header section starts  -->
+
+    <header>
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a href="#" class="logo"><img herf="Home.html" src="images\Logo.png" alt="LuggageWay" width="150px" /></a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about_us">About us</a>
+            <a href="#recruitment">Recruitment</a>
+            <a href="#sponsors">Sponsors</a>
+            <a href="#review">Reviews</a>
+            <a href="#contact_us">Contact us</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-user" id="login-btn"></i>
+        </div>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- login form container starts -->
+
+    <div class="login-form-container">
+        <i class="fa fa-times" id="form-close2"></i>
+
+        <form action="/action_page.php" onsubmit="alert('Your In!')">
+            <h3>login</h3>
+            <input type="email" class="box" placeholder="Enter your email address" required />
+            <input type="password" class="box" placeholder="Enter your password" required />
+            <input type="submit" value="login now" class="btn" />
+            <input type="checkbox" id="remember" />
+            <label for="remember">remember me</label>
+            <p>forget password? <a href="#">click here</a></p>
+            <p>
+                don't have and account? <label id="signup-btn">register now</label>
+            </p>
+        </form>
+    </div>
+    <!-- login form container ends -->
+
+    <!-- Signup form container starts -->
+
+    <div class="signup-form-container">
+        <i class="fa fa-times" id="form-close"></i>
+
+        <form action="/action_page.php" onsubmit="alert('your account has been successfully created!')">
+            <h3>Sign-up</h3>
+            <br />
+            <br />
+            <h2>Personal Info</h2>
+            <br />
+            <br />
+            <label>Name:</label>
+            <input type="text" class="box" placeholder="Enter your full name" autofocus required /><br /><br />
+            <label>Gender:</label>
+            <input type="radio" class="gender" name="gender" />
+            <label>Male</label>
+            <span class="space"></span>
+            <input type="radio" class="gender" name="gender" />
+            <label>Female</label>
+            <br />
+            <br />
+            <label>User name:</label>
+            <input type="text" placeholder="Enter your username" class="box" required /><br /><br />
+            <label>Password:</label>
+            <input type="text" placeholder="Enter your password" class="box" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$
+            " required /><br /><br />
+            <label>Phone:</label>
+            <input type="tel" placeholder="Enter your phone number" class="box" placeholder=" 0531858067 " pattern="(?:\+?0*?966)?0?5[0-9]{8} " required /><br /><br />
+            <label>Email:</label>
+            <input type="email" placeholder="Enter a valid email address" class="box" id="myEmail " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$ " required /><br />
+            <br />
+            <h2>Address Info</h2>
+            <br />
+            <label for="City">City:</label>
+            <select id="City" class="box" required>
+          <option value=" INVALID ">Choose a city</option>
+          <option>Riyadh</option>
+          <option>Mecca</option>
+          <option>Dammam</option>
+          <option>Jubail</option>
+          <option>Abha</option>
+        </select>
+            <br /><br />
+            <label>Buliding number:</label>
+            <input type="text" placeholder="Enter your buliding number" class="box" required /><br /><br />
+            <label for="District">District: </label>
+            <select id="District" class="box" required>
+          <option value="INVALID">Choose a district</option>
+          <option>Makkah Province</option>
+          <option>Al Riyadh Province</option>
+          <option>Eastern province</option>
+          <option>Asir</option>
+        </select>
+            <br /><br />
+            <label>Zip code:</label>
+            <input type="text" placeholder="Type your district zipcode" class="box" /><br /><br />
+            <label>Street:</label>
+            <input type="text" placeholder="Enter Street or location from google map" class="box" required /><br /><br />
+            <input type="hidden" id="custId" /><br />
+            <input type="checkbox" required />
+            <a href="Web Site Development _Simple_.pdf">
+          I have read and agree / agreed with the terms and conditions</a
+        >
+        <br /><br />
+        <input type="reset" value="Reset" class="btn" />
+        <input type="submit" value="Login now" class="btn" />
+      </form>
+    </div>
+    <!-- Signup form container ends -->
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+      <div class="content">
+        <h3>Providing you a peace of mind</h3>
+        <p>Your luggage is our priority</p>
+        <a id="join-us" class="btn">Join us</a>
+    </div>
+
+    <div class="slider">
+        <span class="vid-btn active" data-src="images/vid-1.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-2.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-3.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-4.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-5.mp4"></span>
+    </div>
+    <div class="video-container">
+        <video src="images/vid-1.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- about_us section starts  -->
+
+    <section class="about_us" id="about_us">
+        <h1 class="heading">
+            <span>A</span>
+            <span>b</span>
+            <span>o</span>
+            <span>u</span>
+            <span>t</span>
+            <span class="space"></span>
+            <span>u</span>
+            <span>s</span>
+        </h1>
+
+        <div class="row">
+            <div class="image">
+                <img src="images\aboutus.jpg" alt="about us img" />
+            </div>
+            <article>
+                <h3>Who Are We?</h3>
+                <h1>
+                    We are students in jubail university collage and we are making this website for the gradution peoject
+                </h1>
+                <h3>What is LuggageWay?</h3>
+                <h1>
+                    It is a website that assists travellers in making the most out of their trip experience.
+                </h1>
+                <h3>The Goal Of This Project</h3>
+                <h1>
+                    Is to allow customers to request that an agent pick up their luggage from a specified place and deliver it to the airport for luggage check-in, to avoid long line-ups at the airport!
+                </h1>
+            </article>
+        </div>
+    </section>
+
+    <!-- about_us section ends -->
+
+    <!-- recruitment section starts  -->
+
+    <section class="recruitment" id="recruitment">
+        <h1 class="heading">
+            <span>R</span>
+            <span>e</span>
+            <span>c</span>
+            <span>r</span>
+            <span>u</span>
+            <span>i</span>
+            <span>t</span>
+            <span>e</span>
+            <span>n</span>
+            <span>t</span>
+        </h1>
+
+        <div class="row">
+            <div class="image">
+                <img src="images\r.jpg" alt="join us" />
+            </div>
+
+            <form action="https://formsubmit.co/7f0c922014d9d14b1d6b5f124599de9e" method="POST" onsubmit="alert( 'Your Application Submited!'); " autocomplete="off">
+                <input type="hidden" name="_subject" value="A new jop application" />
+                <div class="inputBox">
+                    <h3>Name</h3>
+                    <input type="text" name="Name" placeholder="Type your full name" required />
+                </div>
+                <div class="inputBox">
+                    <h3 for="jop">Apply For</h3>
+                    <select type="text" name="Apply For" class="inputBox" id="jop" required>
+              <option value="INVALID">
+                Select the sort of job for which you wish to apply
+              </option>
+              <option>Agent jop</option>
+              <option>Admin jop</option>
+            </select>
+                </div>
+                <div class="inputBox">
+                    <h3>National id</h3>
+                    <input type="text" name="National id" placeholder="Type your National number" pattern="^[1|2]{1}[0-9]{9}$" required />
+                </div>
+                <div class="inputBox">
+                    <h3>Email</h3>
+                    <input type="email" name="Email" placeholder="Name@domain.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required />
+                </div>
+
+                <div class="inputBox">
+                    <h3>Phone Number</h3>
+                    <!-- pattern="/^(009665|9665|\+9665|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$/" -->
+                    <input type="phone" name="Phone" placeholder="9665********" required /><br /><br />
+                </div>
+                <input type="text" name="_honey" style="display: none" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_autoresponse" value="Our customer representative will contact you soon. " />
+                <input type="submit" class="btn" value="Submit Application" />
+            </form>
+        </div>
+    </section>
+    <br />
+    <br />
+
+    <!-- sponsors section starts  -->
+
+    <section class="sponsors" id="sponsors">
+        <h1 class="heading">
+            <span>S</span>
+            <span>p</span>
+            <span>o</span>
+            <span>n</span>
+            <span>s</span>
+            <span>o</span>
+            <span>r</span>
+            <span>s</span>
+        </h1>
+        <br />
+        <br />
+        <div class="box-container">
+            <div class="box">
+                <br />
+                <br />
+                <div><img src="images\saudi.png" alt="sponsor1" width="70%" /></div>
+            </div>
+            <div class="box">
+                <br />
+                <div><img src="images\adeal.png" alt="sponsor2" width="70%" /></div>
+            </div>
+            <div class="box">
+                <br />
+                <div>
+                    <img src="images\flynas.png" id="sponsor3" alt="sponsor3" width="60%" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <br />
+    <br />
+    <!-- sponsors section ends -->
+    <!-- reviews section starts -->
+
+    <section class="review" id="review">
+        <h1 class="heading">
+            <span>R</span>
+            <span>e</span>
+            <span>v</span>
+            <span>i</span>
+            <span>e</span>
+            <span>w</span>
+            <span>s</span>
+        </h1>
+        <br />
+        <br />
+        <div class="swiper-container review-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="images/pic1.jpg" alt="customer1" />
+                        <h3>Hamad Al Majed</h3>
+                        <p>Great experience. Thx a lot!</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="images/pic2.jpg" alt="customer2" />
+                        <h3>Yasser Bagna</h3>
+                        <p>Professional service! Thank you kindly</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="images/pic3.jpg" alt="customer3" />
+                        <h3>muayid al bakathir</h3>
+                        <p>Amazingly fast service. Thanks a lot!</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="images/pic4.jpg" alt="customer4" />
+                        <h3>Fadi Alshehri</h3>
+                        <p>Great service and clear communication Thanks.</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br />
+    <br />
+    <!-- reviews section ends -->
+
+    <!-- contact us section starts  -->
+
+    <section class="contact_us">
+        <h1 class="heading">
+            <span>C</span>
+            <span>o</span>
+            <span>n</span>
+            <span>t</span>
+            <span>a</span>
+            <span>c</span>
+            <span>t</span>
+            <span class="space"></span>
+            <span>u</span>
+            <span>s</span>
+        </h1>
+
+        <div class="row">
+            <div class="image">
+                <img src="images/contact-img.svg" alt="contact us img" />
+            </div>
+
+            <form action="https://formsubmit.co/7f0c922014d9d14b1d6b5f124599de9e" method="POST" onsubmit="alert('Your massage sent!')">
+                <input type="hidden" name="_subject" value="a customer contact us wooo!" />
+                <input type="text" name="_honey" style="display: none" />
+                <input type="hidden" name="_captcha" value="false" />
+                <div class="inputBox">
+                    <input type="text" name="Name" placeholder="name" autocomplete="off" />
+                    <input type="email" name="Email" placeholder="email" autocomplete="off" />
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="Phone number" placeholder="number" autocomplete="off" />
+                    <input type="text" name="Subject" placeholder="subject" autocomplete="off" />
+                </div>
+                <input type="text" name="_honey" style="display: none" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_autoresponse" value="Our customer representative will contact you soon." />
+                <input type="hidden" name="_template" value="table" />
+                <textarea type="text" name="Massage" placeholder="massage" cols="30" rows="10"></textarea>
+                <input type="submit" class="btn" value="send message" />
+            </form>
+        </div>
+    </section>
+
+    <!-- contact section ends -->
+
+    <!-- footer section  stars -->
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>about us</h3>
+                <p>
+                    We are students in jubail university collage and we are making this website for the gradution peoject
+                </p>
+            </div>
+            <div class="box">
+                <h3>branch locations</h3>
+                <a href="# ">Saudi Arabia</a>
+            </div>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home">Home</a>
+                <a href="#about_us">About us</a>
+                <a href="#recruitment">Recruitment</a>
+                <a href="#sponsors">Sponsors</a>
+                <a href="#review">Reviews</a>
+                <a href="#contact_us">Contact us</a>
+            </div>
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="https://www.instagram.com/luggageway1/">instagram</a>
+                <a href="https://twitter.com/Luggageway1">twitter</a>
+                <a href="linkedin.com/in/luggageway-company-935940239">linkedin</a>
+            </div>
+        </div>
+
+        <h1 class="credit">
+            created by <span> LuggageWay Team for gradutiom project </span> | all rights reserved!
+        </h1>
+    </section>
+
+    <!-- footer section ends -->
+
+    <!-- Swiper js file link  -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js "></script>
+    <!-- custom js file link  -->
+    <script src="script.js "></script>
+</body>
+
+</html>
