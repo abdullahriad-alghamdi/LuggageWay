@@ -1,7 +1,7 @@
 # LuggageWay
 
 ▶ Who Are We‽ (●'◡'●)?
-✓ We are students in jubail○▿ university collage and we are making this website for the gradution peoject
+✓ We are students in jubail university collage and we are making this website for the gradution peoject
 
 ▶ What is LuggageWay?
 ✓ It is a website that assists travellers in making the most out of their trip experience.
