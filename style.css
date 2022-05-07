@@ -761,4 +761,7 @@ header .icons i:hover {
     #sponsor3 {
         width: 50%;
     }
+    .login-form-container{
+        margin: left;
+    }
 }

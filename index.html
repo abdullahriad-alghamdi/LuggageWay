@@ -41,11 +41,18 @@
 
     <!-- login form container starts -->
 
-    <div class="login-form-container">
+    <div class="login-form-container" id="login">
         <i class="fa fa-times" id="form-close2"></i>
 
         <form action="/action_page.php" onsubmit="alert('Your In!')">
             <h3>login</h3>
+            <label for="usertype"><h4>User type:</h4></label>
+            <select id="usertype"  required>
+          <option value=" INVALID ">--------</option>
+          <option>Clinet</option>
+          <option>Agent</option>
+          <option>Admin</option>
+        </select>
             <input type="email" class="box" placeholder="Enter your email address" required />
             <input type="password" class="box" placeholder="Enter your password" required />
             <input type="submit" value="login now" class="btn" />
@@ -369,7 +376,7 @@
 
     <!-- contact us section starts  -->
 
-    <section class="contact_us">
+    <section class="contact_us" id="contact_us">
         <h1 class="heading">
             <span>C</span>
             <span>o</span>
