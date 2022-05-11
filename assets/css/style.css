@@ -713,7 +713,7 @@ header .icons i:hover {
 
 .social_media li {
     position: relative;
-    overflow: hidden;
+    overflow: hidden; 
     margin-left: 10px;
     height: 50px;
     width: 50px;
@@ -742,9 +742,6 @@ header .icons i:hover {
     transform: rotate(50deg);
 }
 
-.social_media li::marker {
-    color: #071122;
-}
 
 .social_media li:hover::before {
     animation: slide 1s linear;
