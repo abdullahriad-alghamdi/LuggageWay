@@ -10,7 +10,7 @@
     <!-- Swiper css file link  -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets\css\style.css" />
 </head>
 
 <body>
@@ -19,7 +19,7 @@
     <header>
         <div id="menu-bar" class="fas fa-bars"></div>
 
-        <a href="#" class="logo"><img herf="Home.html" src="images\logo.png" alt="LuggageWay" width="150px" /></a>
+        <a href="#" class="logo"><img herf="Home.html" src="assets\images\logo.png" alt="LuggageWay" width="150px" /></a>
 
         <nav class="navbar">
             <a href="#home">Home</a>
@@ -125,7 +125,7 @@
             <input type="text" placeholder="Enter Street or location from google map" class="box" required /><br /><br />
             <input type="hidden" id="custId" /><br />
             <input type="checkbox" required />
-            <a href="Web Site Development _Simple_.pdf">
+            <a href="assets\terms_And_conditions.pdf">
           I have read and agree / agreed with the terms and conditions</a
         >
         <br /><br />
@@ -145,11 +145,11 @@
     </div>
 
     <div class="slider">
-        <span class="vid-btn active" data-src="images/vid-1.mp4"></span>
-        <span class="vid-btn" data-src="images/vid-2.mp4"></span>
-        <span class="vid-btn" data-src="images/vid-3.mp4"></span>
-        <span class="vid-btn" data-src="images/vid-4.mp4"></span>
-        <span class="vid-btn" data-src="images/vid-5.mp4"></span>
+        <span class="vid-btn active" data-src="images\vid-1.mp4"></span>
+        <span class="vid-btn" data-src="assets\images\vid-2.mp4"></span>
+        <span class="vid-btn" data-src="assets\images\vid-3.mp4"></span>
+        <span class="vid-btn" data-src="assets\images\vid-4.mp4"></span>
+        <span class="vid-btn" data-src="assets\images\vid-5.mp4"></span>
     </div>
     <div class="video-container">
         <video src="images/vid-1.mp4" id="video-slider" loop autoplay muted></video>
@@ -174,7 +174,7 @@
 
         <div class="row">
             <div class="image">
-                <img src="images\aboutus.jpg" alt="about us img" />
+                <img src="assets\images\aboutus.jpg" alt="about us img" />
             </div>
             <article>
                 <h3>Who Are We?</h3>
@@ -213,7 +213,7 @@
 
         <div class="row">
             <div class="image">
-                <img src="images\r.jpg" alt="join us" />
+                <img src="assets\images\r.jpg" alt="join us" />
             </div>
 
             <form action="https://formsubmit.co/7f0c922014d9d14b1d6b5f124599de9e" method="POST" onsubmit="alert( 'Your Application Submited!'); " autocomplete="off">
@@ -276,16 +276,16 @@
             <div class="box">
                 <br />
                 <br />
-                <div><img src="images\saudi.png" alt="sponsor1" width="70%" /></div>
+                <div><img src="assets\images\saudi.png" alt="sponsor1" width="70%" /></div>
             </div>
             <div class="box">
                 <br />
-                <div><img src="images\adeal.png" alt="sponsor2" width="70%" /></div>
+                <div><img src="assets\images\adeal.png" alt="sponsor2" width="70%" /></div>
             </div>
             <div class="box">
                 <br />
                 <div>
-                    <img src="images\flynas.png" id="sponsor3" alt="sponsor3" width="60%" />
+                    <img src="assets\images\flynas.png" id="sponsor3" alt="sponsor3" width="60%" />
                 </div>
             </div>
         </div>
@@ -311,7 +311,7 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="box">
-                        <img src="images/pic1.jpg" alt="customer1" />
+                        <img src="assets\images/pic1.jpg" alt="customer1" />
                         <h3>Hamad Al Majed</h3>
                         <p>Great experience. Thx a lot!</p>
                         <div class="stars">
@@ -325,7 +325,7 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="box">
-                        <img src="images/pic2.jpg" alt="customer2" />
+                        <img src="assets\images/pic2.jpg" alt="customer2" />
                         <h3>Yasser Bagna</h3>
                         <p>Professional service! Thank you kindly</p>
                         <div class="stars">
@@ -339,7 +339,7 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="box">
-                        <img src="images/pic3.jpg" alt="customer3" />
+                        <img src="assets\images/pic3.jpg" alt="customer3" />
                         <h3>muayid al bakathir</h3>
                         <p>Amazingly fast service. Thanks a lot!</p>
                         <div class="stars">
@@ -353,7 +353,7 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="box">
-                        <img src="images/pic4.jpg" alt="customer4" />
+                        <img src="assets\images/pic4.jpg" alt="customer4" />
                         <h3>Fadi Alshehri</h3>
                         <p>Great clear communication Thanks.</p>
                         <div class="stars">
@@ -390,7 +390,7 @@
 
         <div class="row">
             <div class="image">
-                <img src="images/contact-img.svg" alt="contact us img" />
+                <img src="assets\images\contact-img.svg" alt="contact us img" />
             </div>
 
             <form action="https://formsubmit.co/7f0c922014d9d14b1d6b5f124599de9e" method="POST" onsubmit="alert('Your massage sent!')">
@@ -422,17 +422,11 @@
     <section class="footer">
         <div class="box-container">
             <div class="box">
-                <h3>about us</h3>
-                <p>
-                    We are students in jubail university collage and we are making this website for the gradution peoject
-                </p>
-            </div>
-            <div class="box">
-                <h3>branch locations</h3>
+                <h3>Branch locations</h3>
                 <a href="# ">Saudi Arabia</a>
             </div>
             <div class="box">
-                <h3>quick links</h3>
+                <h3>Quick links</h3>
                 <a href="#home">Home</a>
                 <a href="#about_us">About us</a>
                 <a href="#recruitment">Recruitment</a>
@@ -440,11 +434,12 @@
                 <a href="#review">Reviews</a>
                 <a href="#contact_us">Contact us</a>
             </div>
-            <div class="box">
-                <h3>follow us</h3>
-                <a href="https://www.instagram.com/luggageway1/">instagram</a>
-                <a href="https://twitter.com/Luggageway1">twitter</a>
-                <a href="linkedin.com/in/luggageway-company-935940239">linkedin</a>
+            <div class="social_media box">
+                <h3>Follow us</h3><br>
+                <li> <a href="https://www.instagram.com/luggageway1/"><i class="fab fa-instagram"></i></a></li>
+                <li> <a href="https://twitter.com/Luggageway1"><i class="fab fa-twitter"></i></a></li>
+                <li> <a href="linkedin.com/in/luggageway-company-935940239"><i class="fab fa-linkedin"></i></a>
+                </li>
             </div>
         </div>
 
@@ -458,7 +453,7 @@
     <!-- Swiper js file link  -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js "></script>
     <!-- custom js file link  -->
-    <script src="script.js "></script>
+    <script src="assets\js\script.js"></script>
 </body>
 
 </html>

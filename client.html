@@ -8,7 +8,7 @@
     <!-- Font Aowesome kit's code  -->
     <script src="https://kit.fontawesome.com/8ebc734131.js" crossorigin="anonymous"></script>
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets\css\style.css" />
     <style>
         header {
             position: relative;
@@ -16,63 +16,6 @@
         
         .app {
             display: flex;
-            min-height: 100vh;
-        }
-        
-        .menu-toggle {
-            display: none;
-            position: fixed;
-            top: 2rem;
-            right: 2rem;
-            width: 60px;
-            height: 60px;
-            border-radius: 99px;
-            background-color: #2e3047;
-            cursor: pointer;
-        }
-        
-        .hamburger {
-            position: relative;
-            top: calc(50% - 2px);
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 32px;
-        }
-        
-        .hamburger>span,
-        .hamburger>span::before,
-        .hamburger>span::after {
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 4px;
-            border-radius: 99px;
-            background-color: #FFF;
-            transition-duration: .25s;
-        }
-        
-        .hamburger>span::before {
-            content: '';
-            top: -8px;
-        }
-        
-        .hamburger>span::after {
-            content: '';
-            top: 8px;
-        }
-        
-        .menu-toggle.is-active .hamburger>span {
-            transform: rotate(45deg);
-        }
-        
-        .menu-toggle.is-active .hamburger>span::before {
-            top: 0;
-            transform: rotate(0deg);
-        }
-        
-        .menu-toggle.is-active .hamburger>span::after {
-            top: 0;
-            transform: rotate(90deg);
         }
         
         .sidebar {
@@ -126,19 +69,17 @@
             color: #707793;
         }
         
-        @media (max-width: 1024px) {
-            .sidebar {
-                max-width: 200px;
-            }
+        .menu-item:last-child {
+            margin-top: auto;
         }
         
+        @media (max-width: 1024px) {
+            .sidebar {
+                max-width: 100px;
+            }
+        }
+        /* 
         @media (max-width: 768px) {
-            header {
-                position: relative;
-            }
-            .menu-toggle {
-                display: block;
-            }
             .content {
                 padding-top: 8rem;
             }
@@ -154,7 +95,7 @@
             .sidebar.is-active {
                 left: 0;
             }
-        }
+        } */
     </style>
 </head>
 
@@ -164,7 +105,7 @@
     <header>
         <div id="menu-bar" class="fas fa-bars"></div>
 
-        <a href="#" class="logo"><img herf="Home.html" src="images\logo.png" alt="LuggageWay" width="150px" /></a>
+        <a href="#" class="logo"><img herf="Home.html" src="assets\images\logo.png" alt="LuggageWay" width="150px" /></a>
 
         <nav class="navbar">
             <a href="index.html">Home</a>
@@ -172,7 +113,7 @@
             <a href="index.html#recruitment">Recruitment</a>
             <a href="index.html#sponsors">Sponsors</a>
             <a href="index.html#review">Reviews</a>
-            <a href="index.html#contact">Contact us</a>
+            <a href="index.html#contact_us">Contact us</a>
         </nav>
 
         <div class="icons">
@@ -189,29 +130,71 @@
     <!-- client body section starts  -->
 
     <section>
+
         <div class="app">
-            <div class="menu-toggle">
-                <div class="hamburger">
-                    <span></span>
-                </div>
-            </div>
 
             <aside class="sidebar">
                 <h3>Menu</h3>
 
                 <nav class="menu">
-                    <a href="#" class="menu-item is-active">Home</a>
-                    <a href="#" class="menu-item">About</a>
-                    <a href="#" class="menu-item">Portfolio</a>
-                    <a href="#" class="menu-item">Contact</a>
+                    <a href="#" class="menu-item is-active"><i class="fas fa-plus-circle"></i> New Order</a>
+                    <a href="#" class="menu-item"><i class="fas fa-list-alt"></i> My Orders</a>
+                    <a href="#" class="menu-item"><i class="fas fa-cog"></i> Settings</a>
+                    <a href="#" class="menu-item">Log-out</a>
                 </nav>
 
             </aside>
 
             <main class="content">
-                <h1>Welcome, Human</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, explicabo!</p>
+                <h1>CSS is Cool</h1>
+
+                <p>
+                    I'm baby kale chips affogato ennui lumbersexual, williamsburg paleo quinoa iceland normcore tumeric. Kitsch coloring book retro, seitan schlitz tattooed biodiesel vexillologist neutra. Synth mumblecore deep v, umami selfies normcore gluten-free snackwave.
+                    Seitan ramps drinking vinegar venmo keytar, humblebrag VHS post-ironic tacos godard pour-over.
+                </p>
+                <p>
+                    Sartorial kogi taxidermy, kickstarter synth yr irony ennui everyday carry retro helvetica stumptown cloud bread squid echo park. Etsy cloud bread sartorial quinoa tacos beard mumblecore shaman tumblr pop-up. Twee retro fingerstache af helvetica pabst
+                    8-bit leggings taiyaki portland ramps tbh tumblr vinyl. Neutra humblebrag bushwick portland subway tile plaid, offal scenester flexitarian cliche squid small batch palo santo. Palo santo meh adaptogen +1 3 wolf moon, listicle brunch
+                    ethical fanny pack everyday carry fam. Offal fingerstache taxidermy, man bun venmo PBR&amp;B helvetica thundercats everyday carry tote bag artisan cray wolf jianbing.
+                </p>
+                <p>
+                    Taxidermy thundercats whatever austin. VHS helvetica ethical, dreamcatcher enamel pin YOLO shabby chic locavore man bun crucifix pabst chillwave pop-up vegan. Air plant mlkshk ethical echo park tumeric, whatever crucifix godard scenester locavore pork
+                    belly yuccie vape. +1 gochujang put a bird on it, pork belly whatever selfies vaporware occupy banh mi normcore VHS. Cornhole normcore hashtag tilde. Hell of yr try-hard DIY raw denim banjo, enamel pin irony polaroid copper mug tofu.
+                    Dreamcatcher lomo literally 90's before they sold out, 3 wolf moon banh mi seitan chambray cliche offal tote bag occupy pug.
+                </p>
+                <p>
+                    Post-ironic hot chicken salvia yr yuccie ugh cold-pressed keffiyeh franzen viral taxidermy mustache slow-carb crucifix vape. Taiyaki yuccie hell of tacos PBR&amp;B, kitsch meggings tbh truffaut kickstarter mixtape af kogi. Fingerstache vegan tofu waistcoat
+                    gentrify cray. Drinking vinegar 3 wolf moon health goth craft beer master cleanse. Letterpress health goth 8-bit chillwave craft beer brooklyn. Chicharrones master cleanse 8-bit, mumblecore copper mug messenger bag poutine lomo kale
+                    chips flannel. Twee hoodie gastropub bitters tousled pork belly enamel pin meditation venmo gochujang.
+                </p>
+                <p>
+                    Next level selfies cronut ethical. Tofu tumblr you probably haven't heard of them, man braid literally forage swag chillwave. Pug yr flannel tumeric. Coloring book yr chillwave snackwave, shoreditch shaman gentrify typewriter tumeric DIY copper mug small
+                    batch. Scenester waistcoat YOLO hexagon kombucha poke 8-bit meditation. Selvage scenester forage williamsburg. Hoodie fingerstache tacos mustache, hashtag quinoa next level sartorial craft beer retro disrupt lo-fi.
+                </p>
+                <p>
+                    YOLO twee keytar farm-to-table flexitarian cardigan polaroid lumbersexual adaptogen drinking vinegar echo park dreamcatcher. Brunch shoreditch dreamcatcher iPhone knausgaard plaid edison bulb letterpress ethical yr fanny pack. Typewriter portland woke
+                    glossier cronut, post-ironic migas gentrify letterpress cray brunch lyft 8-bit master cleanse. Pitchfork thundercats organic pour-over unicorn lomo.
+                </p>
+                <p>
+                    Ugh yr tacos aesthetic everyday carry, tumeric selvage cliche skateboard. Wolf truffaut enamel pin vexillologist poutine. Hoodie roof party pabst, cardigan letterpress af disrupt +1 subway tile chillwave live-edge meggings next level readymade. Master
+                    cleanse gentrify hashtag, stumptown fam single-origin coffee occupy dreamcatcher air plant viral vexillologist enamel pin meggings. Tumblr chambray pickled microdosing austin scenester green juice.
+                </p>
+                <p>
+                    Austin four dollar toast church-key, vaporware hoodie edison bulb jean shorts sustainable williamsburg plaid helvetica scenester lomo humblebrag. Meditation tumblr kickstarter ennui williamsburg taiyaki pabst pour-over. 8-bit godard cred, chillwave enamel
+                    pin skateboard you probably haven't heard of them. Meditation before they sold out single-origin coffee swag try-hard jianbing slow-carb shaman leggings. Palo santo shabby chic whatever man bun. Master cleanse wayfarers single-origin
+                    coffee pork belly cronut, normcore cliche jianbing before they sold out tousled shabby chic af pop-up gentrify. Direct trade la croix vexillologist jianbing, flexitarian selvage try-hard stumptown polaroid shaman wayfarers poke ramps
+                    food truck swag.
+                </p>
+                <p>
+                    Pok pok lumbersexual wayfarers, direct trade leggings poutine truffaut kitsch. Seitan aesthetic master cleanse squid coloring book banh mi YOLO vegan locavore vexillologist readymade next level pop-up edison bulb. Selvage knausgaard literally, quinoa
+                    photo booth 3 wolf moon microdosing freegan yuccie. Truffaut gentrify lomo put a bird on it waistcoat. Ugh austin distillery, tbh actually pork belly snackwave artisan mixtape quinoa vexillologist pok pok polaroid listicle readymade.
+                </p>
+                <p>
+                    Hammock letterpress prism dreamcatcher truffaut shabby chic vice cold-pressed. Franzen pug fashion axe before they sold out, tumblr irony kogi actually af bushwick banh mi. Snackwave bicycle rights tofu dreamcatcher tote bag pour-over meditation raw denim
+                    fanny pack. Pop-up retro taiyaki meditation twee gastropub VHS etsy. Semiotics gochujang street art normcore, edison bulb farm-to-table pour-over taxidermy brooklyn.
+                </p>
             </main>
+        </div>
     </section>
 
     <!-- footer section  stars -->
@@ -219,29 +202,24 @@
     <section class="footer">
         <div class="box-container">
             <div class="box">
-                <h3>about us</h3>
-                <p>
-                    We are students in jubail university collage and we are making this website for the gradution peoject
-                </p>
-            </div>
-            <div class="box">
-                <h3>branch locations</h3>
+                <h3>Branch locations</h3>
                 <a href="# ">Saudi Arabia</a>
             </div>
             <div class="box">
-                <h3>quick links</h3>
-                <a href="#home">Home</a>
-                <a href="#about_us">About us</a>
-                <a href="#recruitment">Recruitment</a>
-                <a href="#sponsors">Sponsors</a>
-                <a href="#review">Reviews</a>
-                <a href="#contact_us">Contact us</a>
+                <h3>Quick links</h3>
+                <a href="index.html">Home</a>
+                <a href="index.html#about_us">About us</a>
+                <a href="index.html#recruitment">Recruitment</a>
+                <a href="index.html#sponsors">Sponsors</a>
+                <a href="index.html#review">Reviews</a>
+                <a href="index.html#contact_us">Contact us</a>
             </div>
-            <div class="box">
-                <h3>follow us</h3>
-                <a href="https://www.instagram.com/luggageway1/">instagram</a>
-                <a href="https://twitter.com/Luggageway1">twitter</a>
-                <a href="linkedin.com/in/luggageway-company-935940239">linkedin</a>
+            <div class="social_media box">
+                <h3>Follow us</h3><br>
+                <li> <a href="https://www.instagram.com/luggageway1/"><i class="fab fa-instagram"></i></a></li>
+                <li> <a href="https://twitter.com/Luggageway1"><i class="fab fa-twitter"></i></a></li>
+                <li> <a href="linkedin.com/in/luggageway-company-935940239"><i class="fab fa-linkedin"></i></a>
+                </li>
             </div>
         </div>
 
@@ -252,10 +230,8 @@
 
     <!-- footer section ends -->
 
-    <!-- Swiper js file link  -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js "></script>
     <!-- custom js file link  -->
-    <script src="script.js "></script>
+    <script src="assets\js\script.js"></script>
 </body>
 
 </html>
