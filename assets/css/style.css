@@ -364,10 +364,6 @@ header .icons i:hover {
     display: block;
 }
 
-.newordersection {
-    height: 200vh;
-}
-
 
 /* logout users pages  endding*/
 
@@ -698,7 +694,7 @@ header .icons i:hover {
 
 .wrapper {
     display: flex;
-    height: 100vh;
+    height: 280vh;
 }
 
 .sidebar {
@@ -765,6 +761,8 @@ header .icons i:hover {
     color: #707793;
 }
 
+
+/* 
 @media (min-width: 768px) {
     .sidebarbtn {
         display: none;
@@ -780,7 +778,7 @@ header .icons i:hover {
         margin-left: -37px;
         border-radius: 0%;
         max-width: 150px;
-        /* transform: translate(-150px); */
+         transform: translate(-150px); 
         z-index: 2;
         height: 100vh;
         clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
@@ -821,10 +819,91 @@ header .icons i:hover {
         z-index: 1;
         left: 0;
     }
-}
+} */
 
 
 /* users pages endding */
+
+
+/* new order page starting */
+
+.contant_neworder {
+    margin-left: 15%;
+}
+
+.newordersection {
+    height: 290vh;
+}
+
+.message_contatnte {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    max-width: 160px;
+    margin-left: 225px;
+    margin-top: -15px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.moremessage:hover .message_contatnte {
+    display: block;
+}
+
+.box-neworder {
+    border: 2px solid #3bba9c;
+    margin-left: 0px;
+    padding: 10px;
+}
+
+
+/* Floating column for labels: 25% width */
+
+.col-25 {
+    float: left;
+    width: 20%;
+    margin-top: 6px;
+}
+
+
+/* Floating column for inputs: 75% width */
+
+.col-75 {
+    float: left;
+    width: 80%;
+    margin-top: 6px;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+    input[type=reset] {
+        width: 100%;
+        margin-top: 0;
+    }
+    .newordersection {
+        height: 330vh;
+    }
+}
+
+
+/* new order page ending */
 
 
 /* footer starting */

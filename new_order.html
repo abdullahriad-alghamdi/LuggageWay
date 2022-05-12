@@ -63,109 +63,234 @@
 
             </aside>
 
-            <main class="content-body">
+            <main class="content-body ">
                 <h1>New Order</h1>
 
-                <form action="/action_page.php" onsubmit="alert('your account has been successfully created!')">
+                <form action="/action_page.php" class="contant_neworder" onsubmit="alert('your account has been successfully created!')">
                     <h3></h3>
                     <br />
                     <br />
                     <h2>Travell Info</h2>
                     <br>
-                    <label>Depart airport</label>
-                    <select id="Depart_airport" class="bpx" required>
-                        <option value="INVALID">Choose an airport</option>
-                        <option>King Fahd International Airport</option>
-                        <option>king Khalid International Airport</option>
-                        <option>king Abdulaziz International Airport</option>
-                    </select><br><br>
-                    <label>Airline</label>
-                    <select id="Airline" class="bpx" required>
-                        <option value="INVALID">Choose an airline</option>
-                        <option>Saudia</option>
-                        <option>Flynas</option>
-                        <option>Flyadeal</option>
-                    </select><br><br>
-                    <label>Bording Time:</label>
-                    <input type="time" class="box" autofocus required /><br /><br />
-                    <label>Depart Time:</label>
-                    <input type="time" class="box" autofocus required /><br /><br />
-                    <label>Booking Number:</label>
-                    <input type="text" class="box" placeholder="Enter your Booking Number" autofocus required /><br /><br />
-                    <label>Depart Date</label>
-                    <input type="date" class="box" autofocus required />
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Depart airport</label>
+                        </div>
+                        <div class="col-75">
+                            <select id="Depart_airport" class="box-neworder" required>
+                                <option value="INVALID">Choose an airport</option>
+                                <option>King Fahd International Airport</option>
+                                <option>king Khalid International Airport</option>
+                                <option>king Abdulaziz International Airport</option>
+                            </select>
+                        </div>
+                    </div><br>
+                    <div class="row>">
+                        <div class="col-25">
+                            <label>Airline</label>
+                        </div>
+                        <div class="col-75">
+                            <select id="Airline" class="box-neworder" required>
+                                <option value="INVALID">Choose an airline</option>
+                                <option>Saudia</option>
+                                <option>Flynas</option>
+                                <option>Flyadeal</option>
+                             </select>
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Bording Time:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="time" class="box-neworder" autofocus required />
+                        </div>
+                    </div><br /><br />
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Depart Time:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="time" class="box-neworder" autofocus required />
+                        </div>
+                    </div><br /><br />
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Booking Number:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" class="box-neworder" placeholder="Enter your Booking Number" autofocus required />
+                        </div>
+                    </div><br /><br />
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Depart Date</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="date" class="box-neworder" autofocus required />
+                        </div>
+                    </div>
                     <br>
                     <br>
                     <h2>Personal Info</h2>
                     <br />
                     <br />
-                    <label>Name:</label>
-                    <input type="text" class="box" placeholder="Enter your full name" autofocus required /><br /><br />
-                    <label>Phone:</label>
-                    <input type="tel" placeholder="Enter your phone number" class="box" placeholder=" 0531858067 " maxlength="10" pattern="(05)+(\d{8})$" required /><br /><br />
-                    <label>Email:</label>
-                    <input type="email" placeholder="Enter a valid email address" class="box" id="myEmail " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /><br />
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Name:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" class="box-neworder" placeholder="Enter your full name" autofocus required />
+                        </div>
+                    </div><br /><br />
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Phone:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="tel" placeholder="Enter your phone number" class="box-neworder" placeholder=" 0531858067 " maxlength="10" pattern="(05)+(\d{8})$" required />
+                        </div>
+                    </div><br /><br />
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Email:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="email" placeholder="Enter a valid email address" class="box-neworder" id="myEmail " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+                        </div>
+                    </div>
+                    <br />
                     <br>
                     <h2>Luggage Info</h2>
                     <br>
-                    <label for="Largeb">Large bags:</label>
-                    <select id="Largeb" class="box" required>
-                        <option value=" INVALID ">Choose a number</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select><br><br>
-                    <label for="smallb">small bags:</label>
-                    <select id="smallb" class="box" required>
-                        <option value=" INVALID ">Choose a number</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select><br><br>
-                    <label for="comment">Add any important details of your luggage</label>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="Largeb">Large bags:</label>
+                        </div>
+                        <div class="col-75">
+                            <select id="Largeb" class="box-neworder" required>
+                                <option value=" INVALID ">Choose a number</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            <span class="moremessage">
+                                <i class="fa fa-exclamation-circle moremessage"></i>
+                                <p class="message_contatnte">this is small message</p>
+                            </span>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="smallb">small bags:</label>
+                        </div>
+                        <div class="col-75">
+                            <select id="smallb" class="box-neworder" required>
+                                <option value=" INVALID ">Choose a number</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            <span class="moremessage">
+                                <i class="fa fa-exclamation-circle moremessage"></i>
+                                <p class="message_contatnte">this is small message</p>
+                            </span>
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="comment">Add any important details of your luggage</label>
+                        </div>
+                        <div class="col-75">
+                            <textarea type="text" name="Massage" class="box-neworder" placeholder="massage" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
                     <br>
-                    <textarea type="text" name="Massage" placeholder="massage" cols="30" rows="10"></textarea>
                     <br>
-                    <br>
-                    <label>picup date</label>
-                    <input type="date" class="box" autofocus required /><br /><br />
-                    <label>pickup Time:</label>
-                    <input type="time" class="box" autofocus required /><br /><br />
+                    <div class="row">
+                        <div class="col-25">
+                            <label>picup date</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="date" class="box-neworder" autofocus required /><br /><br />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label>pickup Time:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="time" class="box-neworder" autofocus required /><br /><br />
+                        </div>
+                    </div>
                     <h2>Address Info</h2>
                     <br />
-                    <label for="City">City:</label>
-                    <select id="City" class="box" required>
-                        <option value=" INVALID ">Choose a city</option>
-                        <option value="riyadh">Riyadh</option>
-                        <option value="jeddah">Jeddah</option>
-                        <option value="dammam">Dammam</option>
-                    </select><br><br>
-                    <label for="District">District: </label>
-                    <select id="District" class="box" required>
-                        <option value="INVALID">Choose a district</option>
-                    </select><br /><br />
-                    <label>Buliding number:</label>
-                    <input type="text" placeholder="Enter your buliding number" class="box" required /><br /><br />
-                    <label>Zip code:</label>
-                    <input type="text" placeholder="Type your district zipcode" class="box" maxlength="5" /><br /><br />
-                    <label>Street:</label>
-                    <input type="text" placeholder="Enter Street or location from google map" class="box" required /><br /><br />
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="City">City:</label>
+                        </div>
+                        <div class="col-75">
+                            <select id="City" class="box-neworder" required>
+                                <option value=" INVALID ">Choose a city</option>
+                                <option value="riyadh">Riyadh</option>
+                                <option value="jeddah">Jeddah</option>
+                                <option value="dammam">Dammam</option>
+                            </select><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="District">District: </label>
+                        </div>
+                        <div class="col-75">
+                            <select id="District" class="box-neworder" required>
+                                <option value="INVALID">Choose a district</option>
+                            </select><br /><br />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Buliding number:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" placeholder="Enter your buliding number" class="box-neworder" required /><br /><br />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Zip code:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" placeholder="Type your district zipcode" class="box-neworder" maxlength="5" /><br /><br />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Street:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" placeholder="Enter Street or location from google map" class="box-neworder" required /><br /><br />
+                        </div>
+                    </div>
                     <input type="checkbox" required />
                     <a href="assets\terms_And_conditions.pdf">
                   I have read and agree / agreed with the terms and conditions</a>
