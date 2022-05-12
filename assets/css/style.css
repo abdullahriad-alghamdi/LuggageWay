@@ -913,10 +913,16 @@ header .icons i:hover {
         margin-left: 0%;
     }
     .newordersection {
-        height: 250vh;
+        height: 255vh;
     }
     .wrapper {
-        height: 245vh;
+        height: 25vh;
+    }
+    .box-neworder {
+        width: 100%;
+    }
+    .sidebar {
+        max-width: 25vw;
     }
 }
 
