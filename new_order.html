@@ -56,40 +56,82 @@
                 <h3>client</h3>
 
                 <nav class="menu">
-                    <a href="client.html" class="menu-item is-active"><i class="fas fa-list-alt"></i> My Orders</a>
-                    <a href="new_order.html" class="menu-item "><i class="fas fa-plus-circle"></i> New Order</a>
+                    <a href="client.html" class="menu-item"><i class="fas fa-list-alt"></i> My Orders</a>
+                    <a href="new_order.html" class="menu-item  is-active"><i class="fas fa-plus-circle"></i> New Order</a>
                     <a href="settings.html" class="menu-item"><i class="fas fa-cog"></i> Settings</a>
                 </nav>
 
             </aside>
 
             <main class="content-body">
-                <h1>CSS is Cool</h1>
+                <h1>New Order</h1>
 
-                <p>
-                    I'm baby kale chips affogato ennui lumbersexual, williamsburg paleo quinoa iceland normcore tumeric. Kitsch coloring book retro, seitan schlitz tattooed biodiesel vexillologist neutra. Synth mumblecore deep v, umami selfies normcore gluten-free snackwave.
-                    Seitan ramps drinking vinegar venmo keytar, humblebrag VHS post-ironic tacos godard pour-over.
-                </p>
-                <p>
-                    Sartorial kogi taxidermy, kickstarter synth yr irony ennui everyday carry retro helvetica stumptown cloud bread squid echo park. Etsy cloud bread sartorial quinoa tacos beard mumblecore shaman tumblr pop-up. Twee retro fingerstache af helvetica pabst
-                    8-bit leggings taiyaki portland ramps tbh tumblr vinyl. Neutra humblebrag bushwick portland subway tile plaid, offal scenester flexitarian cliche squid small batch palo santo. Palo santo meh adaptogen +1 3 wolf moon, listicle brunch
-                    ethical fanny pack everyday carry fam. Offal fingerstache taxidermy, man bun venmo PBR&amp;B helvetica thundercats everyday carry tote bag artisan cray wolf jianbing.
-                </p>
-                <p>
-                    Taxidermy thundercats whatever austin. VHS helvetica ethical, dreamcatcher enamel pin YOLO shabby chic locavore man bun crucifix pabst chillwave pop-up vegan. Air plant mlkshk ethical echo park tumeric, whatever crucifix godard scenester locavore pork
-                    belly yuccie vape. +1 gochujang put a bird on it, pork belly whatever selfies vaporware occupy banh mi normcore VHS. Cornhole normcore hashtag tilde. Hell of yr try-hard DIY raw denim banjo, enamel pin irony polaroid copper mug tofu.
-                    Dreamcatcher lomo literally 90's before they sold out, 3 wolf moon banh mi seitan chambray cliche offal tote bag occupy pug.
-                </p>
-                <p>
-                    Post-ironic hot chicken salvia yr yuccie ugh cold-pressed keffiyeh franzen viral taxidermy mustache slow-carb crucifix vape. Taiyaki yuccie hell of tacos PBR&amp;B, kitsch meggings tbh truffaut kickstarter mixtape af kogi. Fingerstache vegan tofu waistcoat
-                    gentrify cray. Drinking vinegar 3 wolf moon health goth craft beer master cleanse. Letterpress health goth 8-bit chillwave craft beer brooklyn. Chicharrones master cleanse 8-bit, mumblecore copper mug messenger bag poutine lomo kale
-                    chips flannel. Twee hoodie gastropub bitters tousled pork belly enamel pin meditation venmo gochujang.
-                </p>
-                <p>
-                    Next level selfies cronut ethical. Tofu tumblr you probably haven't heard of them, man braid literally forage swag chillwave. Pug yr flannel tumeric. Coloring book yr chillwave snackwave, shoreditch shaman gentrify typewriter tumeric DIY copper mug small
-                    batch. Scenester waistcoat YOLO hexagon kombucha poke 8-bit meditation. Selvage scenester forage williamsburg. Hoodie fingerstache tacos mustache, hashtag quinoa next level sartorial craft beer retro disrupt lo-fi.
-                </p>
-
+                <form action="/action_page.php" onsubmit="alert('your account has been successfully created!')">
+                    <h3></h3>
+                    <br />
+                    <br />
+                    <h2>Travell Info</h2>
+                    <br>
+                    <label>Depart airport</label>
+                    <select id="Depart_airport" class="bpx" required>
+                        <option value="INVALID">Choose an airport</option>
+                        <option>King Fahd International Airport</option>
+                        <option>king Khalid International Airport</option>
+                        <option>king Abdulaziz International Airport</option>
+                    </select><br><br>
+                    <label>Airline</label>
+                    <select id="Airline" class="bpx" required>
+                        <option value="INVALID">Choose an airline</option>
+                        <option>Saudia</option>
+                        <option>Flynas</option>
+                        <option>Flyadeal</option>
+                    </select><br><br>
+                    <label>Bording Time:</label>
+                    <input type="time" class="box" autofocus required /><br /><br />
+                    <label>Depart Time:</label>
+                    <input type="time" class="box" autofocus required /><br /><br />
+                    <label>Booking Number:</label>
+                    <input type="text" class="box" placeholder="Enter your Booking Number" autofocus required /><br /><br />
+                    <label>Depart Date</label>
+                    <input type="date" class="box" autofocus required />
+                    <br>
+                    <br>
+                    <h2>Personal Info</h2>
+                    <br />
+                    <br />
+                    <label>Name:</label>
+                    <input type="text" class="box" placeholder="Enter your full name" autofocus required /><br /><br />
+                    <label>Phone:</label>
+                    <input type="tel" placeholder="Enter your phone number" class="box" placeholder=" 0531858067 " maxlength="10" pattern="(05)+(\d{8})$" required /><br /><br />
+                    <label>Email:</label>
+                    <input type="email" placeholder="Enter a valid email address" class="box" id="myEmail " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /><br />
+                    <br>
+                    <h2>Address Info</h2>
+                    <br />
+                    <label for="City">City:</label>
+                    <select id="City" class="box" required>
+                        <option value=" INVALID ">Choose a city</option>
+                        <option value="riyadh">Riyadh</option>
+                        <option value="jeddah">Jeddah</option>
+                        <option value="dammam">Dammam</option>
+                    </select><br><br>
+                    <label for="District">District: </label>
+                    <select id="District" class="box" required>
+                        <option value="INVALID">Choose a district</option>
+                    </select><br /><br />
+                    <label>Buliding number:</label>
+                    <input type="text" placeholder="Enter your buliding number" class="box" required /><br /><br />
+                    <label>Zip code:</label>
+                    <input type="text" placeholder="Type your district zipcode" class="box" maxlength="5" /><br /><br />
+                    <label>Street:</label>
+                    <input type="text" placeholder="Enter Street or location from google map" class="box" required /><br /><br />
+                    <input type="checkbox" required />
+                    <a href="assets\terms_And_conditions.pdf">
+                  I have read and agree / agreed with the terms and conditions</a>
+                    <br /><br />
+                    <input type="reset" value="Reset" class="btn" />
+                    <input type="submit" value="Register" class="btn" />
+                </form>
 
             </main>
         </div>
@@ -130,6 +172,7 @@
 
     <!-- custom js file link  -->
     <script src="assets\js\script.js"></script>
+
 </body>
 
 </html>

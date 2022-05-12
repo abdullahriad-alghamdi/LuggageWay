@@ -776,9 +776,10 @@ header .icons i:hover {
         margin-left: -37px;
         border-radius: 0%;
         max-width: 150px;
-        transform: translate(-150px);
+        /* transform: translate(-150px); */
         z-index: 2;
         height: 100vh;
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
     }
     body {
         display: flex;
@@ -815,10 +816,6 @@ header .icons i:hover {
         margin-left: -70px;
         z-index: 1;
         left: 0;
-    }
-    .sidebarOpen .sidebar {
-        transform: translate(0);
-        box-shadow: 0 0 15px rgb(0, 0, 0, 0.2);
     }
 }
 

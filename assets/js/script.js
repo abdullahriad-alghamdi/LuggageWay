@@ -11,7 +11,6 @@ let videoBtn = document.querySelectorAll('.vid-btn');
 
 
 
-
 //If you scroll down on the menu or login page, the page will be
 // removed and you will be redirected to the home page.
 window.onscroll = () => {
