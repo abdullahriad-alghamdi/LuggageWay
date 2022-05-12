@@ -142,7 +142,7 @@ header .icons i:hover {
 /* log-in starting */
 
 .login-form-container {
-    position: fixed;
+    position: absolute;
     top: -120%;
     left: 0;
     z-index: 10000;
