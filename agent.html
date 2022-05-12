@@ -4,114 +4,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LuggageWay - client</title>
+    <title>LuggageWay - agent</title>
     <!-- Font Aowesome kit's code  -->
     <script src="https://kit.fontawesome.com/8ebc734131.js" crossorigin="anonymous"></script>
     <!-- custom css file link  -->
     <link rel="stylesheet" href="assets\css\style.css" />
-    <style>
-        header {
-            position: relative;
-        }
-        
-        .wrapper {
-            display: flex;
-            height: 100vh;
-        }
-        
-        .sidebar {
-            flex: 1 1 0;
-            max-width: 225px;
-            padding: 2rem 1rem;
-            background-color: #333333;
-            border-radius: 10px;
-        }
-        
-        .sidebar h3 {
-            color: #707793;
-            font-size: 1.25rem;
-            text-transform: uppercase;
-            margin-bottom: 0.5em;
-        }
-        
-        .sidebar .menu {
-            margin: 0 -1rem;
-            margin-left: 2%;
-            margin-top: 10px;
-        }
-        
-        .sidebar .menu .menu-item {
-            display: block;
-            padding: 1.5em;
-            color: #FFF;
-            text-decoration: none;
-            transition: 0.1s linear;
-        }
-        
-        .sidebar .menu i {
-            margin-right: 20px;
-        }
-        
-        .sidebar .menu .menu-item:hover,
-        .sidebar .menu .menu-item.is-active {
-            color: #3bba9c;
-            border-right: 5px solid #3bba9c;
-            font-size: 1.2rem;
-        }
-        
-        .sidebar .menu .menu-item:hover {
-            border-right: 5px solid #3bba9c;
-        }
-        
-        .content {
-            flex: 1 1 0;
-            padding: 2rem;
-        }
-        
-        .content h1 {
-            color: #3C3F58;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .content p {
-            color: #707793;
-        }
-        
-        .menu-item:last-child {
-            margin-top: auto;
-        }
-        
-        @media (max-width: 1024px) {
-            .sidebar {
-                max-width: 100px;
-            }
-        }
-        /* 
-        @media (max-width: 768px) {
-            .content {
-                padding-top: 8rem;
-            }
-            .sidebar {
-                position: fixed;
-                top: 0;
-                left: -300px;
-                height: 100vh;
-                width: 100%;
-                max-width: 300px;
-                transition: 0.2s linear;
-            }
-            .sidebar.is-active {
-                left: 0;
-            }
-        } */
-    </style>
+
+
 </head>
 
 <body>
     <!-- header section starts  -->
 
-    <header>
+    <header class="users_page">
         <div id="menu-bar" class="fas fa-bars"></div>
 
         <a href="index.html" class="logo"><img herf="Home.html" src="assets\images\logo.png" alt="LuggageWay" width="150px" /></a>
@@ -159,7 +64,7 @@
 
             </aside>
 
-            <main class="content">
+            <main class="content-body">
                 <h1>CSS is Cool</h1>
 
                 <p>
@@ -226,12 +131,6 @@
 
     <!-- custom js file link  -->
     <script src="assets\js\script.js"></script>
-</body>
-
-</html>- footer section ends -->
-
-<!-- custom js file link  -->
-<script src="assets\js\script.js"></script>
 </body>
 
 </html>

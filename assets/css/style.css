@@ -698,9 +698,10 @@ header .icons i:hover {
 }
 
 .sidebar {
+    margin-left: -10px;
     flex: 1 1 0;
     max-width: 225px;
-    padding: 2rem 1rem;
+    padding: 2rem 0.5rem;
     background-color: #333333;
     border-radius: 10px;
 }
@@ -727,7 +728,7 @@ header .icons i:hover {
 }
 
 .sidebar .menu i {
-    margin-right: 20px;
+    margin-right: 1rem;
 }
 
 .sidebar .menu .menu-item:hover,
@@ -743,7 +744,11 @@ header .icons i:hover {
 
 .content-body {
     flex: 1 1 0;
-    padding: 2rem;
+    position: relative;
+    scroll-behavior: smooth;
+    font-size: 13px;
+    margin-top: 30px;
+    margin-left: 30px;
 }
 
 .content-body h1 {
@@ -756,35 +761,66 @@ header .icons i:hover {
     color: #707793;
 }
 
-.menu-item:last-child {
-    margin-top: auto;
-}
-
-@media (max-width: 1024px) {
-    .sidebar {
-        max-width: 100px;
+@media (min-width: 768px) {
+    .sidebarbtn {
+        display: none;
     }
 }
 
-
-/* 
 @media (max-width: 768px) {
-    .content-body {
-        padding-top: 8rem;
-    }
     .sidebar {
-        position: fixed;
-        top: 0;
-        left: -300px;
+        position: sticky;
+        flex: 1 1 0;
+        margin: 0 1rem;
+        margin-top: -17px;
+        margin-left: -37px;
+        border-radius: 0%;
+        max-width: 150px;
+        transform: translate(-150px);
+        z-index: 2;
         height: 100vh;
-        width: 100%;
-        max-width: 300px;
-        transition: 0.2s linear;
     }
-    .sidebar.is-active {
+    body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 85vh;
+    }
+    .body-header {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        background-color: #666666;
+        display: flex;
+    }
+    .footer {
+        position: static;
+        width: 100%;
+        top: 100%;
+        bottom: 0;
+    }
+    .sidebarbtn {
+        display: block;
+        color: #fff;
+        right: 0%;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 2.5rem;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+    .content-body {
+        margin-top: 50px;
+        margin-left: -70px;
+        z-index: 1;
         left: 0;
     }
-} */
+    .sidebarOpen .sidebar {
+        transform: translate(0);
+        box-shadow: 0 0 15px rgb(0, 0, 0, 0.2);
+    }
+}
 
 
 /* users pages endding */
@@ -793,6 +829,7 @@ header .icons i:hover {
 /* footer starting */
 
 .footer {
+    position: relative;
     background: #333;
 }
 
