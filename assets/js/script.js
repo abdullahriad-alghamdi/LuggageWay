@@ -48,6 +48,8 @@ formBtn3.addEventListener('click', () => {
 
 formClose.addEventListener('click', () => {
     signupForm.classList.remove('active');
+    loginForm.classList.remove('active');
+
 
 });
 // X close button button for the sign-in
