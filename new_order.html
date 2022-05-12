@@ -48,7 +48,7 @@
 
     <!-- client body section starts  -->
 
-    <section>
+    <section class="newordersection">
 
         <div class="wrapper">
 
@@ -106,6 +106,47 @@
                     <label>Email:</label>
                     <input type="email" placeholder="Enter a valid email address" class="box" id="myEmail " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /><br />
                     <br>
+                    <h2>Luggage Info</h2>
+                    <br>
+                    <label for="Largeb">Large bags:</label>
+                    <select id="Largeb" class="box" required>
+                        <option value=" INVALID ">Choose a number</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select><br><br>
+                    <label for="smallb">small bags:</label>
+                    <select id="smallb" class="box" required>
+                        <option value=" INVALID ">Choose a number</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select><br><br>
+                    <label for="comment">Add any important details of your luggage</label>
+                    <br>
+                    <textarea type="text" name="Massage" placeholder="massage" cols="30" rows="10"></textarea>
+                    <br>
+                    <br>
+                    <label>picup date</label>
+                    <input type="date" class="box" autofocus required /><br /><br />
+                    <label>pickup Time:</label>
+                    <input type="time" class="box" autofocus required /><br /><br />
                     <h2>Address Info</h2>
                     <br />
                     <label for="City">City:</label>
@@ -130,7 +171,7 @@
                   I have read and agree / agreed with the terms and conditions</a>
                     <br /><br />
                     <input type="reset" value="Reset" class="btn" />
-                    <input type="submit" value="Register" class="btn" />
+                    <input type="submit" value="next" class="btn" />
                 </form>
 
             </main>
