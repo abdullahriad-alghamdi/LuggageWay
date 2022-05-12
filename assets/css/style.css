@@ -902,6 +902,24 @@ header .icons i:hover {
     }
 }
 
+@media (max-width: 1200px) {}
+
+@media (max-width: 991px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 450px) {
+    .contant_neworder {
+        margin-left: 0%;
+    }
+    .newordersection {
+        height: 250vh;
+    }
+    .wrapper {
+        height: 245vh;
+    }
+}
+
 
 /* new order page ending */
 
