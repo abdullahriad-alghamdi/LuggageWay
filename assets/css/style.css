@@ -692,9 +692,13 @@ header .icons i:hover {
     position: relative;
 }
 
+.contant_userpage {
+    margin-left: 15%;
+}
+
 .wrapper {
     display: flex;
-    height: 280vh;
+    height: 100vh;
 }
 
 .sidebar {
@@ -827,10 +831,6 @@ header .icons i:hover {
 
 /* new order page starting */
 
-.contant_neworder {
-    margin-left: 15%;
-}
-
 .newordersection {
     height: 290vh;
 }
@@ -854,6 +854,11 @@ header .icons i:hover {
     border: 2px solid #3bba9c;
     margin-left: 0px;
     padding: 10px;
+}
+
+.wrapper_neworder {
+    display: flex;
+    height: 280vh;
 }
 
 
@@ -902,19 +907,65 @@ header .icons i:hover {
     }
 }
 
-@media (max-width: 1200px) {}
+@media (max-width: 1200px) {
+    .newordersection {
+        height: 350vh;
+    }
+    .settingssection {
+        height: 140vh;
+    }
+    .wrapper_neworder,
+    .wrapper {
+        height: 30vh;
+    }
+    .box-neworder {
+        width: 100%;
+    }
+}
 
-@media (max-width: 991px) {}
+@media (max-width: 991px) {
+    .newordersection {
+        height: 175vh;
+    }
+    .settingssection {
+        height: 70vh;
+    }
+    .wrapper_neworder,
+    .wrapper {
+        height: 25vh;
+    }
+    .box-neworder {
+        width: 100%;
+    }
+}
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+    .newordersection {
+        height: 205vh;
+    }
+    .settingssection {
+        height: 75vh;
+    }
+    .wrapper_neworder,
+    .wrapper {
+        height: 25vh;
+    }
+    .box-neworder {
+        width: 100%;
+    }
+}
 
-@media (max-width: 450px) {
-    .contant_neworder {
+@media screen and (max-width: 450px) {
+    .contant_userpage {
         margin-left: 0%;
     }
     .newordersection {
         height: 255vh;
     }
+    .settingssection {
+        height: 85vh;
+    }
+    .wrapper_neworder,
     .wrapper {
         height: 25vh;
     }

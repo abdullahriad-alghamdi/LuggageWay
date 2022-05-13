@@ -48,7 +48,7 @@
 
     <!-- client body section starts  -->
 
-    <section>
+    <section class="settingssection">
 
         <div class="wrapper">
 
@@ -57,38 +57,78 @@
 
                 <nav class="menu">
                     <a href="client.html" class="menu-item"><i class="fas fa-list-alt"></i> My Orders</a>
-                    <a href="new_order.html" class="menu-item  is-active"><i class="fas fa-plus-circle"></i> New Order</a>
-                    <a href="settingsClient.html" class="menu-item"><i class="fas fa-cog"></i> Settings</a>
+                    <a href="new_order.html" class="menu-item"><i class="fas fa-plus-circle"></i> New Order</a>
+                    <a href="settingsClient.html" class="menu-item is-active"><i class="fas fa-cog"></i> Settings</a>
                 </nav>
 
             </aside>
 
             <main class="content-body">
-                <form action="/action_page.php" onsubmit="alert('your setting has been successfully update!')">
+                <h1>Settings</h1>
+
+                <form action="/action_page.php" class="contant_userpage" onsubmit="alert('your setting has been successfully update!')">
                     <br />
                     <br />
                     <h2>Personal Info</h2>
                     <br />
                     <br />
-                    <label>Name:</label>
-                    <input type="text" class="box" placeholder="Enter your full name" autofocus required /><br /><br />
-                    <label>Gender:</label>
-                    <input type="radio" class="gender" name="gender" />
-                    <label>Male</label>
-                    <span class="space"></span>
-                    <input type="radio" class="gender" name="gender" />
-                    <label>Female</label>
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Name:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" class="box-neworder" placeholder="Enter your full name" autofocus required /><br /><br />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Gender:</label>
+                        </div>
+                        <div class="col-75 ">
+                            <input type="radio" class="gender" name="gender" />
+                            <label>Male</label>
+                            <span class="space"></span>
+                            <input type="radio" class="gender" name="gender" />
+                            <label>Female</label>
+                        </div>
+                    </div>
                     <br />
                     <br />
-                    <label>User name:</label>
-                    <input type="text" placeholder="Enter your username" class="box" required /><br /><br />
-                    <label>Password:</label>
-                    <input type="text" placeholder="Enter your password" class="box" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$
-                    " required /><br /><br />
-                    <label>Phone:</label>
-                    <input type="tel" placeholder="Enter your phone number" class="box" placeholder=" 0531858067 " pattern="(?:\+?0*?966)?0?5[0-9]{8} " required /><br /><br />
-                    <label>Email:</label>
-                    <input type="email" placeholder="Enter a valid email address" class="box" id="myEmail " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$ " required /><br />
+                    <div class="row">
+                        <div class="col-25">
+                            <label>User name:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" placeholder="Enter your username" class="box-neworder" required />
+                        </div>
+                    </div>
+                    <br /><br />
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Password:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" placeholder="Enter your password" class="box-neworder" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" required />
+                        </div>
+                    </div>
+                    <br /><br />
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Phone:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="tel" placeholder="Enter your phone number" class="box-neworder" placeholder=" 0531858067 " pattern="(?:\+?0*?966)?0?5[0-9]{8} " required />
+                        </div>
+                    </div>
+                    <br /><br />
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Email:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="email" placeholder="Enter a valid email address" class="box-neworder" id="myEmail " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$ " required />
+                        </div>
+                    </div>
                     <br /><br /><br />
                     <input type="submit" value="Update" class="btn" />
                 </form>
