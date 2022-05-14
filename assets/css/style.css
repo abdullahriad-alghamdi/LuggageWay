@@ -698,7 +698,7 @@ header .icons i:hover {
 
 .wrapper {
     display: flex;
-    height: 100vh;
+    height: 125vh;
 }
 
 .sidebar {
@@ -832,7 +832,7 @@ header .icons i:hover {
 /* new order page starting */
 
 .newordersection {
-    height: 290vh;
+    height: 300vh;
 }
 
 .message_contatnte {
@@ -858,7 +858,7 @@ header .icons i:hover {
 
 .wrapper_neworder {
     display: flex;
-    height: 280vh;
+    height: 300vh;
 }
 
 
