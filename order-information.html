@@ -4,66 +4,41 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LuggageWay - client</title>
+    <title>LuggageWay - order-information</title>
     <!-- Font Aowesome kit's code  -->
     <script src="https://kit.fontawesome.com/8ebc734131.js" crossorigin="anonymous"></script>
     <!-- custom css file link  -->
     <link rel="stylesheet" href="assets\css\style.css" />
+
     <style>
         header {
             background: rgba(51, 51, 51);
         }
         
-        .text-left {
-            text-align: left
-        }
-        
-        .text-right {
-            text-align: right
-        }
-        
-        .text-center {
-            text-align: center
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 6px 12px;
-            margin-bottom: 0;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 1.42857143;
-            text-align: center;
-            white-space: nowrap;
-            vertical-align: middle;
-            -ms-touch-action: manipulation;
-            touch-action: manipulation;
-            cursor: pointer;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            background-image: none;
-            border: 1px solid transparent;
-            border-radius: 4px
-        }
-        
-        .row {
-            padding-top: 20px;
-        }
-        
-        .table-hover>tbody>tr:hover {
-            background-color: #f5f5f5;
-        }
-        
-        .table-bordered {
-            border: 1px solid rgb(34, 30, 30);
-        }
-        
         table {
-            margin-left: 50px;
-            margin-top: 40px;
-            width: 60vw;
+            width: 80vw;
+        }
+        
+        .col-sm-9 {
+            background-color: rgb(237, 237, 237);
+            margin-right: 40px;
+            padding: 20px 100px;
+            border: 1px solid slategrey;
+        }
+        
+        ul.linking li {
+            display: inline-block;
+            padding: 0 17px 0 8px;
+            margin-right: 7px;
+            position: relative;
+        }
+        
+        ul.linking li a {
+            display: block;
+            padding: 0;
+            color: rgb(14, 12, 12);
+            text-decoration: none;
+            font-size: 14px;
         }
     </style>
 
@@ -103,68 +78,103 @@
 
     <section class="body-header">
 
-        <div class="wrapper">
 
-            <aside class="sidebar">
+        <ul class="linking">
+            <li><a href="client.html">My orders</a></li>
+            <li><a href="order-information.html">Order Information</a></li>
 
-                <nav class="menu">
+        </ul>
 
-                    <h3>client</h3>
-                    <a href="client.html" class="menu-item is-active"><i class="fas fa-list-alt"></i> My Orders</a>
-                    <a href="new_order.html" class="menu-item "><i class="fas fa-plus-circle"></i> New Order</a>
-                    <a href="settingsClient.html" class="menu-item"><i class="fas fa-cog"></i> Settings</a>
-                </nav>
+        <main class="content-body">
 
-            </aside>
+            <br>
+            <br>
+            <h1>Order Details</h1>
+            <br>
+            <br>
+            <!--Middle Part Start-->
+            <div class="col-sm-9">
 
-            <main class="content-body">
-                <div class="row">
-                    <h2 class="title">Order History</h2><br>
-                    <table class="table table-bordered table-hover">
-                        <thead>
+                <table>
+
+                    <tbody>
+                        <tr>
+                            <td style="width: 50%;"> <b>Order ID:</b> #003
+                                <br>
+                                <b>Date Added:</b> 20/06/2016</td>
+                            <td style="width: 50%;"> <b>Payment Method:</b> Online
+                                <br>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div>
+                    <table>
+                        <br>
+                        <br>
+                        <tfoot>
                             <tr>
-                                <td class="text-center">Order ID</td>
-                                <td class="text-center">Status</td>
-                                <td class="text-center">Date Added</td>
-                                <td class="text-right">Total</td>
+                                <td></td>
+                                <td><b>Order #003</b>
+                                </td>
+                                <td>$498</td>
                                 <td></td>
                             </tr>
-                        </thead>
-                        <tbody>
                             <tr>
-                                <td class="text-center">#003</td>
-                                <td class="text-center">in prograss</td>
-                                <td class="text-center">21/09/2021</td>
-                                <td class="text-right">$498.00</td>
-                                <td class="text-center"><a class="btn btn-info" href="order-information.html"><i class="fa fa-eye"></i></a>
+                                <td></td>
+                                <td><b>Delivery cost</b>
                                 </td>
+                                <td>$5</td>
+                                <td></td>
                             </tr>
                             <tr>
-                                <td class="text-center">#002</td>
-                                <td class="text-center">Shipped</td>
-                                <td class="text-center">21/06/2016</td>
-                                <td class="text-right">$318.00</td>
-                                <td class="text-center"><a class="btn btn-info" href=""><i class="fa fa-eye"></i></a>
+                                <td></td>
+                                <td><b>VAT (20%)</b>
                                 </td>
+                                <td>$15</td>
+                                <td></td>
                             </tr>
                             <tr>
-                                <td class="text-center">#001</td>
-                                <td class="text-center">Shipped</td>
-                                <td class="text-center">21/01/2018</td>
-                                <td class="text-right">$228.00</td>
-                                <td class="text-center"><a class="btn btn-info" href=""><i class="fa fa-eye"></i></a>
+                                <td></td>
+                                <td><b>Total</b>
                                 </td>
+                                <td>$518</td>
+                                <td></td>
                             </tr>
-
-
-                        </tbody>
+                        </tfoot>
                     </table>
+                </div>
+                <br>
+                <br>
+                <h3>Order History</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Date Added</td>
+                            <td>Status</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>20/06/2016</td>
+                            <td>Processing</td>
+                        </tr>
+                        <tr>
+                            <td>21/06/2016</td>
+                            <td>Shipped</td>
+                        </tr>
+                        <tr>
+                            <td>24/06/2016</td>
+                            <td>Complete</td>
+                        </tr>
+                    </tbody>
+                </table>
 
 
-
-            </main>
             </div>
     </section>
+    <!-- //Main Container -->
 
     <!-- footer section  stars -->
 

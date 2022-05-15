@@ -1,10 +1,13 @@
-let formBtn = document.querySelector('#login-btn');
+let formBtn1 = document.querySelector('#login-btn');
 let formBtn2 = document.querySelector('#signup-btn');
 let formBtn3 = document.querySelector('#join-us');
+let formBtn4 = document.querySelector('#Forgetpassowrd-link');
 let loginForm = document.querySelector('.login-form-container');
 let signupForm = document.querySelector('.signup-form-container');
-let formClose = document.querySelector('#form-close');
+let fpForm = document.querySelector('.Forgetpassowrd-form-container');
+let formClose1 = document.querySelector('#form-close');
 let formClose2 = document.querySelector('#form-close2');
+let formClose3 = document.querySelector('#form-close3');
 let menu = document.querySelector('#menu-bar');
 let navbar = document.querySelector('.navbar');
 let videoBtn = document.querySelectorAll('.vid-btn');
@@ -17,6 +20,7 @@ window.onscroll = () => {
         menu.classList.remove('fa-times');
         navbar.classList.remove('active');
         loginForm.classList.remove('active');
+        fpForm.classList.remove('active');
 
     }
     // on a mobile device When you click on the side button,
@@ -26,7 +30,7 @@ menu.addEventListener('click', () => {
     navbar.classList.toggle('active');
 });
 //sign-in button that opens the pop-up sign-in page.
-formBtn.addEventListener('click', () => {
+formBtn1.addEventListener('click', () => {
     loginForm.classList.add('active');
 
 });
@@ -44,9 +48,15 @@ formBtn3.addEventListener('click', () => {
     loginForm.classList.add('active');
 
 });
+//Forget passowrd link takes you to the rest password page in a pop-up window.
+
+formBtn4.addEventListener('click', () => {
+    fpForm.classList.add('active');
+
+});
 // X close button for the sign-up
 
-formClose.addEventListener('click', () => {
+formClose1.addEventListener('click', () => {
     signupForm.classList.remove('active');
     loginForm.classList.remove('active');
 
@@ -58,6 +68,14 @@ formClose2.addEventListener('click', () => {
     loginForm.classList.remove('active');
 
 });
+// X close button button for the Forget passowrd
+
+formClose3.addEventListener('click', () => {
+    loginForm.classList.remove('active');
+    fpForm.classList.remove('active');
+
+});
+
 // video slider button
 videoBtn.forEach(btn => {
     btn.addEventListener('click', () => {

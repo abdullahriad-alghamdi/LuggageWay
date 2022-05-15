@@ -242,6 +242,109 @@ header .icons i:hover {
 /* log-in ending */
 
 
+/* Forget passowrd starting */
+
+.Forgetpassowrd-form-container {
+    position: absolute;
+    top: -120%;
+    left: 0;
+    z-index: 10000;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Forgetpassowrd-form-container.active {
+    top: 0;
+}
+
+.Forgetpassowrd-form-container form {
+    margin: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    background: #fff;
+    width: 50rem;
+}
+
+.Forgetpassowrd-form-container form h3 {
+    font-size: 3rem;
+    color: #444;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.Forgetpassowrd-form-container form .box {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    margin: 0.6rem 0;
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+    text-transform: none;
+}
+
+.Forgetpassowrd-form-container form .box:focus {
+    border-color: var(--blue);
+}
+
+.Forgetpassowrd-form-container form #remember {
+    margin: 2rem 0;
+}
+
+.Forgetpassowrd-form-container form label {
+    font-size: 1.2rem;
+}
+
+.Forgetpassowrd-form-container form .btn {
+    display: block;
+    width: 100%;
+}
+
+.Forgetpassowrd-form-container form #signup-btn {
+    font-size: 15px;
+    cursor: pointer;
+    color: var(--blue);
+}
+
+.Forgetpassowrd-form-container form #signup-btn:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: black;
+}
+
+.Forgetpassowrd-form-container form p {
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.Forgetpassowrd-form-container form p a {
+    color: var(--blue);
+}
+
+.Forgetpassowrd-form-container form p a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.Forgetpassowrd-form-container #form-close3 {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 40;
+}
+
+
+/* Forget passowrd ending */
+
+
 /* sign-up starting*/
 
 .signup-form-container {
@@ -748,8 +851,6 @@ header .icons i:hover {
 
 .content-body {
     flex: 1 1 0;
-    position: relative;
-    scroll-behavior: smooth;
     font-size: 13px;
     margin-top: 30px;
     margin-left: 30px;
@@ -765,65 +866,20 @@ header .icons i:hover {
     color: #707793;
 }
 
-
-/* 
-@media (min-width: 768px) {
-    .sidebarbtn {
-        display: none;
-    }
+.content-body .square {
+    height: 300px;
+    width: 300px;
+    background-color: #555;
+    border-radius: 20%;
+    z-index: 165765;
 }
 
-@media (max-width: 768px) {
-    .sidebar {
-        position: sticky;
-        flex: 1 1 0;
-        margin: 0 1rem;
-        margin-top: -17px;
-        margin-left: -37px;
-        border-radius: 0%;
-        max-width: 150px;
-         transform: translate(-150px); 
-        z-index: 2;
-        height: 100vh;
-        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-    }
-    body {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 85vh;
-    }
-    .body-header {
-        position: relative;
-        width: 100%;
-        height: 50px;
-        background-color: #666666;
-        display: flex;
-    }
-    .footer {
-        position: static;
-        width: 100%;
-        top: 100%;
-        bottom: 0;
-    }
-    .sidebarbtn {
-        display: block;
-        color: #fff;
-        right: 0%;
-        border: none;
-        outline: none;
-        background: none;
-        font-size: 2.5rem;
-        cursor: pointer;
-        flex-shrink: 0;
-    }
-    .content-body {
-        margin-top: 50px;
-        margin-left: -70px;
-        z-index: 1;
-        left: 0;
-    }
-} */
+.content-body .square .square2 {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(189, 9, 9);
+    z-index: 1;
+}
 
 
 /* users pages endding */
@@ -889,102 +945,13 @@ header .icons i:hover {
 }
 
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-
-@media screen and (max-width: 600px) {
-    .col-25,
-    .col-75,
-    input[type=submit] {
-        width: 100%;
-        margin-top: 0;
-    }
-    input[type=reset] {
-        width: 100%;
-        margin-top: 0;
-    }
-    .newordersection {
-        height: 330vh;
-    }
-}
-
-@media (max-width: 1200px) {
-    .newordersection {
-        height: 350vh;
-    }
-    .settingssection {
-        height: 140vh;
-    }
-    .wrapper_neworder,
-    .wrapper {
-        height: 30vh;
-    }
-    .box-neworder {
-        width: 100%;
-    }
-}
-
-@media (max-width: 991px) {
-    .newordersection {
-        height: 175vh;
-    }
-    .settingssection {
-        height: 70vh;
-    }
-    .wrapper_neworder,
-    .wrapper {
-        height: 25vh;
-    }
-    .box-neworder {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .newordersection {
-        height: 205vh;
-    }
-    .settingssection {
-        height: 75vh;
-    }
-    .wrapper_neworder,
-    .wrapper {
-        height: 25vh;
-    }
-    .box-neworder {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .contant_userpage {
-        margin-left: 0%;
-    }
-    .newordersection {
-        height: 255vh;
-    }
-    .settingssection {
-        height: 85vh;
-    }
-    .wrapper_neworder,
-    .wrapper {
-        height: 25vh;
-    }
-    .box-neworder {
-        width: 100%;
-    }
-    .sidebar {
-        max-width: 25vw;
-    }
-}
-
-
 /* new order page ending */
 
 
 /* footer starting */
 
 .footer {
-    position: relative;
+    margin-bottom: 0px;
     background: #333;
 }
 
@@ -1109,9 +1076,22 @@ header .icons i:hover {
 
 /* media queries  */
 
-@media (max-width: 1200px) {
+@media (max-width: 1288px) {
     html {
         font-size: 55%;
+    }
+    .newordersection {
+        height: 250rem;
+    }
+    .settingssection {
+        height: 90rem;
+    }
+    .wrapper_neworder,
+    .wrapper {
+        height: 30vh;
+    }
+    .box-neworder {
+        width: 100%;
     }
 }
 
@@ -1121,6 +1101,19 @@ header .icons i:hover {
     }
     section {
         padding: 2rem;
+    }
+    .newordersection {
+        height: 240rem;
+    }
+    .settingssection {
+        height: 100rem;
+    }
+    .wrapper_neworder,
+    .wrapper {
+        height: 320vh;
+    }
+    .box-neworder {
+        width: 100%;
     }
 }
 
@@ -1148,6 +1141,35 @@ header .icons i:hover {
         margin: 1.5rem 0;
         background: #222;
     }
+    .newordersection {
+        height: 205vh;
+    }
+    .settingssection {
+        height: 75vh;
+    }
+    .wrapper_neworder,
+    .wrapper {
+        height: 25vh;
+    }
+    .box-neworder {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+    input[type=reset] {
+        width: 100%;
+        margin-top: 0;
+    }
+    .newordersection {
+        height: 330vh;
+    }
 }
 
 @media (max-width: 450px) {
@@ -1165,5 +1187,24 @@ header .icons i:hover {
     }
     .login-form-container {
         margin: left;
+    }
+    .contant_userpage {
+        margin-left: 0%;
+    }
+    .newordersection {
+        height: 255vh;
+    }
+    .settingssection {
+        height: 85vh;
+    }
+    .wrapper_neworder,
+    .wrapper {
+        height: 25vh;
+    }
+    .box-neworder {
+        width: 100%;
+    }
+    .sidebar {
+        max-width: 25vw;
     }
 }

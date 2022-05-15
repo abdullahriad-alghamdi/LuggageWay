@@ -9,7 +9,11 @@
     <script src="https://kit.fontawesome.com/8ebc734131.js" crossorigin="anonymous"></script>
     <!-- custom css file link  -->
     <link rel="stylesheet" href="assets\css\style.css" />
-
+    <style>
+        header {
+            background: rgba(51, 51, 51);
+        }
+    </style>
 </head>
 
 <body>
@@ -66,7 +70,7 @@
             <main class="content-body ">
                 <h1>New Order</h1>
 
-                <form action="/action_page.php" class="contant_userpage" onsubmit="alert('your account has been successfully created!')">
+                <form name="neworderform" action="/action_page.php" class="contant_userpage" onsubmit="alert('your account has been successfully created!')">
                     <h3></h3>
                     <br />
                     <br />
@@ -168,7 +172,7 @@
                             <label for="Largeb">Large bags:</label>
                         </div>
                         <div class="col-75">
-                            <select id="Largeb" class="box-neworder" required>
+                            <select id="Largeb" class="box-neworder" onchange="totalcostfun" required>
                                 <option value=" INVALID ">Choose a number</option>
                                 <option value="0">0</option>
                                 <option value="1">1</option>
@@ -194,7 +198,7 @@
                             <label for="smallb">small bags:</label>
                         </div>
                         <div class="col-75">
-                            <select id="smallb" class="box-neworder" required>
+                            <select id="smallb" class="box-neworder" onchange="totalcostfun" required>
                                 <option value=" INVALID ">Choose a number</option>
                                 <option value="0">0</option>
                                 <option value="1">1</option>
@@ -249,8 +253,8 @@
                             <label for="City">City:</label>
                         </div>
                         <div class="col-75">
-                            <select id="City" class="box-neworder" required>
-                                <option value=" INVALID ">Choose a city</option>
+                            <select id="City" class="box-neworder" onchange="totalcostfun" required>
+                                <option value="zero">Choose a city</option>
                                 <option value="riyadh">Riyadh</option>
                                 <option value="jeddah">Jeddah</option>
                                 <option value="dammam">Dammam</option>
@@ -262,8 +266,8 @@
                             <label for="District">District: </label>
                         </div>
                         <div class="col-75">
-                            <select id="District" class="box-neworder" required>
-                                <option value="INVALID">Choose a district</option>
+                            <select id="District" class="box-neworder" onchange="totalcostfun" required>
+                                <option value="">Choose a district</option>
                             </select><br /><br />
                         </div>
                     </div>
@@ -296,11 +300,15 @@
                   I have read and agree / agreed with the terms and conditions</a>
                     <br /><br />
                     <input type="reset" value="Reset" class="btn" />
-                    <input type="submit" value="next" class="btn" />
+                    <input type="submit" onclick="window.location = 'Checkout.html';" value="Go to Payment" class="btn" />
                 </form>
+                <p id="totalcostprint" class="box-neworder">
 
+                </p>
             </main>
         </div>
+
+
     </section>
 
     <!-- footer section  stars -->
@@ -338,6 +346,53 @@
 
     <!-- custom js file link  -->
     <script src="assets\js\script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#City").change(function() {
+                var val = $(this).val();
+                if (val == "riyadh") {
+                    $("#District").html("<option value='test'>Alnarjes</option><option value='test2'>Alolay</option><option value='test3'>Alsowaide</option>");
+                } else if (val == "jeddah") {
+                    $("#District").html("<option value='test'>Almarwa</option><option value='test2'>Alfaisalyah</option><option value='test3'>Aljamah</option>");
+                } else if (val == "dammam") {
+                    $("#District").html("<option value='test'>Almanar</option><option value='test2'>Alshefa</option><option value='test3'>Alshate</option>");
+                } else if (val == "zero") {
+                    $("#District").html("<option value=''>Choose a district</option>");
+                }
+            });
+        });
+
+
+        function totalcostfun(neworderform) {
+            var district = document.getElementById("District").innerHTML;
+            var smallbag = document.getElementById("smallb").innerHTML;
+            var largebag = document.getElementById("Largeb").innerHTML;
+            var cost
+
+            if (district = "Almanar") {
+                cost = (parseInt(smallbag) * 30) + (parseInt(largebag) * 55) + 35
+            } else if (district = "Alshefa") {
+                cost = (parseInt(smallbag) * 30) + (parseInt(largebag) * 55) + 40
+            } else if (district = "Alshate") {
+                cost = (parseInt(smallbag) * 30) + (parseInt(largebag) * 55) + 45
+            } else if (district = "Almarwa") {
+                cost = (parseInt(smallbag) * 30) + (parseInt(largebag) * 55) + 35
+            } else if (district = "Alfaisalyah") {
+                cost = (parseInt(smallbag) * 30) + (parseInt(largebag) * 55) + 40
+            } else if (district = "Aljamah") {
+                cost = (parseInt(smallbag) * 30) + (parseInt(largebag) * 55) + 45
+            } else if (district = "Alnarjes") {
+                cost = (parseInt(smallbag) * 30) + (parseInt(largebag) * 55) + 35
+            } else if (district = "Alolay") {
+                cost = (parseInt(smallbag) * 30) + (parseInt(largebag) * 55) + 40
+            } else if (district = "Alsowaide") {
+                cost = (parseInt(smallbag) * 30) + (parseInt(largebag) * 55) + 45
+            }
+
+            document.getElementById("totalcostprint").innerHTML = cost;
+        }
+    </script>
 
 </body>
 
