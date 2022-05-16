@@ -106,3 +106,39 @@ var swiper = new Swiper(".review-slider", {
         },
     },
 });
+
+
+
+
+function totalcostfun() {
+    var elt1 = document.getElementById("District");
+    var dliverycost = elt1.options[elt1.selectedIndex].value;
+
+    var elt2 = document.getElementById("smallb");
+    var smallbag = elt2.options[elt2.selectedIndex].value;
+
+    var elt3 = document.getElementById("Largeb");
+    var largebag = elt3.options[elt3.selectedIndex].value;
+
+    var cost;
+    var vat15;
+    var pricewithoutvat;
+
+    dliverycost = parseInt(dliverycost);
+    smallbag = parseInt(smallbag);
+    largebag = parseInt(largebag);
+
+    cost = (smallbag * 30) + (largebag * 55) + dliverycost;
+
+    pricewithoutvat = (cost / 1.15);
+    vat15 = cost - pricewithoutvat;
+
+    document.getElementById("smallbags").value = smallbag;
+    document.getElementById("largebags").value = largebag;
+    document.getElementById("dlivcost").value = dliverycost;
+    document.getElementById("pricenovat").value = pricewithoutvat.toFixed(2);
+    document.getElementById("vat").value = vat15.toFixed(2);
+    document.getElementById("PicExtPrice").value = cost;
+
+
+};
