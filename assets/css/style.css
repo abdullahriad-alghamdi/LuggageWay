@@ -801,7 +801,7 @@ header .icons i:hover {
 
 .wrapper {
     display: flex;
-    height: 100vh;
+    height: fit-content;
 }
 
 .sidebar {
@@ -887,9 +887,10 @@ header .icons i:hover {
 
 /* new order page starting */
 
-.newordersection {
+
+/* .newordersection {
     height: 290vh;
-}
+} */
 
 .message_contatnte {
     display: none;
@@ -914,7 +915,7 @@ header .icons i:hover {
 
 .wrapper_neworder {
     display: flex;
-    height: 280vh;
+    height: fit-content;
 }
 
 
@@ -938,7 +939,7 @@ header .icons i:hover {
 
 /* Clear floats after the columns */
 
-.row:after {
+.row-2:after {
     content: "";
     display: table;
     clear: both;
@@ -1080,16 +1081,16 @@ header .icons i:hover {
     html {
         font-size: 55%;
     }
-    .newordersection {
+    /* .newordersection {
         height: 250rem;
     }
     .settingssection {
         height: 90rem;
-    }
-    .wrapper_neworder,
+    } */
+    /* .wrapper_neworder,
     .wrapper {
         height: 30vh;
-    }
+    } */
     .box-neworder {
         width: 100%;
     }
@@ -1102,16 +1103,16 @@ header .icons i:hover {
     section {
         padding: 2rem;
     }
-    .newordersection {
+    /* .newordersection {
         height: 240rem;
     }
     .settingssection {
         height: 100rem;
-    }
-    .wrapper_neworder,
+    } */
+    /* .wrapper_neworder,
     .wrapper {
         height: 320vh;
-    }
+    } */
     .box-neworder {
         width: 100%;
     }
@@ -1141,16 +1142,16 @@ header .icons i:hover {
         margin: 1.5rem 0;
         background: #222;
     }
-    .newordersection {
+    /* .newordersection {
         height: 205vh;
-    }
-    .settingssection {
+    } */
+    /* .settingssection {
         height: 75vh;
-    }
-    .wrapper_neworder,
+    } */
+    /* .wrapper_neworder,
     .wrapper {
         height: 25vh;
-    }
+    } */
     .box-neworder {
         width: 100%;
     }
@@ -1167,9 +1168,9 @@ header .icons i:hover {
         width: 100%;
         margin-top: 0;
     }
-    .newordersection {
+    /* .newordersection {
         height: 330vh;
-    }
+    } */
 }
 
 @media (max-width: 450px) {
@@ -1191,16 +1192,16 @@ header .icons i:hover {
     .contant_userpage {
         margin-left: 0%;
     }
-    .newordersection {
+    /* .newordersection {
         height: 255vh;
-    }
-    .settingssection {
+    } */
+    /* .settingssection {
         height: 85vh;
-    }
-    .wrapper_neworder,
+    } */
+    /* .wrapper_neworder,
     .wrapper {
         height: 25vh;
-    }
+    } */
     .box-neworder {
         width: 100%;
     }
