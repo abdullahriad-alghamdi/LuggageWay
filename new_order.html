@@ -295,6 +295,70 @@
                             <input type="text" placeholder="Enter Street or location from google map" class="box-neworder" required /><br /><br />
                         </div>
                     </div>
+                    <br>
+                    <br>
+                    <h2>Summary</h2>
+                    <br>
+                    <br>
+                    <div class="row-2">
+                        <div class="col-25">
+                            <label>Small bags</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="smallbags" readonly/>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row-2">
+                        <div class="col-25">
+                            <label>Large bags</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="largebags" readonly/>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row-2">
+                        <div class="col-25">
+                            <label>Dlivary cost</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="dlivcost" readonly/>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row-2">
+                        <div class="col-25">
+                            <label>Total without vat15%:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="pricenovat" readonly/>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row-2">
+                        <div class="col-25">
+                            <label>VAT15%</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="vat" readonly/>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row-2">
+                        <div class="col-25">
+                            <label>Total:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="PicExtPrice" readonly/>
+                        </div>
+                    </div>
+                    <br>
                     <input type="checkbox" required />
                     <a href="assets\terms_And_conditions.pdf">
                   I have read and agree / agreed with the terms and conditions</a>
@@ -302,9 +366,6 @@
                     <input type="reset" value="Reset" class="btn" />
                     <input type="submit" onclick="window.location = 'Checkout.html';" value="Go to Payment" class="btn" />
                 </form>
-                <p id="totalcostprint" class="box-neworder">
-
-                </p>
             </main>
         </div>
 
@@ -346,52 +407,23 @@
 
     <!-- custom js file link  -->
     <script src="assets\js\script.js"></script>
+    <!-- independent selection by using javaquery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
             $("#City").change(function() {
                 var val = $(this).val();
                 if (val == "riyadh") {
-                    $("#District").html("<option value='test'>Alnarjes</option><option value='test2'>Alolay</option><option value='test3'>Alsowaide</option>");
+                    $("#District").html("<option value='0'>Choose a district</option><option value='35'>Alnarjes</option><option value='40'>Alolay</option><option value='45'>Alsowaide</option>");
                 } else if (val == "jeddah") {
-                    $("#District").html("<option value='test'>Almarwa</option><option value='test2'>Alfaisalyah</option><option value='test3'>Aljamah</option>");
+                    $("#District").html("<option value='0'>Choose a district</option><option value='35'>Almarwa</option><option value='40'>Alfaisalyah</option><option value='45'>Aljamah</option>");
                 } else if (val == "dammam") {
-                    $("#District").html("<option value='test'>Almanar</option><option value='test2'>Alshefa</option><option value='test3'>Alshate</option>");
+                    $("#District").html("<option value='0'>Choose a district</option><option value='35'>Almanar</option><option value='40'>Alshefa</option><option value='45'>Alshate</option>");
                 } else if (val == "zero") {
                     $("#District").html("<option value=''>Choose a district</option>");
                 }
             });
         });
-
-
-        function totalcostfun() {
-            var district = document.getElementById("District").innerHTML;
-            var smallbag = document.getElementById("smallb").innerHTML;
-            var largebag = document.getElementById("Largeb").innerHTML;
-            var cost
-
-            if (district = "Almanar") {
-                cost = (parseInt(smallbag) * 30) + (parseInt(largebag) * 55) + 35;
-            } else if (district = "Alshefa") {
-                cost = (parseInt(smallbag) * 30) + (parseInt(largebag) * 55) + 40;
-            } else if (district = "Alshate") {
-                cost = (parseInt(smallbag) * 30) + (parseInt(largebag) * 55) + 45;
-            } else if (district = "Almarwa") {
-                cost = (parseInt(smallbag) * 30) + (parseInt(largebag) * 55) + 35;
-            } else if (district = "Alfaisalyah") {
-                cost = (parseInt(smallbag) * 30) + (parseInt(largebag) * 55) + 40;
-            } else if (district = "Aljamah") {
-                cost = (parseInt(smallbag) * 30) + (parseInt(largebag) * 55) + 45;
-            } else if (district = "Alnarjes") {
-                cost = (parseInt(smallbag) * 30) + (parseInt(largebag) * 55) + 35;
-            } else if (district = "Alolay") {
-                cost = (parseInt(smallbag) * 30) + (parseInt(largebag) * 55) + 40;
-            } else if (district = "Alsowaide") {
-                cost = (parseInt(smallbag) * 30) + (parseInt(largebag) * 55) + 45;
-            }
-
-            document.getElementById("totalcostprint").value = cost;
-        }
     </script>
 
 </body>

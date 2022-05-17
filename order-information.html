@@ -16,14 +16,24 @@
         }
         
         table {
-            width: 80vw;
+            width: fit-content;
         }
         
-        .col-sm-9 {
+        .midel_part {
             background-color: rgb(237, 237, 237);
-            margin-right: 40px;
-            padding: 20px 100px;
+            padding: 5% 10%;
             border: 1px solid slategrey;
+            width: fit-content;
+            height: fit-content;
+        }
+        
+        .midel_part td {
+            width: 250px;
+            text-align: center;
+        }
+        
+        .midel_part table {
+            border: 1px solid black;
         }
         
         ul.linking li {
@@ -97,86 +107,66 @@
             <br>
             <br>
             <!--Middle Part Start-->
-            <div class="col-sm-9">
+
+            <div class="midel_part">
 
                 <table>
+                    <tr>
+                        <th>
+                            <b>Order ID:</b> #003
+                            <br>
+                            <b>Date Added:</b> 20/06/2016
+                        </th>
+                        <th style="padding:50px;">
+                            <b>Payment Method:</b> Online
+                            <br>
+                        </th>
+                    </tr>
 
-                    <tbody>
-                        <tr>
-                            <td style="width: 50%;"> <b>Order ID:</b> #003
-                                <br>
-                                <b>Date Added:</b> 20/06/2016</td>
-                            <td style="width: 50%;"> <b>Payment Method:</b> Online
-                                <br>
-                            </td>
-                        </tr>
-                    </tbody>
+                    <tr>
+                        <td><b>Order #003:</b></td>
+                        <td>$498</td>
+                    </tr>
+                    <tr>
+                        <td><b>Delivery cost:</b></td>
+                        <td>$5</td>
+                    </tr>
+                    <tr>
+                        <td>VAT (15%):</td>
+                        <td>$15</td>
+                    </tr>
+                    <tr>
+                        <td><b>Total:</b></td>
+                        <td>$518</td>
+                    </tr>
+
                 </table>
-
-                <div>
-                    <table>
-                        <br>
-                        <br>
-                        <tfoot>
-                            <tr>
-                                <td></td>
-                                <td><b>Order #003</b>
-                                </td>
-                                <td>$498</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td><b>Delivery cost</b>
-                                </td>
-                                <td>$5</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td><b>VAT (20%)</b>
-                                </td>
-                                <td>$15</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td><b>Total</b>
-                                </td>
-                                <td>$518</td>
-                                <td></td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
                 <br>
                 <br>
-                <h3>Order History</h3>
+                <br>
+                <br>
+                <h3>Order History:</h3>
                 <table>
-                    <thead>
-                        <tr>
-                            <td>Date Added</td>
-                            <td>Status</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>20/06/2016</td>
-                            <td>Processing</td>
-                        </tr>
-                        <tr>
-                            <td>21/06/2016</td>
-                            <td>Shipped</td>
-                        </tr>
-                        <tr>
-                            <td>24/06/2016</td>
-                            <td>Complete</td>
-                        </tr>
-                    </tbody>
+                    <tr>
+                        <th>Date Added</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>20/06/2016</td>
+                        <td>Processing</td>
+                    </tr>
+                    <tr>
+                        <td>21/06/2016</td>
+                        <td>Shipped</td>
+                    </tr>
+                    <tr>
+                        <td>24/06/2016</td>
+                        <td>Complete</td>
+                    </tr>
                 </table>
-
 
             </div>
+        </main>
     </section>
     <!-- //Main Container -->
 
