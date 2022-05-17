@@ -464,7 +464,7 @@
                 <p><a href="#">Large bags</a> <span class="price" id="pricenovat">1</span></p>
                 <p><a href="#">Small bags</a> <span class="price" id="pricenovat">1</span></p>
                 <p><a href="#">Delivery cost</a> <span class="price">$5</span></p>
-                <p><a href="#">Total without vat15%t</a> <span class="price">$5</span></p>
+                <p><a href="#">Total without VAT(15%)</a> <span class="price">$5</span></p>
                 <p><a href="#">VAT (15%)</a> <span class="price">$15</span></p>
 
                 <hr>
@@ -499,7 +499,7 @@
                                 </div>
                                 <div class="ccv">
                                     <label>CCV</label>
-                                    <div style="  font-size: 15px;"></div>
+                                    <div style="  font-size: 15px;">***</div>
                                 </div>
                             </div>
                         </div>
@@ -552,7 +552,7 @@
                         </fieldset>
                         <fieldset class="fieldset-ccv">
                             <label for="card-ccv">CCV</label>
-                            <input type="text" onkeypress="return isNumber(event)" id="card-ccv" maxlength="3" required />
+                            <input type="password" onkeypress="return isNumber(event)" id="card-ccv" maxlength="3" required />
                         </fieldset>
                         <button type="submit" class="pymentbtn"><i class="fa fa-lock"></i> submit</button>
                     </form>
@@ -643,9 +643,7 @@
         .on("blur", function() {
             $(".credit-card-box").removeClass("hover");
         })
-        .on("keyup change", function() {
-            $(".ccv div").html($(this).val());
-        });
+
 
     function allowOnlyLetters(e, t) {
         if (window.event) {
@@ -655,7 +653,7 @@
         } else {
             return true;
         }
-        if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+        if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123 || charCode == 32))
             return true;
         else {
             alert("Please enter only alphabets");
