@@ -25,7 +25,7 @@ html {
 }
 
 body::-webkit-scrollbar {
-    width: 0.25rem;
+    width: 0.45rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -68,6 +68,10 @@ section {
 .btn:hover {
     background: rgba(179, 179, 179, 0.2);
     color: var(--blue);
+}
+
+.fa {
+    text-shadow: 0 1px 1px rgb(4, 3, 3, 0.1);
 }
 
 

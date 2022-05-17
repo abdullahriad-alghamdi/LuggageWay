@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .as-console-wrapper {
+            width: 350px;
+            min-height: 100%;
+            margin-left: 45%;
+        }
+        
+        .as-console-row.as-console-row::after {
+            content: '';
+            padding: 0;
+            margin: 0;
+            border: 0;
+            width: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="paymentform">
+
+        <div class="page-title">
+            <h1>Create A Blog</h1>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-control">
+                    <input type="text" name="title" value="" placeholder="Title">
+                </div>
+                <div class="form-control">
+                    <input type="text" name="slug" value="" placeholder="Slug">
+                </div>
+
+                <button type="submit" onclick="syncData(document.paymentform)"></button>
+            </div>
+
+        </div>
+    </form>
+
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+        document.getElementById("button").addEventListener('click', function() {
+            var text = document.getElementById('text');
+            text.value += ' after clicking';
+        });
+    </script>
+</body>
+
+</html>

@@ -206,7 +206,8 @@
                                         <label for="cname">Name on Card</label>
                                         <input type="text" id="cname" name="cardname" placeholder="Hamad al Majed" required>
                                         <label for="ccnum">Credit card number</label>
-                                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" maxlength="16" required>
+                                        <input type="text" id="ccnum" name="cardnumberx" placeholder="1111-2222-3333-4444" maxlength="16" required>
+                                        <input type="text" id="ccnum" name="cardnumbery" placeholder="1111-2222-3333-4444" maxlength="8" required>
                                         <div class="row">
                                             <div class="col-50">
                                                 <label for="expyear">Exp Year</label>
@@ -224,7 +225,7 @@
 
                                 </div>
 
-                                <input type="submit" value="Continue to checkout" onclick="creditCardValidation(document.paymentform.cardnumber)" class="btn">
+                                <input type="submit" value="Continue to checkout" onclick="creditCardValidation(document.paymentform.cardnumberx)" class="btn">
                             </form>
                         </div>
                     </div>
