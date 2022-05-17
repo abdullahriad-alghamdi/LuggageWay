@@ -7,125 +7,345 @@
     <title>LuggageWay - client</title>
     <!-- Font Aowesome kit's code  -->
     <script src="https://kit.fontawesome.com/8ebc734131.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
     <!-- custom css file link  -->
+    <link rel="stylesheet" href="assets\css\style.css" />
     <link rel="stylesheet" href="assets\css\style.css" />
 
     <style>
         header {
-            background: rgba(51, 51, 51);
+            background: rgb(51, 51, 51);
         }
         
-        .row {
-            display: -ms-flexbox;
-            /* IE10 */
-            display: flex;
-            -ms-flex-wrap: wrap;
-            /* IE10 */
-            flex-wrap: wrap;
-            margin: 0 -16px;
+        body {
+            background: linear-gradient(50deg, #b6b3b3, rgb(160, 213, 228));
         }
+        /*-------------------- Buttons --------------------*/
         
-        .col-25 {
-            -ms-flex: 25%;
-            /* IE10 */
-            flex: 25%;
-        }
-        
-        .col-50 {
-            -ms-flex: 50%;
-            /* IE10 */
-            flex: 50%;
-        }
-        
-        .col-75 {
-            -ms-flex: 75%;
-            /* IE10 */
-            flex: 75%;
-        }
-        
-        .col-25,
-        .col-50,
-        .col-75 {
-            padding: 0 16px;
-        }
-        
-        .container {
-            background-color: #f2f2f2;
-            padding: 5px 20px 15px 20px;
-            border: 1px solid lightgrey;
-            border-radius: 3px;
-        }
-        
-        input[type=text] {
-            width: 100%;
-            margin-bottom: 20px;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        
-        input[type=number] {
-            width: 100%;
-            margin-bottom: 20px;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        
-        label {
-            margin-bottom: 10px;
+        .pymentbtn {
             display: block;
+            background: #bded7d;
+            color: #fff;
+            text-decoration: none;
+            margin: 20px 0;
+            padding: 15px 15px;
+            border-radius: 5px;
+            position: relative;
         }
         
-        .icon-container {
-            margin-bottom: 20px;
-            padding: 7px 0;
-            font-size: 24px;
+        .pymentbtn::after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 0.2s ease-in-out;
+            box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0), 0 3px 3px rgba(0, 0, 0, .2);
+            border-radius: 5px;
         }
         
-        .btn {
-            background-color: #04AA6D;
-            color: white;
-            padding: 12px;
-            margin: 10px 0;
+        .pymentbtn:hover::after {
+            background: rgba(0, 0, 0, 0.1);
+            box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.2);
+        }
+        /*-------------------- Form --------------------*/
+        
+        .form fieldset {
+            border: none;
+            padding: 0;
+            padding: 10px 0;
+            position: relative;
+            clear: both;
+        }
+        
+        .form fieldset.fieldset-expiration {
+            float: left;
+            width: 60%;
+        }
+        
+        .form fieldset.fieldset-expiration .select {
+            width: 84px;
+            margin-right: 12px;
+            float: left;
+        }
+        
+        .form fieldset.fieldset-ccv {
+            clear: none;
+            float: right;
+            width: 86px;
+        }
+        
+        .form fieldset label {
+            display: block;
+            text-transform: uppercase;
+            font-size: 11px;
+            color: rgba(0, 0, 0, .6);
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-family: Inconsolata;
+        }
+        
+        .form fieldset input,
+        .form fieldset .select {
+            width: 100%;
+            height: 38px;
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 15px;
+            outline: none !important;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .form fieldset input.input-cart-number,
+        .form fieldset .select.input-cart-number {
+            display: inline-block;
+            margin-right: 8px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        
+        .form fieldset input.input-cart-number:last-child,
+        .form fieldset .select.input-cart-number:last-child {
+            margin-right: 0;
+        }
+        
+        .form fieldset .select {
+            position: relative;
+        }
+        
+        .form fieldset .select::after {
+            content: '';
+            border-top: 8px solid #222;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            position: absolute;
+            z-index: 2;
+            top: 14px;
+            right: 10px;
+            pointer-events: none;
+        }
+        
+        .form fieldset .select select {
+            appearance: none;
+            position: absolute;
+            padding: 0;
             border: none;
             width: 100%;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 17px;
+            outline: none;
+            top: 6px;
+            left: 6px;
+            background: none;
         }
         
-        .btn:hover {
-            background-color: #45a049;
+        .form fieldset .select select :-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 #000;
         }
         
-        a {
-            color: #2196F3;
+        .form button {
+            width: 100%;
+            outline: none;
+            background: linear-gradient(180deg, #4ea8a4, #3d8291);
+            text-transform: uppercase;
+            font-weight: bold;
+            border: none;
+            box-shadow: none;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            margin-top: 90px;
         }
         
-        hr {
-            border: 1px solid lightgrey;
+        .form button .fa {
+            margin-right: 6px;
+        }
+        /*-------------------- Checkout --------------------*/
+        
+        .checkout {
+            left: 40%;
+            margin: 150px auto 30px;
+            position: relative;
+            width: 460px;
+            background: white;
+            border-radius: 15px;
+            padding: 160px 45px 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, .1);
+        }
+        /*-------------------- Credit Card --------------------*/
+        
+        .credit-card-box {
+            perspective: 1000;
+            width: 400px;
+            height: 280px;
+            position: absolute;
+            top: -112px;
+            left: 50%;
+            transform: translateX(-50%);
         }
         
-        span.price {
-            float: right;
-            color: grey;
+        .credit-card-box:hover .flip,
+        .credit-card-box.hover .flip {
+            transform: rotateY(180deg);
         }
         
-        .container p a {
-            padding: 6.5px;
+        .credit-card-box .front,
+        .credit-card-box .back {
+            width: 400px;
+            height: 250px;
+            border-radius: 15px;
+            backface-visibility: hidden;
+            background: linear-gradient(135deg, #5e7db6, var(--blue));
+            position: absolute;
+            color: #fff;
+            top: 0;
+            left: 0;
+            text-shadow: 0 1px 1px rgba(121, 121, 121, 0.3);
+            box-shadow: 0 1px 1px rgba(111, 111, 111, 0.3);
         }
         
-        @media (max-width: 800px) {
-            .row {
-                flex-direction: column-reverse;
-            }
-            .col-25 {
-                margin-bottom: 20px;
-            }
+        .credit-card-box .flip {
+            transition: 0.5s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        /* card rotation  */
+        
+        .credit-card-box .back {
+            transform: rotateY(180deg);
+        }
+        /* logo */
+        
+        .credit-card-box .logo {
+            position: absolute;
+            top: 9px;
+            right: 20px;
+            width: 60px;
+            display: flex;
+            flex-direction: row;
+        }
+        /* logo positon  */
+        
+        .credit-card-box .front .logo {
+            top: 10px;
+            right: 65px;
+        }
+        
+        .credit-card-box .back .logo {
+            top: 185px;
+            left: 15px;
+        }
+        /* logo spaceing  */
+        
+        .credit-card-box .back .logo i {
+            padding: 12%;
+        }
+        
+        .credit-card-box .front .logo i {
+            padding: 12%;
+        }
+        /* square chip properties */
+        
+        .credit-card-box .chip {
+            position: absolute;
+            width: 60px;
+            height: 45px;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #ddccf0 0%, #d1e9f5 44%, #f8ece7 100%);
+            border-radius: 8px;
+        }
+        /* square inside the chip */
+        
+        .credit-card-box .chip::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border: 4px solid rgba(128, 128, 128, .1);
+            width: 80%;
+            height: 70%;
+            border-radius: 5px;
+        }
+        /* back strip styling */
+        
+        .credit-card-box .strip {
+            background: linear-gradient(135deg, #404040, #1a1a1a);
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            top: 30px;
+            left: 0;
+        }
+        /* credit card holder name box input styling */
+        
+        .credit-card-box .number {
+            position: absolute;
+            margin: 0 auto;
+            top: 103px;
+            left: 19px;
+            font-size: 35px;
+        }
+        /* credit card box text lable styling */
+        
+        .credit-card-box label {
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-shadow: none;
+            text-transform: uppercase;
+            font-weight: normal;
+            opacity: 0.5;
+            display: block;
+            margin-bottom: 3px;
+        }
+        /* card holder credit card box card expiration date styling */
+        
+        .credit-card-box .card-holder,
+        .credit-card-box .card-expiration-date {
+            position: absolute;
+            margin: 0 auto;
+            top: 180px;
+            left: 19px;
+            font-size: 22px;
+            text-transform: capitalize;
+        }
+        /* credit card expiration date box text lable styling */
+        
+        .credit-card-box .card-expiration-date {
+            text-align: right;
+            left: auto;
+            right: 20px;
+        }
+        /* cvv box input box styling */
+        
+        .credit-card-box .ccv {
+            height: 36px;
+            background: #fff;
+            width: 91%;
+            border-radius: 5px;
+            top: 110px;
+            left: 0;
+            right: 0;
+            position: absolute;
+            margin: 0 auto;
+            color: #000;
+            text-align: right;
+            padding: 10px;
+        }
+        /* cvv box text lable styling */
+        
+        .credit-card-box .ccv label {
+            margin: -25px 0 14px;
+            color: #fff;
         }
         
         ul.linking li {
+            text-transform: capitalize;
             display: inline-block;
             padding: 0 17px 0 8px;
             margin-right: 7px;
@@ -135,9 +355,31 @@
         ul.linking li a {
             display: block;
             padding: 0;
-            color: rgb(14, 12, 12);
+            color: rgb(255, 255, 255);
             text-decoration: none;
             font-size: 14px;
+        }
+        
+        ul.linking li a:hover {
+            color: black;
+            text-shadow: 0 2px 1px rgba(255, 255, 255, 0.3);
+        }
+        
+        .input-group-addon {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .input-group-addon i {
+            width: fit-content;
+            height: fit-content;
+            padding: 12px;
+            font-size: 14px;
+            color: #000;
+            background-color: rgb(199, 199, 199);
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
         }
     </style>
 
@@ -185,62 +427,95 @@
 
             </ul>
 
-            <main class="content-body">
+            <main>
 
-                <h1>Checkout</h1>
-                <div class="row">
-                    <div class="col-75">
-                        <div class="container">
-                            <form name="paymentform" action="#">
-
-                                <div class="row">
-
-
-                                    <div class="col-50">
-                                        <h3>Payment</h3>
-                                        <label for="fname">Accepted Cards</label>
-                                        <div class="icon-container">
-                                            <i class="fa fa-cc-visa" style="color:navy;"></i>
-                                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                                        </div>
-                                        <label for="cname">Name on Card</label>
-                                        <input type="text" id="cname" name="cardname" placeholder="Hamad al Majed" required>
-                                        <label for="ccnum">Credit card number</label>
-                                        <input type="text" id="ccnum" name="cardnumberx" placeholder="1111-2222-3333-4444" maxlength="16" required>
-                                        <input type="text" id="ccnum" name="cardnumbery" placeholder="1111-2222-3333-4444" maxlength="8" required>
-                                        <div class="row">
-                                            <div class="col-50">
-                                                <label for="expyear">Exp Year</label>
-                                                <input type="text" id="expyear" name="expyear" placeholder="25" maxlength="2">
-                                            </div>
-                                            <div class="col-50">
-                                                <label for="expmonth">Exp Month</label>
-                                                <input type="text" id="expmonth" name="expmonth" placeholder="12" maxlength="2">
-                                            </div>
-                                        </div>
-                                        <label for="cvv">CVV</label>
-                                        <input type="text" id="cvv" name="cvv" placeholder="352" maxlength="3">
-
-                                    </div>
+                <div class="checkout">
+                    <div class="credit-card-box">
+                        <div class="flip">
+                            <div class="front">
+                                <div class="chip"></div>
+                                <div class="logo">
+                                    <i class="fa fa-cc-mastercard" style="font-size:36px"></i>
+                                    <i class="fa fa-cc-visa" style="font-size:36px"></i>
+                                </div>
+                                <div class="number"></div>
+                                <div class="card-holder">
+                                    <label>Card holder</label>
+                                    <div></div>
+                                </div>
+                                <div class="card-expiration-date">
+                                    <label>Expires</label>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="strip"></div>
+                                <div class="logo">
+                                    <i class="fa fa-cc-mastercard" style="font-size:36px"></i>
+                                    <i class="fa fa-cc-visa" style="font-size:36px"></i>
 
                                 </div>
-
-                                <input type="submit" value="Continue to checkout" onclick="creditCardValidation(document.paymentform.cardnumberx)" class="btn">
-                            </form>
+                                <div class="ccv">
+                                    <label>CCV</label>
+                                    <div style="  font-size: 15px;"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-25">
-                        <div class="container">
-                            <h4>Cart <span class="price" style="color:black"></span></h4>
-                            <p><a href="#">Order #003</a> <span class="price" id="pricenovat">SAR</span></p>
-                            <p><a href="#">Delivery cost</a> <span class="price">$5</span></p>
-                            <p><a href="#">VAT (15%)</a> <span class="price">$15</span></p>
+                    <form class="form" onsubmit="creditCardValidation(document.paymentform.cardnumber)" name="paymentform" autocomplete="off">
+                        <fieldset>
+                            <label for="card-number">Card Number</label>
 
-                            <hr>
-                            <p>Total <span class="price" style="color:black"><b>$518</b></span></p>
-                        </div>
-                    </div>
+                            <span class="input-group-addon"><i class="fa fa-credit-card"></i> <input type="text" onkeypress="return isNumber(event)" id="cardnumber" class="input-cart-number" maxlength="16" required/></span>
+                        </fieldset>
+                        <fieldset>
+                            <label for="">Card holder</label>
+                            <input type="text" onkeypress="return allowOnlyLetters(event,this);" id="card-holder" maxlength="25" />
+                        </fieldset>
+                        <fieldset class="fieldset-expiration">
+                            <label for="card-expiration-month">Expiration date</label>
+                            <div class="select">
+                                <select id="card-expiration-month" required>
+            <option></option>
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+            <option>05</option>
+            <option>06</option>
+            <option>07</option>
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+          </select>
+                            </div>
+                            <div class="select">
+                                <select id="card-expiration-year" required>
+            <option></option>
+
+            <option>2022</option>
+            <option>2023</option>
+            <option>2024</option>
+            <option>2025</option>            
+            <option>2026</option>
+            <option>2027</option>
+            <option>2028</option>
+            <option>2029</option>
+            <option>2030</option>
+            <option>2031</option>
+          </select>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset-ccv">
+                            <label for="card-ccv">CCV</label>
+                            <input type="text" onkeypress="return isNumber(event)" id="card-ccv" maxlength="3" required />
+                        </fieldset>
+                        <button type="submit" class="pymentbtn"><i class="fa fa-lock"></i> submit</button>
+                    </form>
                 </div>
+
             </main>
         </div>
     </section>
@@ -280,23 +555,97 @@
 
     <!-- custom js file link  -->
     <script src="assets\js\script.js"></script>
-    <script>
-        function creditCardValidation(creditCradNum) {
-            var master = /^(?:5[1-5][0-9]{14})$/;
-            var vis = /^4[0-9]{12}(?:[0-9]{3})?$/;
-            if (creditCradNum.value.match(master)) {
-                alert("valid Mastercard number!");
-                return true;
-            } else if (creditCradNum.value.match(vis)) {
 
-                alert("valid Visa card number!");
-                return true;
-            } else {
-                alert("Not valid Card number!");
-                return false;
-            }
-        }
-    </script>
 </body>
+<script>
+    $(".input-cart-number").on("keyup change", function() {
+        $t = $(this);
+
+        if ($t.val().length > 3) {
+            $t.next().focus();
+        }
+
+        var card_number = "";
+        $(".input-cart-number").each(function() {
+            card_number += $(this).val() + " ";
+            // if ($(this).val().length == 4) {
+            //     $(this).next().focus();
+            // }
+        });
+
+        $(".credit-card-box .number").html(card_number);
+    });
+    // showing the card holder name in the card while writing 
+
+    $("#card-holder").on("keyup change", function() {
+        $t = $(this);
+        $(".credit-card-box .card-holder div").html($t.val());
+    });
+    // showing the card expiration date in the card while writing 
+
+    $("#card-expiration-month, #card-expiration-year").change(function() {
+        m = $("#card-expiration-month option").index(
+            $("#card-expiration-month option:selected")
+        );
+        m = m < 10 ? "0" + m : m;
+        y = $("#card-expiration-year").val().substr(2, 2);
+        $(".card-expiration-date div").html(m + "/" + y);
+    });
+    // focus on the back of the card when clicking on the ccv box
+    // showing the cvv on the card while writing 
+
+    $("#card-ccv")
+        .on("focus", function() {
+            $(".credit-card-box").addClass("hover");
+        })
+        .on("blur", function() {
+            $(".credit-card-box").removeClass("hover");
+        })
+        .on("keyup change", function() {
+            $(".ccv div").html($(this).val());
+        });
+
+    function allowOnlyLetters(e, t) {
+        if (window.event) {
+            var charCode = window.event.keyCode;
+        } else if (e) {
+            var charCode = e.which;
+        } else {
+            return true;
+        }
+        if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+            return true;
+        else {
+            alert("Please enter only alphabets");
+            return false;
+        }
+    }
+
+    function isNumber(evt) {
+        evt = (evt) ? evt : window.event;
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+            alert("Please enter only numbers");
+            return false;
+        }
+        return true;
+    }
+
+    function creditCardValidation(creditCradNum) {
+        var master = /^(?:5[1-5][0-9]{14})$/;
+        var vis = /^4[0-9]{12}(?:[0-9]{3})?$/;
+        if (creditCradNum.value.match(master)) {
+            alert("valid Mastercard number!");
+            return true;
+        } else if (creditCradNum.value.match(vis)) {
+
+            alert("valid Visa card number!");
+            return true;
+        } else {
+            alert("Not valid Card number!");
+            return false;
+        }
+    }
+</script>
 
 </html>
