@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuggageWay - client</title>
+    <!-- Font Aowesome kit's code  -->
+    <script src="https://kit.fontawesome.com/8ebc734131.js" crossorigin="anonymous"></script>
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="assets\css\style.css" />
+    <style>
+        header {
+            background: rgba(51, 51, 51);
+        }
+        
+        .Travell_Info,
+        .Personal_Info,
+        .Luggage_Info,
+        .Address_Info,
+        .Summary_Info {
+            padding: 6.5rem;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+        }
+        
+        .Travell_Info,
+        .Personal_Info,
+        .Luggage_Info,
+        .Address_Info,
+        .Summary_Info>select,
+        input {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header section starts  -->
+
+    <header class="users_page">
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a href="index.html" class="logo"><img herf="Home.html" src="assets\images\logo.png" alt="LuggageWay" width="150px" /></a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="index.html#about_us">About us</a>
+            <a href="index.html#recruitment">Recruitment</a>
+            <a href="index.html#sponsors">Sponsors</a>
+            <a href="index.html#review">Reviews</a>
+            <a href="index.html#contact_us">Contact us</a>
+        </nav>
+
+        <div class="icons">
+            <div class="dropdown">
+                <i class="fa fa-user-circle-o dropbtn"></i>
+                <div class="dropdown-content">
+                    <a href="client.html">My account</a>
+                    <a href="index.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- My account container starts -->
+
+    <!-- My account container ends -->
+
+    <!-- client body section starts  -->
+
+    <section class="newordersection">
+        <div class="wrapper">
+            <aside class="sidebar">
+                <h3>client</h3>
+
+                <nav class="menu">
+                    <a href="client.html" class="menu-item"><i class="fas fa-list-alt"></i> My Orders</a
+            >
+            <a href="new_order.html" class="menu-item is-active"
+              ><i class="fas fa-plus-circle"></i> New Order</a
+            >
+            <a href="settingsClient.html" class="menu-item"
+              ><i class="fas fa-cog"></i> Settings</a
+            >
+          </nav>
+        </aside>
+
+        <main class="content-body">
+          <h1>New Order</h1>
+
+          <form
+            name="neworderform"
+            action="/action_page.php"
+            class="contant_userpage"
+            onsubmit="alert('your account has been successfully created!')"
+          >
+            <h3></h3>
+            <br />
+            <br />
+            <div class="Travell_Info">
+              <h2>Travell Info</h2>
+              <br />
+              <div class="row-2">
+                <div class="col-25">
+                  <label>Depart airport</label>
+                </div>
+                <div class="col-75">
+                  <select id="Depart_airport" class="box-neworder" required>
+                    <option value="INVALID">Choose an airport</option>
+                    <option>King Fahd International Airport</option>
+                    <option>king Khalid International Airport</option>
+                    <option>king Abdulaziz International Airport</option>
+                  </select>
+                </div>
+              </div>
+              <br />
+              <div class="row-2>">
+                <div class="col-25">
+                  <label>Airline</label>
+                </div>
+                <div class="col-75">
+                  <select id="Airline" class="box-neworder" required>
+                    <option value="INVALID">Choose an airline</option>
+                    <option>Saudia</option>
+                    <option>Flynas</option>
+                    <option>Flyadeal</option>
+                  </select>
+                </div>
+              </div>
+              <br /><br />
+              <div class="row-2">
+                <div class="col-25">
+                  <label>Bording Time:</label>
+                </div>
+                <div class="col-75">
+                  <input type="time" class="box-neworder" autofocus required />
+                </div>
+              </div>
+              <br /><br />
+              <div class="row-2">
+                <div class="col-25">
+                  <label>Depart Time:</label>
+                </div>
+                <div class="col-75">
+                  <input type="time" class="box-neworder" autofocus required />
+                </div>
+              </div>
+              <br /><br />
+              <div class="row-2">
+                <div class="col-25">
+                  <label>Booking Number:</label>
+                </div>
+                <div class="col-75">
+                  <input
+                    type="text"
+                    class="box-neworder"
+                    placeholder="Enter your Booking Number"
+                    autofocus
+                    required
+                  />
+                </div>
+              </div>
+              <br /><br />
+              <div class="row-2">
+                <div class="col-25">
+                  <label>Depart Date</label>
+                </div>
+                <div class="col-75">
+                  <input type="date" class="box-neworder" autofocus required />
+                </div>
+              </div>
+            </div>
+            <br />
+            <br />
+            <div class="Personal_Info">
+              <h2>Personal Info</h2>
+              <br />
+              <br />
+              <div class="row-2">
+                <div class="col-25">
+                  <label>Name:</label>
+                </div>
+                <div class="col-75">
+                  <input
+                    type="text"
+                    class="box-neworder"
+                    placeholder="Enter your full name"
+                    autofocus
+                    required
+                  />
+                </div>
+              </div>
+              <br /><br />
+              <div class="row-2">
+                <div class="col-25">
+                  <label>Phone:</label>
+                </div>
+                <div class="col-75">
+                  <input
+                    type="tel"
+                    placeholder="Enter your phone number"
+                    class="box-neworder"
+                    maxlength="10"
+                    pattern="(05)+(\d{8})$"
+                    required
+                  />
+                </div>
+              </div>
+              <br /><br />
+              <div class="row-2">
+                <div class="col-25">
+                  <label>Email:</label>
+                </div>
+                <div class="col-75">
+                  <input
+                    type="email"
+                    placeholder="Enter a valid email address"
+                    class="box-neworder"
+                    id="myEmail "
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <br />
+            <br />
+            <div class="Luggage_Info">
+              <h2>Luggage Info</h2>
+              <br />
+              <div class="row-2">
+                <div class="col-25">
+                  <label for="Largeb">Large bags:</label>
+                </div>
+                <div class="col-75">
+                  <select
+                    id="Largeb"
+                    class="box-neworder"
+                    onchange="totalcostfun()"
+                    required
+                  >
+                    <option value=" INVALID ">Choose a number</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                  <span class="moremessage">
+                    <i class="fa fa-exclamation-circle moremessage"></i>
+                    <p class="message_contatnte">this is small message</p>
+                  </span>
+                </div>
+              </div>
+              <br /><br />
+              <div class="row-2">
+                <div class="col-25">
+                  <label for="smallb">small bags:</label>
+                </div>
+                <div class="col-75">
+                  <select
+                    id="smallb"
+                    class="box-neworder"
+                    onchange="totalcostfun()"
+                    required
+                  >
+                    <option value=" INVALID ">Choose a number</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                  <span class="moremessage">
+                    <i class="fa fa-exclamation-circle moremessage"></i>
+                    <p class="message_contatnte">this is small message</p>
+                  </span>
+                </div>
+              </div>
+              <br /><br />
+
+              <div class="row-2">
+                <div class="col-25">
+                  <label for="comment"
+                    >Add any important details of your luggage</label
+                  >
+                </div>
+                <div class="col-75">
+                  <textarea
+                    type="text"
+                    name="Massage"
+                    class="box-neworder"
+                    placeholder="massage"
+                    cols="30"
+                    row-2s="10"
+                  ></textarea>
+                </div>
+              </div>
+              <br />
+              <br />
+              <div class="row-2">
+                <div class="col-25">
+                  <label>picup date</label>
+                </div>
+                <div class="col-75">
+                  <input
+                    type="date"
+                    class="box-neworder"
+                    autofocus
+                    required
+                  /><br /><br />
+                </div>
+              </div>
+              <div class="row-2">
+                <div class="col-25">
+                  <label>pickup Time:</label>
+                </div>
+                <div class="col-75">
+                  <input
+                    type="time"
+                    class="box-neworder"
+                    autofocus
+                    required
+                  /><br /><br />
+                </div>
+              </div>
+            </div>
+            <div class="Address_Info">
+              <h2>Address Info</h2>
+              <br />
+              <div class="row-2">
+                <div class="col-25">
+                  <label for="City">City:</label>
+                </div>
+                <div class="col-75">
+                  <select
+                    id="City"
+                    class="box-neworder"
+                    onchange="totalcostfun()"
+                    required
+                  >
+                    <option value="zero">Choose a city</option>
+                    <option value="riyadh">Riyadh</option>
+                    <option value="jeddah">Jeddah</option>
+                    <option value="dammam">Dammam</option></select
+                  ><br /><br />
+                </div>
+              </div>
+              <div class="row-2">
+                <div class="col-25">
+                  <label for="District">District: </label>
+                </div>
+                <div class="col-75">
+                  <select
+                    id="District"
+                    class="box-neworder"
+                    onchange="totalcostfun()"
+                    required
+                  >
+                    <option value="">Choose a district</option></select
+                  ><br /><br />
+                </div>
+              </div>
+              <div class="row-2">
+                <div class="col-25">
+                  <label>Buliding number:</label>
+                </div>
+                <div class="col-75">
+                  <input
+                    type="text"
+                    placeholder="Enter your buliding number"
+                    class="box-neworder"
+                    required
+                  /><br /><br />
+                </div>
+              </div>
+              <div class="row-2">
+                <div class="col-25">
+                  <label>Zip code:</label>
+                </div>
+                <div class="col-75">
+                  <input
+                    type="text"
+                    placeholder="Type your district zipcode"
+                    class="box-neworder"
+                    maxlength="5"
+                  /><br /><br />
+                </div>
+              </div>
+              <div class="row-2">
+                <div class="col-25">
+                  <label>Street:</label>
+                </div>
+                <div class="col-75">
+                  <input
+                    type="text"
+                    placeholder="Enter Street or location from google map"
+                    class="box-neworder"
+                    required
+                  /><br /><br />
+                </div>
+              </div>
+            </div>
+            <br />
+            <br />
+            <div class="Summary_Info">
+              <h2>Summary</h2>
+              <br />
+              <br />
+              <div class="row-2">
+                <div class="col-25">
+                  <label>Small bags</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="smallbags" readonly />
+                </div>
+              </div>
+              <br />
+
+              <div class="row-2">
+                <div class="col-25">
+                  <label>Large bags</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="largebags" readonly />
+                </div>
+              </div>
+              <br />
+
+              <div class="row-2">
+                <div class="col-25">
+                  <label>Dlivary cost</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="dlivcost" readonly />
+                </div>
+              </div>
+              <br />
+
+              <div class="row-2">
+                <div class="col-25">
+                  <label>Total without vat15%:</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="pricenovat" readonly />
+                </div>
+              </div>
+              <br />
+
+              <div class="row-2">
+                <div class="col-25">
+                  <label>VAT15%</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="vat" readonly />
+                </div>
+              </div>
+              <br />
+
+              <div class="row-2">
+                <div class="col-25">
+                  <label>Total:</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="PicExtPrice" readonly />
+                </div>
+              </div>
+            </div>
+            <br />
+            <input type="checkbox" required />
+            <a href="assets\terms_And_conditions.pdf">
+              I have read and agree / agreed with the terms and conditions</a
+            >
+            <br /><br />
+            <input type="reset" value="Reset" class="btn" />
+            <input
+              type="submit"
+              onclick="window.location = 'Checkout.html';"
+              value="Go to Payment"
+              class="btn"
+            />
+          </form>
+        </main>
+      </div>
+    </section>
+
+    <!-- footer section  stars -->
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Branch locations</h3>
+          <a href="# ">Saudi Arabia</a>
+        </div>
+        <div class="box">
+            <h3>Quick links</h3>
+            <a href="index.html">Home</a>
+            <a href="index.html#about_us">About us</a>
+            <a href="index.html#recruitment">Recruitment</a>
+            <a href="index.html#sponsors">Sponsors</a>
+            <a href="index.html#review">Reviews</a>
+            <a href="index.html#contact_us">Contact us</a>
+        </div>
+        <div class="social_media box">
+            <h3>Follow us</h3>
+            <br />
+            <li>
+                <a href="https://www.instagram.com/luggageway1/"><i class="fab fa-instagram"></i
+            ></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/Luggageway1"><i class="fab fa-twitter"></i
+            ></a>
+            </li>
+            <li>
+                <a href="linkedin.com/in/luggageway-company-935940239"><i class="fab fa-linkedin"></i
+            ></a>
+            </li>
+        </div>
+        </div>
+
+        <h1 class="credit">
+            created by <span> LuggageWay Team for gradutiom project </span> | all rights reserved!
+        </h1>
+    </section>
+
+    <!-- footer section ends -->
+
+    <!-- custom js file link  -->
+    <script src="assets\js\script.js"></script>
+    <!-- independent selection by using javaquery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#City").change(function() {
+                var val = $(this).val()
+                if (val == "riyadh") {
+                    $("#District").html(
+                        "<option value='0'>Choose a district</option><option value='35'>Alnarjes</option><option value='40'>Alolay</option><option value='45'>Alsowaide</option>"
+                    )
+                } else if (val == "jeddah") {
+                    $("#District").html(
+                        "<option value='0'>Choose a district</option><option value='35'>Almarwa</option><option value='40'>Alfaisalyah</option><option value='45'>Aljamah</option>"
+                    )
+                } else if (val == "dammam") {
+                    $("#District").html(
+                        "<option value='0'>Choose a district</option><option value='35'>Almanar</option><option value='40'>Alshefa</option><option value='45'>Alshate</option>"
+                    )
+                } else if (val == "zero") {
+                    $("#District").html("<option value=''>Choose a district</option>")
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
