@@ -71,19 +71,27 @@
                 <h1>Settings</h1>
 
                 <form action="/action_page.php" class="contant_userpage" onsubmit="alert('your setting has been successfully update!')">
-                    <br />
-                    <br />
+                    <br><br>
                     <h2>Personal Info</h2>
-                    <br />
-                    <br />
+                    <br><br>
                     <div class="row">
                         <div class="col-25">
                             <label>Name:</label>
                         </div>
                         <div class="col-75">
-                            <input type="text" class="box-neworder" placeholder="Enter your full name" autofocus required /><br /><br />
+                            <input type="text" class="box-neworder" placeholder="Enter your full name" autofocus required />
                         </div>
                     </div>
+                    <br><br>
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Email:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="email" placeholder="Enter a valid email address" class="box-neworder" id="myEmail " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$ " required />
+                        </div>
+                    </div>
+                    <br><br><br><br>
                     <div class="row">
                         <div class="col-25">
                             <label>Gender:</label>
@@ -95,27 +103,15 @@
                             <input type="radio" class="gender" name="gender" />
                             <label>Female</label>
                         </div>
-                    </div>
-                    <br />
-                    <br />
-                    <div class="row">
-                        <div class="col-25">
-                            <label>User name:</label>
-                        </div>
-                        <div class="col-75">
-                            <input type="text" placeholder="Enter your username" class="box-neworder" required />
-                        </div>
-                    </div>
-                    <br /><br />
+                    </div><br><br>
                     <div class="row">
                         <div class="col-25">
                             <label>Password:</label>
                         </div>
                         <div class="col-75">
-                            <input type="text" placeholder="Enter your password" class="box-neworder" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" required />
+                            <input type="password" placeholder="Enter your password" class="box-neworder" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" required />
                         </div>
                     </div>
-                    <br /><br />
                     <div class="row">
                         <div class="col-25">
                             <label>Phone:</label>
@@ -124,16 +120,7 @@
                             <input type="tel" placeholder="Enter your phone number" class="box-neworder" pattern="(?:\+?0*?966)?0?5[0-9]{8} " required />
                         </div>
                     </div>
-                    <br /><br />
-                    <div class="row">
-                        <div class="col-25">
-                            <label>Email:</label>
-                        </div>
-                        <div class="col-75">
-                            <input type="email" placeholder="Enter a valid email address" class="box-neworder" id="myEmail " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$ " required />
-                        </div>
-                    </div>
-                    <br /><br /><br />
+
                     <input type="submit" value="Update" class="btn" />
                 </form>
             </main>

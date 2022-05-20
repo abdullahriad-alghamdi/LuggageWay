@@ -833,7 +833,7 @@ header .icons i:hover {
 .sidebar .menu .menu-item {
     display: block;
     padding: 1.5em;
-    color: #FFF;
+    color: #fff;
     text-decoration: none;
     transition: 0.1s linear;
 }
@@ -861,7 +861,7 @@ header .icons i:hover {
 }
 
 .content-body h1 {
-    color: #3C3F58;
+    color: #3c3f58;
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
@@ -884,73 +884,6 @@ header .icons i:hover {
     background-color: rgb(189, 9, 9);
     z-index: 1;
 }
-
-
-/* users pages endding */
-
-
-/* new order page starting */
-
-
-/* .newordersection {
-    height: 290vh;
-} */
-
-.message_contatnte {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    max-width: 160px;
-    margin-left: 225px;
-    margin-top: -15px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.moremessage:hover .message_contatnte {
-    display: block;
-}
-
-.box-neworder {
-    border: 2px solid #3bba9c;
-    margin-left: 0px;
-    padding: 10px;
-}
-
-.wrapper_neworder {
-    display: flex;
-    height: fit-content;
-}
-
-
-/* Floating column for labels: 25% width */
-
-.col-25 {
-    float: left;
-    width: 20%;
-    margin-top: 6px;
-}
-
-
-/* Floating column for inputs: 75% width */
-
-.col-75 {
-    float: left;
-    width: 80%;
-    margin-top: 6px;
-}
-
-
-/* Clear floats after the columns */
-
-.row-2:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-/* new order page ending */
 
 
 /* footer starting */
@@ -1030,7 +963,7 @@ header .icons i:hover {
 }
 
 .social_media li::before {
-    content: '';
+    content: "";
     position: absolute;
     background-color: #ffffff;
     height: 200%;
@@ -1049,9 +982,9 @@ header .icons i:hover {
     color: white;
     border-radius: 100%;
     background: #f09433;
-    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -moz-linear-gradient( 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient( 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient( 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
 }
 
@@ -1060,7 +993,7 @@ header .icons i:hover {
 }
 
 .social_media li:hover .fa-linkedin {
-    color: #0E76A8;
+    color: #0e76a8;
 }
 
 @keyframes slide {
@@ -1085,18 +1018,8 @@ header .icons i:hover {
     html {
         font-size: 55%;
     }
-    /* .newordersection {
-        height: 250rem;
-    }
-    .settingssection {
-        height: 90rem;
-    } */
-    /* .wrapper_neworder,
-    .wrapper {
-        height: 30vh;
-    } */
     .box-neworder {
-        width: 100%;
+        width: 90%;
     }
 }
 
@@ -1107,18 +1030,8 @@ header .icons i:hover {
     section {
         padding: 2rem;
     }
-    /* .newordersection {
-        height: 240rem;
-    }
-    .settingssection {
-        height: 100rem;
-    } */
-    /* .wrapper_neworder,
-    .wrapper {
-        height: 320vh;
-    } */
     .box-neworder {
-        width: 100%;
+        width: 90%;
     }
 }
 
@@ -1146,70 +1059,132 @@ header .icons i:hover {
         margin: 1.5rem 0;
         background: #222;
     }
-    /* .newordersection {
-        height: 205vh;
-    } */
-    /* .settingssection {
-        height: 75vh;
-    } */
-    /* .wrapper_neworder,
-    .wrapper {
-        height: 25vh;
-    } */
     .box-neworder {
-        width: 100%;
+        width: 90%;
     }
 }
 
 @media screen and (max-width: 600px) {
     .col-25,
     .col-75,
-    input[type=submit] {
+    input[type="submit"] {
         width: 100%;
         margin-top: 0;
     }
-    input[type=reset] {
+    input[type="reset"] {
         width: 100%;
         margin-top: 0;
     }
-    /* .newordersection {
-        height: 330vh;
-    } */
+    @media (max-width: 450px) {
+        html {
+            font-size: 50%;
+        }
+        .heading span {
+            font-size: 2.5rem;
+        }
+        .contact_us .row form .inputBox input {
+            width: 100%;
+        }
+        #sponsor3 {
+            width: 50%;
+        }
+        .login-form-container {
+            margin: left;
+        }
+        .contant_userpage {
+            margin-left: 0%;
+        }
+        .box-neworder {
+            width: 90%;
+        }
+        .sidebar {
+            max-width: 25vw;
+        }
+    }
 }
 
-@media (max-width: 450px) {
-    html {
-        font-size: 50%;
-    }
-    .heading span {
-        font-size: 2.5rem;
-    }
-    .contact_us .row form .inputBox input {
-        width: 100%;
-    }
-    #sponsor3 {
-        width: 50%;
-    }
-    .login-form-container {
-        margin: left;
-    }
-    .contant_userpage {
-        margin-left: 0%;
-    }
-    /* .newordersection {
-        height: 255vh;
-    } */
-    /* .settingssection {
-        height: 85vh;
-    } */
-    /* .wrapper_neworder,
-    .wrapper {
-        height: 25vh;
-    } */
-    .box-neworder {
-        width: 100%;
-    }
-    .sidebar {
-        max-width: 25vw;
-    }
+.users_page {
+    background: rgba(51, 51, 51);
 }
+
+
+/* clint page */
+
+.Travell_Info,
+.Personal_Info,
+.Luggage_Info,
+.Address_Info,
+.Summary_Info {
+    padding: 6.5rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+
+/* users pages endding */
+
+
+/* new order page starting */
+
+
+/* .newordersection {
+    height: 290vh;
+} */
+
+.message_contatnte {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    max-width: 160px;
+    margin-left: 225px;
+    margin-top: -15px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.moremessage:hover .message_contatnte {
+    display: block;
+}
+
+.box-neworder {
+    border: 2px solid var(--blue);
+    margin-left: 0px;
+    padding: 10px;
+    width: 90%;
+}
+
+.wrapper_neworder {
+    display: flex;
+    height: fit-content;
+}
+
+
+/* Floating column for labels: 25% width */
+
+.col-25 {
+    font-weight: bold;
+    float: left;
+    width: 20%;
+    margin-top: 6px;
+}
+
+
+/* Floating column for inputs: 75% width */
+
+.col-75 {
+    float: left;
+    width: 80%;
+    margin-top: 6px;
+}
+
+
+/* Clear floats after the columns */
+
+.row-2:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* new order page ending */
