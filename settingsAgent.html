@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuggageWay - client</title>
+    <!-- Font Aowesome kit's code  -->
+    <script src="https://kit.fontawesome.com/8ebc734131.js" crossorigin="anonymous"></script>
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="assets\css\style.css" />
+
+</head>
+
+<body>
+    <!-- header section starts  -->
+
+    <header class="users_page">
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a href="index.html" class="logo"><img herf="Home.html" src="assets\images\logo.png" alt="LuggageWay" width="150px" /></a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="index.html#about_us">About us</a>
+            <a href="index.html#recruitment">Recruitment</a>
+            <a href="index.html#sponsors">Sponsors</a>
+            <a href="index.html#review">Reviews</a>
+            <a href="index.html#contact_us">Contact us</a>
+        </nav>
+
+        <div class="icons">
+            <div class="dropdown">
+                <i class="fa fa-user-circle-o dropbtn"></i>
+                <div class="dropdown-content">
+                    <a href="client.html">My account</a>
+                    <a href="index.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- My account container starts -->
+
+    <!-- My account container ends -->
+
+    <!-- client body section starts  -->
+
+    <section class="settingssection">
+
+        <div class="wrapper">
+
+            <aside class="sidebar">
+                <h3>client</h3>
+
+                <nav class="menu">
+                    <a href="Agent_MyOrders.html" class="menu-item"><i class="fas fa-list-alt"></i> My Orders</a>
+                    <a href="settingsAgent.html" class="menu-item is-active"><i class="fas fa-cog"></i> Settings</a>
+                </nav>
+
+            </aside>
+
+            <main class="content-body">
+
+
+                <form action="/action_page.php" class="contant_userpage" onsubmit="alert('your setting has been successfully update!')">
+                    <br><br>
+                    <div class="Personal_Info">
+
+                        <h2>Personal Info</h2>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-25">
+                                <label>Name:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" class="box-neworder" placeholder="Enter your full name" autofocus required />
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-25">
+                                <label>Email:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="email" placeholder="Enter a valid email address" class="box-neworder" id="myEmail " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$ " required />
+                            </div>
+                        </div><br><br>
+                        <div class="row">
+                            <div class="col-25">
+                                <label>Password:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="password" placeholder="Enter your password" class="box-neworder" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label>Phone number:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="tel" placeholder="Enter your phone number" class="box-neworder" pattern="(?:\+?0*?966)?0?5[0-9]{8} " required />
+                            </div>
+                        </div>
+                        <br><br>
+                        <br><br>
+                        <br><br>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-25">
+                                <label>Gender:</label>
+                            </div>
+                            <div class="col-75 ">
+                                <input type="radio" class="gender" name="gender" />
+                                <label>Male</label>
+                                <span class="space"></span>
+                                <input type="radio" class="gender" name="gender" />
+                                <label>Female</label>
+                            </div>
+                        </div>
+
+                        <br><br>
+                        <br><br>
+
+                        <input type="submit" value="Update" class="btn" />
+                    </div>
+                </form>
+            </main>
+        </div>
+    </section>
+
+    <!-- footer section  stars -->
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Branch locations</h3>
+                <a href="# ">Saudi Arabia</a>
+            </div>
+            <div class="box">
+                <h3>Quick links</h3>
+                <a href="index.html">Home</a>
+                <a href="index.html#about_us">About us</a>
+                <a href="index.html#recruitment">Recruitment</a>
+                <a href="index.html#sponsors">Sponsors</a>
+                <a href="index.html#review">Reviews</a>
+                <a href="index.html#contact_us">Contact us</a>
+            </div>
+            <div class="social_media box">
+                <h3>Follow us</h3><br>
+                <li> <a href="https://www.instagram.com/luggageway1/"><i class="fab fa-instagram"></i></a></li>
+                <li> <a href="https://twitter.com/Luggageway1"><i class="fab fa-twitter"></i></a></li>
+                <li> <a href="linkedin.com/in/luggageway-company-935940239"><i class="fab fa-linkedin"></i></a>
+                </li>
+            </div>
+        </div>
+
+        <h1 class="credit">
+            created by <span> LuggageWay Team for gradutiom project </span> | all rights reserved!
+        </h1>
+    </section>
+
+    <!-- footer section ends -->
+
+    <!-- custom js file link  -->
+    <script src="assets\js\script.js"></script>
+
+</body>
+
+</html>

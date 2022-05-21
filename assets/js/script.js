@@ -140,5 +140,47 @@ function totalcostfun() {
     document.getElementById("vat").value = vat15.toFixed(2);
     document.getElementById("PicExtPrice").value = cost;
 
-
 };
+
+
+function allowOnlyLetters(e, t) {
+    if (window.event) {
+        var charCode = window.event.keyCode;
+    } else if (e) {
+        var charCode = e.which;
+    } else {
+        return true;
+    }
+    if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123 || charCode == 32))
+        return true;
+    else {
+        alert("Please enter only alphabets");
+        return false;
+    }
+}
+
+function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        alert("Please enter only numbers");
+        return false;
+    }
+    return true;
+}
+
+function creditCardValidation(creditCradNum) {
+    var master = /^(?:5[1-5][0-9]{14})$/;
+    var vis = /^4[0-9]{12}(?:[0-9]{3})?$/;
+    if (creditCradNum.value.match(master)) {
+        alert("valid Mastercard number!");
+        return true;
+    } else if (creditCradNum.value.match(vis)) {
+
+        alert("valid Visa card number!");
+        return true;
+    } else {
+        alert("Not valid Card number!");
+        return false;
+    }
+}

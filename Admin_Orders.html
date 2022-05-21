@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuggageWay - Admin</title>
+    <!-- data table style sheet using bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <!-- data table style sheet using bootstrap -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.0/css/dataTables.bootstrap5.min.css">
+    <!-- Font Aowesome kit's code  -->
+    <script src="https://kit.fontawesome.com/8ebc734131.js" crossorigin="anonymous"></script>
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="assets\css\style.css" />
+
+
+
+</head>
+
+<body>
+    <!-- header section starts  -->
+
+    <header class="users_page">
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a href="index.html" class="logo"><img herf="Home.html" src="assets\images\logo.png" alt="LuggageWay" width="150px" /></a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="index.html#about_us">About us</a>
+            <a href="index.html#recruitment">Recruitment</a>
+            <a href="index.html#sponsors">Sponsors</a>
+            <a href="index.html#review">Reviews</a>
+            <a href="index.html#contact_us">Contact us</a>
+        </nav>
+
+        <div class="icons">
+            <div class="dropdown">
+                <i class="fa fa-user-circle-o dropbtn"></i>
+                <div class="dropdown-content">
+                    <a href="client.html">My account</a>
+                    <a href="index.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- client body section starts  -->
+
+    <section>
+
+        <div class="wrapper">
+
+            <aside class="sidebar">
+                <h3>Admin</h3>
+
+                <nav class="menu">
+                    <a href="Admin_Orders.html" class="menu-item is-active"><i class="fas fa-list-alt"></i> The Orders</a>
+                    <a href="Admin_Customers.html" class="menu-item "><i class="fas fa-list-alt"></i> The Userss</a>
+                    <a href="settingsAdmin.html" class="menu-item"><i class="fas fa-cog"></i> Settings</a>
+                </nav>
+
+            </aside>
+
+            <main class="content-body">
+                <table id="example" class="table table-striped" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th class="text-center"><input type="checkbox"> Select All </th>
+                            <th class="text-center">Order ID</th>
+                            <th class="text-center">Status</th>
+                            <th class="text-right">Total</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td class="text-center"><input type="checkbox"></td>
+                            <td class="text-center">#003</td>
+                            <td class="text-center">in prograss</td>
+                            <td class="text-right">$498.00</td>
+                            <td class="text-center"><a class="infobtn  btn-info" href="order-information.html"><i class="fa fa-eye"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><input type="checkbox"></td>
+                            <td class="text-center">#003</td>
+                            <td class="text-center">in prograss</td>
+                            <td class="text-right">$498.00</td>
+                            <td class="text-center"><a class="infobtn  btn-info" href="order-information.html"><i class="fa fa-eye"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><input type="checkbox"></td>
+                            <td class="text-center">#003</td>
+                            <td class="text-center">in prograss</td>
+                            <td class="text-right">$498.00</td>
+                            <td class="text-center"><a class="infobtn  btn-info" href="order-information.html"><i class="fa fa-eye"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><input type="checkbox"></td>
+                            <td class="text-center">#003</td>
+                            <td class="text-center">in prograss</td>
+                            <td class="text-right">$498.00</td>
+                            <td class="text-center"><a class="infobtn  btn-info" href="order-information.html"><i class="fa fa-eye"></i></a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <button><input type="submit" class="btn"></button>
+            </main>
+        </div>
+    </section>
+
+    <!-- footer section  stars -->
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Branch locations</h3>
+                <a href="# ">Saudi Arabia</a>
+            </div>
+            <div class="box">
+                <h3>Quick links</h3>
+                <a href="index.html">Home</a>
+                <a href="index.html#about_us">About us</a>
+                <a href="index.html#recruitment">Recruitment</a>
+                <a href="index.html#sponsors">Sponsors</a>
+                <a href="index.html#review">Reviews</a>
+                <a href="index.html#contact_us">Contact us</a>
+            </div>
+            <div class="social_media box">
+                <h3>Follow us</h3><br>
+                <li> <a href="https://www.instagram.com/luggageway1/"><i class="fab fa-instagram"></i></a></li>
+                <li> <a href="https://twitter.com/Luggageway1"><i class="fab fa-twitter"></i></a></li>
+                <li> <a href="linkedin.com/in/luggageway-company-935940239"><i class="fab fa-linkedin"></i></a>
+                </li>
+            </div>
+        </div>
+
+        <h1 class="credit">
+            created by <span> LuggageWay Team for gradutiom project </span> | all rights reserved!
+        </h1>
+    </section>
+
+    <!-- footer section ends -->
+
+
+    <!-- data table javascript using bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.0/js/dataTables.bootstrap5.min.js "></script>
+    <!-- custom js file link  -->
+    <script src="assets\js\script.js"></script>
+    <script>
+        // table pagination
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
+        // number of buttons viewing at time 
+        // $.fn.DataTable.ext.pager.numbers_length = 1;
+    </script>
+</body>
+
+</html>
