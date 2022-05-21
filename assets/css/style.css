@@ -1083,9 +1083,6 @@ header .icons i:hover {
 }
 
 
-/* clint ending */
-
-
 /* new Order page */
 
 .message_contatnte {
@@ -1552,6 +1549,59 @@ span.price {
 hr {
     border: 1px solid lightgrey;
 }
+
+
+/* client ending */
+
+
+/* Admin Starting */
+
+.Pushbtn {
+    color: white;
+    padding: 10px;
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.Pushbtn:hover {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+.Deletebtn {
+    color: white;
+    padding: 10px;
+    background-color: rgb(155, 0, 0);
+    border: 1px solid rgb(155, 0, 0);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    margin-right: 4px;
+}
+
+.Deletebtn:hover {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+.Ordersbtn {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Admin ending */
+
+
+/* Agent Starting */
+
+
+/* Agent ending */
 
 
 /* media queries  */

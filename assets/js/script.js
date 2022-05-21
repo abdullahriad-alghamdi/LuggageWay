@@ -1,3 +1,4 @@
+let { main, select } = SelectAll();
 let formBtn1 = document.querySelector('#login-btn');
 let formBtn2 = document.querySelector('#signup-btn');
 let formBtn3 = document.querySelector('#join-us');
@@ -110,6 +111,8 @@ var swiper = new Swiper(".review-slider", {
 
 
 
+
+
 function totalcostfun() {
     var elt1 = document.getElementById("District");
     var dliverycost = elt1.options[elt1.selectedIndex].value;
@@ -182,5 +185,26 @@ function creditCardValidation(creditCradNum) {
     } else {
         alert("Not valid Card number!");
         return false;
+    }
+}
+
+
+
+function SelectAll() {
+    let main = document.getElementById('SelectAll');
+    let select = document.getElementsByClassName('select');
+
+    main.onclick = () => {
+        if (main.checked == true) {
+            for (let i = 0; i < select.length; i++) {
+                select[i].checked = true;
+                document.querySelector('button').style.display = 'block';
+            }
+        } else {
+            for (let i = 0; i < select.length; i++) {
+                select[i].checked = false;
+                document.querySelector('button').style.display = 'none';
+            }
+        }
     }
 }

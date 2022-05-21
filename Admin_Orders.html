@@ -14,7 +14,44 @@
     <!-- custom css file link  -->
     <link rel="stylesheet" href="assets\css\style.css" />
 
-
+    <style>
+        *,
+        *:before,
+        *:after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .popup {
+            background-color: #ffffff;
+            width: 420px;
+            padding: 30px 40px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            border-radius: 8px;
+            display: none;
+            font-family: "Poppins", sans-serif;
+            text-align: center;
+        }
+        
+        .popup button {
+            display: block;
+            margin: 0 0 20px auto;
+            background-color: transparent;
+            font-size: 30px;
+            color: #ffffff;
+            background: #03549a;
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    </style>
 
 </head>
 
@@ -69,51 +106,53 @@
                 <table id="example" class="table table-striped" style="width:100%">
                     <thead>
                         <tr>
-                            <th class="text-center"><input type="checkbox"> Select All </th>
+                            <th class="text-center"><label for="SelectAll"><input id="SelectAll" type="checkbox"> Select All </label></th>
                             <th class="text-center">Order ID</th>
                             <th class="text-center">Status</th>
-                            <th class="text-right">Total</th>
+                            <th class="text-center">Client Name</th>
+                            <th class="text-center">Client Email</th>
+                            <th class="text-center">Phone number</th>
+                            <th class="text-center">Total Price</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
 
                         <tr>
-                            <td class="text-center"><input type="checkbox"></td>
-                            <td class="text-center">#003</td>
+                            <td class="text-center"><input type="checkbox" class="select" name=""></td>
+                            <td class="text-center">#001</td>
                             <td class="text-center">in prograss</td>
-                            <td class="text-right">$498.00</td>
+                            <td class="text-center">Abdullah</td>
+                            <td class="text-center">Abdullah@gmail.com</td>
+                            <td class="text-center">0531858067</td>
+                            <td class="text-center">$498.00</td>
                             <td class="text-center"><a class="infobtn  btn-info" href="order-information.html"><i class="fa fa-eye"></i></a>
                             </td>
                         </tr>
                         <tr>
-                            <td class="text-center"><input type="checkbox"></td>
-                            <td class="text-center">#003</td>
+                            <td class="text-center"><input type="checkbox" class="select" name=""></td>
+                            <td class="text-center">#001</td>
                             <td class="text-center">in prograss</td>
-                            <td class="text-right">$498.00</td>
-                            <td class="text-center"><a class="infobtn  btn-info" href="order-information.html"><i class="fa fa-eye"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center"><input type="checkbox"></td>
-                            <td class="text-center">#003</td>
-                            <td class="text-center">in prograss</td>
-                            <td class="text-right">$498.00</td>
-                            <td class="text-center"><a class="infobtn  btn-info" href="order-information.html"><i class="fa fa-eye"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center"><input type="checkbox"></td>
-                            <td class="text-center">#003</td>
-                            <td class="text-center">in prograss</td>
-                            <td class="text-right">$498.00</td>
+                            <td class="text-center">Abdullah</td>
+                            <td class="text-center">Abdullah@gmail.com</td>
+                            <td class="text-center">0531858067</td>
+                            <td class="text-center">$498.00</td>
                             <td class="text-center"><a class="infobtn  btn-info" href="order-information.html"><i class="fa fa-eye"></i></a>
                             </td>
                         </tr>
 
                     </tbody>
                 </table>
-                <button><input type="submit" class="btn"></button>
+                <div class="Ordersbtn">
+                    <button style="display: none;"><input onclick="alert('Records has been successfully Deleted!')" type="submit" class="Deletebtn" value="Delete All"></button>
+                    <button><input onclick="alert('Records has been successfully sent to the Agent!')"  type="submit" class="Pushbtn" value="Push Orders"></button>
+                </div>
+                <div class="popup">
+                    <h2>Automatic Pop-Up</h2>
+                    <p>Lorem, ipsum ... dignissimos?</p>
+                    <button id="close">&times;</button>
+
+                </div>
             </main>
         </div>
     </section>
@@ -166,6 +205,7 @@
         // number of buttons viewing at time 
         // $.fn.DataTable.ext.pager.numbers_length = 1;
     </script>
+
 </body>
 
 </html>
