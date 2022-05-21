@@ -24,6 +24,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body a {
+    text-decoration: none;
+}
+
 body::-webkit-scrollbar {
     width: 0.45rem;
 }
@@ -476,6 +480,10 @@ header .icons i:hover {
 
 
 /* menu bar (side button) starting*/
+
+.navbar {
+    display: block;
+}
 
 #menu-bar {
     color: #fff;
@@ -1011,6 +1019,117 @@ header .icons i:hover {
 
 /* footer ending */
 
+.users_page {
+    background: rgba(51, 51, 51);
+}
+
+
+/* Floating column for labels: 25% width */
+
+.col-25 {
+    font-weight: bold;
+    float: left;
+    width: 20%;
+    margin-top: 6px;
+}
+
+
+/* Floating column for inputs: 80% width */
+
+.col-75 {
+    float: left;
+    width: 80%;
+    margin-top: 6px;
+}
+
+
+/* clint (myorders)page */
+
+.Travell_Info,
+.Personal_Info,
+.Luggage_Info,
+.Address_Info,
+.Summary_Info {
+    padding: 6.5rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+.infobtn {
+    display: inline-block;
+    padding: 2px 8px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: var(--blue);
+    color: rgb(255, 255, 255);
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+.page-link {
+    color: var(--blue);
+}
+
+
+/* clint ending */
+
+
+/* new Order page */
+
+.message_contatnte {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    max-width: 160px;
+    margin-left: 225px;
+    margin-top: -15px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.moremessage:hover .message_contatnte {
+    display: block;
+}
+
+.box-neworder {
+    border: 2px solid var(--blue);
+    margin-left: 0px;
+    padding: 10px;
+    width: 90%;
+}
+
+
+/* Clear floats after the columns */
+
+.row-2:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* new order page ending */
+
 
 /* media queries  */
 
@@ -1102,89 +1221,3 @@ header .icons i:hover {
         }
     }
 }
-
-.users_page {
-    background: rgba(51, 51, 51);
-}
-
-
-/* clint page */
-
-.Travell_Info,
-.Personal_Info,
-.Luggage_Info,
-.Address_Info,
-.Summary_Info {
-    padding: 6.5rem;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem;
-}
-
-
-/* users pages endding */
-
-
-/* new order page starting */
-
-
-/* .newordersection {
-    height: 290vh;
-} */
-
-.message_contatnte {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    max-width: 160px;
-    margin-left: 225px;
-    margin-top: -15px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.moremessage:hover .message_contatnte {
-    display: block;
-}
-
-.box-neworder {
-    border: 2px solid var(--blue);
-    margin-left: 0px;
-    padding: 10px;
-    width: 90%;
-}
-
-.wrapper_neworder {
-    display: flex;
-    height: fit-content;
-}
-
-
-/* Floating column for labels: 25% width */
-
-.col-25 {
-    font-weight: bold;
-    float: left;
-    width: 20%;
-    margin-top: 6px;
-}
-
-
-/* Floating column for inputs: 75% width */
-
-.col-75 {
-    float: left;
-    width: 80%;
-    margin-top: 6px;
-}
-
-
-/* Clear floats after the columns */
-
-.row-2:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-/* new order page ending */

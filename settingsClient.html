@@ -9,11 +9,7 @@
     <script src="https://kit.fontawesome.com/8ebc734131.js" crossorigin="anonymous"></script>
     <!-- custom css file link  -->
     <link rel="stylesheet" href="assets\css\style.css" />
-    <style>
-        header {
-            background: rgba(51, 51, 51);
-        }
-    </style>
+
 </head>
 
 <body>
@@ -68,60 +64,69 @@
             </aside>
 
             <main class="content-body">
-                <h1>Settings</h1>
+
 
                 <form action="/action_page.php" class="contant_userpage" onsubmit="alert('your setting has been successfully update!')">
                     <br><br>
-                    <h2>Personal Info</h2>
-                    <br><br>
-                    <div class="row">
-                        <div class="col-25">
-                            <label>Name:</label>
-                        </div>
-                        <div class="col-75">
-                            <input type="text" class="box-neworder" placeholder="Enter your full name" autofocus required />
-                        </div>
-                    </div>
-                    <br><br>
-                    <div class="row">
-                        <div class="col-25">
-                            <label>Email:</label>
-                        </div>
-                        <div class="col-75">
-                            <input type="email" placeholder="Enter a valid email address" class="box-neworder" id="myEmail " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$ " required />
-                        </div>
-                    </div>
-                    <br><br><br><br>
-                    <div class="row">
-                        <div class="col-25">
-                            <label>Gender:</label>
-                        </div>
-                        <div class="col-75 ">
-                            <input type="radio" class="gender" name="gender" />
-                            <label>Male</label>
-                            <span class="space"></span>
-                            <input type="radio" class="gender" name="gender" />
-                            <label>Female</label>
-                        </div>
-                    </div><br><br>
-                    <div class="row">
-                        <div class="col-25">
-                            <label>Password:</label>
-                        </div>
-                        <div class="col-75">
-                            <input type="password" placeholder="Enter your password" class="box-neworder" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" required />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-25">
-                            <label>Phone:</label>
-                        </div>
-                        <div class="col-75">
-                            <input type="tel" placeholder="Enter your phone number" class="box-neworder" pattern="(?:\+?0*?966)?0?5[0-9]{8} " required />
-                        </div>
-                    </div>
+                    <div class="Personal_Info">
 
-                    <input type="submit" value="Update" class="btn" />
+                        <h2>Personal Info</h2>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-25">
+                                <label>Name:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" class="box-neworder" placeholder="Enter your full name" autofocus required />
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-25">
+                                <label>Email:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="email" placeholder="Enter a valid email address" class="box-neworder" id="myEmail " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$ " required />
+                            </div>
+                        </div><br><br>
+                        <div class="row">
+                            <div class="col-25">
+                                <label>Password:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="password" placeholder="Enter your password" class="box-neworder" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label>Phone number:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="tel" placeholder="Enter your phone number" class="box-neworder" pattern="(?:\+?0*?966)?0?5[0-9]{8} " required />
+                            </div>
+                        </div>
+                        <br><br>
+                        <br><br>
+                        <br><br>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-25">
+                                <label>Gender:</label>
+                            </div>
+                            <div class="col-75 ">
+                                <input type="radio" class="gender" name="gender" />
+                                <label>Male</label>
+                                <span class="space"></span>
+                                <input type="radio" class="gender" name="gender" />
+                                <label>Female</label>
+                            </div>
+                        </div>
+
+                        <br><br>
+                        <br><br>
+
+                        <input type="submit" value="Update" class="btn" />
+                    </div>
                 </form>
             </main>
         </div>
