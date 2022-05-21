@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
 :root {
     --blue: #2aa5a3;
+    --white: white;
 }
 
 
@@ -19,9 +20,13 @@
 
 html {
     font-size: 62.5%;
-    overflow-x: hidden;
     scroll-padding-top: 6rem;
     scroll-behavior: smooth;
+}
+
+html,
+body {
+    overflow-x: hidden;
 }
 
 body a {
@@ -37,7 +42,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #2aa5a3;
+    background-color: var(--blue);
 }
 
 
@@ -45,7 +50,7 @@ body::-webkit-scrollbar-thumb {
 
 *::selection {
     background: var(--blue);
-    color: #fff;
+    color: white;
 }
 
 
@@ -62,7 +67,7 @@ section {
     display: inline-block;
     margin-top: 1rem;
     background: var(--blue);
-    color: #fff;
+    color: white;
     padding: 0.8rem 3rem;
     border: 0.2rem solid var(--blue);
     cursor: pointer;
@@ -74,8 +79,9 @@ section {
     color: var(--blue);
 }
 
-.fa {
-    text-shadow: 0 1px 1px rgb(4, 3, 3, 0.1);
+.fa-times:before {
+    color: rgb(206, 45, 45);
+    text-shadow: 2px 1px 1px rgb(0, 0, 0);
 }
 
 
@@ -85,6 +91,9 @@ section {
     text-align: center;
     padding: 2.5rem 0;
 }
+
+
+/* the heading of each part of the index page */
 
 .heading span {
     font-size: 3.5rem;
@@ -103,7 +112,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(51, 51, 51, 0.37);
+    background: rgba(0, 0, 0, 0.37);
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -111,19 +120,13 @@ header {
     padding: 2rem 9%;
 }
 
-header .logo {
-    font-size: 2.5rem;
-    font-weight: bolder;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-header .logo span {
-    color: var(--blue);
+header .navbar {
+    display: block;
+    text-align: center;
 }
 
 header .navbar a {
-    color: #fff;
+    color: var(--white);
     font-size: 2rem;
     margin: 0 0.8rem;
 }
@@ -134,7 +137,7 @@ header .navbar a:hover {
 
 header .icons i {
     font-size: 2.5rem;
-    color: #fff;
+    color: var(--white);
     cursor: pointer;
     margin-right: 2rem;
 }
@@ -142,6 +145,53 @@ header .icons i {
 header .icons i:hover {
     color: var(--blue);
 }
+
+
+/* logout users button pages starting */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    right: 5px;
+}
+
+
+/* logout users button pages  endding*/
+
+
+/* menu bar (side button) starting*/
+
+#menu-bar {
+    color: #fff;
+    border: 0.1rem solid #fff;
+    border-radius: 0.5rem;
+    font-size: 3rem;
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* menu bar ending*/
 
 
 /* header ending */
@@ -167,7 +217,6 @@ header .icons i:hover {
 }
 
 .login-form-container form {
-    margin: 2rem;
     padding: 1.5rem 2rem;
     border-radius: 0.5rem;
     background: #fff;
@@ -415,16 +464,6 @@ header .icons i:hover {
     color: #666;
 }
 
-.signup-form-container form #City,
-#District {
-    color: #666;
-}
-
-.signup-form-container form #City,
-#District {
-    color: #666;
-}
-
 .signup-form-container form .gender {
     margin: 15px;
 }
@@ -447,56 +486,6 @@ header .icons i:hover {
 
 
 /* sign-up form ending */
-
-
-/* logout users pages starting */
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
-/* logout users pages  endding*/
-
-
-/* menu bar (side button) starting*/
-
-.navbar {
-    display: block;
-}
-
-#menu-bar {
-    color: #fff;
-    border: 0.1rem solid #fff;
-    border-radius: 0.5rem;
-    font-size: 3rem;
-    padding: 0.5rem 1.2rem;
-    cursor: pointer;
-    display: none;
-}
-
-
-/* menu bar ending*/
 
 
 /* home starting*/
@@ -800,22 +789,6 @@ header .icons i:hover {
 
 /* contact_us ending */
 
-
-/* users page starting */
-
-.users_page {
-    position: relative;
-}
-
-.contant_userpage {
-    margin-left: 15%;
-}
-
-.wrapper {
-    display: flex;
-    height: fit-content;
-}
-
 .sidebar {
     margin-left: -10px;
     flex: 1 1 0;
@@ -1019,8 +992,21 @@ header .icons i:hover {
 
 /* footer ending */
 
+
+/* users page starting */
+
 .users_page {
+    position: relative;
     background: rgba(51, 51, 51);
+}
+
+.contant_userpage {
+    margin-left: 7.5%;
+}
+
+.wrapper {
+    display: flex;
+    height: fit-content;
 }
 
 
@@ -1059,24 +1045,14 @@ header .icons i:hover {
     display: inline-block;
     padding: 2px 8px;
     margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
+    border-radius: 15%;
     background-color: var(--blue);
     color: rgb(255, 255, 255);
+}
+
+.btn-info:hover {
+    background-color: var(--blue);
+    border-color: var(--blue);
 }
 
 .page-item.active .page-link {
@@ -1087,6 +1063,10 @@ header .icons i:hover {
 }
 
 .page-link {
+    color: var(--blue);
+}
+
+.page-link:hover {
     color: var(--blue);
 }
 
@@ -1194,30 +1174,28 @@ header .icons i:hover {
         width: 100%;
         margin-top: 0;
     }
-    @media (max-width: 450px) {
-        html {
-            font-size: 50%;
-        }
-        .heading span {
-            font-size: 2.5rem;
-        }
-        .contact_us .row form .inputBox input {
-            width: 100%;
-        }
-        #sponsor3 {
-            width: 50%;
-        }
-        .login-form-container {
-            margin: left;
-        }
-        .contant_userpage {
-            margin-left: 0%;
-        }
-        .box-neworder {
-            width: 90%;
-        }
-        .sidebar {
-            max-width: 25vw;
-        }
+    html {
+        font-size: 50%;
+    }
+    .heading span {
+        font-size: 2.5rem;
+    }
+    .contact_us .row form .inputBox input {
+        width: 100%;
+    }
+    #sponsor3 {
+        width: 50%;
+    }
+    .login-form-container {
+        margin: left;
+    }
+    .contant_userpage {
+        margin-left: 0%;
+    }
+    .box-neworder {
+        width: 90%;
+    }
+    .sidebar {
+        max-width: 25vw;
     }
 }
