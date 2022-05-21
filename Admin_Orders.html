@@ -217,7 +217,7 @@
         $(document).ready(function() {
             $('#example').DataTable();
         });
-        // number of buttons viewing at time 
+        // number of buttons viewing at time
         // $.fn.DataTable.ext.pager.numbers_length = 1;
     </script>
     <script>
@@ -237,6 +237,21 @@
                 }
             }
         }
+    </script>
+    <script type="text/javascript">
+        window.addEventListener("load", function() {
+            setTimeout(
+                function open(event) {
+                    document.querySelector(".popup").style.display = "block";
+                },
+                2000
+            )
+        });
+
+
+        document.querySelector("#close").addEventListener("click", function() {
+            document.querySelector(".popup").style.display = "none";
+        });
     </script>
 
 </body>
