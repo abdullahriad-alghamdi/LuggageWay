@@ -487,6 +487,24 @@
         // number of buttons viewing at time 
         // $.fn.DataTable.ext.pager.numbers_length = 1;
     </script>
+    <script>
+        let main = document.getElementById('SelectAll');
+        let select = document.getElementsByClassName('select');
+
+        main.onclick = () => {
+            if (main.checked == true) {
+                for (let i = 0; i < select.length; i++) {
+                    select[i].checked = true;
+                    document.querySelector('button').style.display = 'block';
+                }
+            } else {
+                for (let i = 0; i < select.length; i++) {
+                    select[i].checked = false;
+                    document.querySelector('button').style.display = 'none';
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>

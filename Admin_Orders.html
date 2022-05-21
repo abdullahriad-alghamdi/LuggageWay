@@ -51,6 +51,19 @@
             outline: none;
             cursor: pointer;
         }
+        
+        a {
+            display: block;
+            width: 150px;
+            position: relative;
+            margin: 10px auto;
+            text-align: center;
+            background-color: #0f72e5;
+            border-radius: 20px;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 0;
+        }
     </style>
 
 </head>
@@ -148,9 +161,10 @@
                     <button><input onclick="alert('Records has been successfully sent to the Agent!')"  type="submit" class="Pushbtn" value="Push Orders"></button>
                 </div>
                 <div class="popup">
+                    <button id="close">&times;</button>
                     <h2>Automatic Pop-Up</h2>
                     <p>Lorem, ipsum ... dignissimos?</p>
-                    <button id="close">&times;</button>
+                    <a href="#">Let's Go</a>
 
                 </div>
             </main>
@@ -196,7 +210,8 @@
     <script src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.0/js/dataTables.bootstrap5.min.js "></script>
     <!-- custom js file link  -->
-    <script src="assets\js\script.js"></script>
+    <script src="assets\js\SelectAll.js"></script>
+
     <script>
         // table pagination
         $(document).ready(function() {
@@ -204,6 +219,24 @@
         });
         // number of buttons viewing at time 
         // $.fn.DataTable.ext.pager.numbers_length = 1;
+    </script>
+    <script>
+        let main = document.getElementById('SelectAll');
+        let select = document.getElementsByClassName('select');
+
+        main.onclick = () => {
+            if (main.checked == true) {
+                for (let i = 0; i < select.length; i++) {
+                    select[i].checked = true;
+                    document.querySelector('button').style.display = 'block';
+                }
+            } else {
+                for (let i = 0; i < select.length; i++) {
+                    select[i].checked = false;
+                    document.querySelector('button').style.display = 'none';
+                }
+            }
+        }
     </script>
 
 </body>
