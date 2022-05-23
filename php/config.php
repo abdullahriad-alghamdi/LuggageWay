@@ -3,7 +3,7 @@ session_start();
 
 
 $DB_NAME = "luggfgcw_luggage_way";
-$DB_USER = "luggageway";
+$DB_USER = "luggfgcw_luggageway";
 $DB_PWD = "0X?IoXn7QJNP";
 $DB_HOST = "server277.web-hosting.com";
 
