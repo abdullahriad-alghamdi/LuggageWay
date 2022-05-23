@@ -48,7 +48,7 @@
         <div class="wrapper">
 
             <aside class="sidebar">
-                <h3>client</h3>
+                <h3 class="print-name">client</h3>
                 <nav class="menu">
                     <a href="Admin_Orders.html" class="menu-item "><i class="fas fa-list-alt"></i> The Orders</a>
                     <a href="Admin_Customers.html" class="menu-item "><i class="fas fa-list-alt"></i> The Users</a>
@@ -161,6 +161,19 @@
 
     <!-- custom js file link  -->
     <script src="assets\js\script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url: "php/check_status.php",
+                method: "post",
+                data: {"get_name": true},
+                success: function(data){
+                   $(".print-name").text(data);
+                }
+            })
+        })
+    </script>
 
 </body>
 

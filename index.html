@@ -470,9 +470,10 @@
                 method: "post",
                 data: {"login": true},
                 success: function(data){
-                    if(data == "loggedin"){
+                    data = JSON.parse(data)
+                    if(data.loggedin){
                         $("#loginForm *").remove();
-                        $("#loginForm").append("<p>You are already loggedin! <a href='php/logout.php'>Logout</a></p>");
+                        $("#loginForm").append("<p>You are already loggedin! <a href='php/logout.php'>Logout</a> <a href='" + data.url + "'>Back to dashboard</a></p>");
                     }
                 }
             })

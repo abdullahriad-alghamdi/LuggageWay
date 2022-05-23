@@ -49,7 +49,7 @@
         <div class="wrapper">
 
             <aside class="sidebar">
-                <h3>client</h3>
+                <h3 class="print-name">client</h3>
 
                 <nav class="menu">
                     <a href="Client_MyOrders.html" class="menu-item"><i class="fas fa-list-alt"></i> My Orders</a>
@@ -427,6 +427,14 @@
                     $("#District").html("<option value=''>Choose a district</option>");
                 }
             });
+            $.ajax({
+                url: "php/check_status.php",
+                method: "post",
+                data: {"get_name": true},
+                success: function(data){
+                   $(".print-name").text(data);
+                }
+            })
         });
     </script>
 

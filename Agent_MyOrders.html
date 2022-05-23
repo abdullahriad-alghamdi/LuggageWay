@@ -54,7 +54,7 @@
         <div class="wrapper">
 
             <aside class="sidebar">
-                <h3>Agent</h3>
+                <h3 class="print-name">Agent</h3>
 
                 <nav class="menu">
                     <a href="Agent_MyOrders.html" class="menu-item is-active"><i class="fas fa-list-alt"></i> My Orders</a>
@@ -285,15 +285,23 @@
     <script src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.0/js/dataTables.bootstrap5.min.js "></script>
     <!-- custom js file link  -->
-    <script src="assets\js\script.js"></script>
     <script>
         // table pagination
         $(document).ready(function() {
             $('#example').DataTable();
+            $.ajax({
+                url: "php/check_status.php",
+                method: "post",
+                data: {"get_name": true},
+                success: function(data){
+                   $(".print-name").text(data);
+                }
+            })
         });
         // number of buttons viewing at time 
         // $.fn.DataTable.ext.pager.numbers_length = 1;
     </script>
+    <script src="assets\js\script.js"></script>
     <script>
         let main = document.getElementById('SelectAll');
         let select = document.getElementsByClassName('select');

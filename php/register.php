@@ -31,6 +31,8 @@ $hashed_pwd = password_hash($password, PASSWORD_DEFAULT);
 $insert_sql = mysqli_query($conn, "INSERT INTO `users` (`id`, `role`, `name`, `gender`, `email`, `password`, `secret_code`, `phone`, `created_at`) VALUES (NULL, 'client', '$name', '$gender', '$email', '$hashed_pwd', '$secret_code', '$phone', current_timestamp())");
 if($insert_sql){
     $_SESSION["user_id"] = mysqli_insert_id($conn);
+    $_SESSION["role"] = "client";
+    $_SESSION["name"] = $name;
     echo "success";
     die;
 }

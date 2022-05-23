@@ -18,6 +18,8 @@ if(mysqli_num_rows($check_sql) > 0){
         die;
     }else{
         $_SESSION["user_id"] = $row["id"];
+        $_SESSION["role"] = $row["role"];
+        $_SESSION["name"] = $row["name"];
         echo "success";
         die;
     }
