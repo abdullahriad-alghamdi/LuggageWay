@@ -13,7 +13,44 @@
     <link rel="stylesheet" href="assets\css\style.css" />
     <link rel="stylesheet" href="assets\css\style.css" />
 
-
+    <style>
+        body {
+            text-align: center;
+            padding: 40px 0;
+            background: #EBF0F5;
+        }
+        
+        h1 {
+            color: #88B04B;
+            font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+            font-weight: 900;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            color: #404F5E;
+            font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+            font-size: 20px;
+            margin: 0;
+        }
+        
+        i {
+            color: #9ABC66;
+            font-size: 100px;
+            line-height: 200px;
+            margin-left: -15px;
+        }
+        
+        .card {
+            background: white;
+            padding: 60px;
+            border-radius: 4px;
+            box-shadow: 0 2px 3px #C8D0D8;
+            display: inline-block;
+            margin: 0 auto;
+        }
+    </style>
 
 </head>
 
@@ -61,105 +98,13 @@
 
             <main>
 
-                <span class="Summary-container">
-                        <h4>Summary <span class="price" style="color:black"></span></h4>
-                <p><a href="#">Large bags</a> <span class="price" id="pricenovat">1</span></p>
-                <p><a href="#">Small bags</a> <span class="price" id="pricenovat">1</span></p>
-                <p><a href="#">Delivery cost</a> <span class="price">$5</span></p>
-                <p><a href="#">Total without VAT(15%)</a> <span class="price">$5</span></p>
-                <p><a href="#">VAT (15%)</a> <span class="price">$15</span></p>
-
-                <hr>
-
-                <p>Total <span class="price" style="color:black"><b>$518</b></span></p>
-                </span>
-                <div class="checkout">
-                    <div class="credit-card-box">
-                        <div class="flip">
-                            <div class="front">
-                                <div class="chip"></div>
-                                <div class="logo">
-                                    <i class="fa fa-cc-mastercard" style="font-size:36px"></i>
-                                    <i class="fa fa-cc-visa" style="font-size:36px"></i>
-                                </div>
-                                <div class="number"></div>
-                                <div class="card-holder">
-                                    <label>Card holder</label>
-                                    <div></div>
-                                </div>
-                                <div class="card-expiration-date">
-                                    <label>Expires</label>
-                                    <div></div>
-                                </div>
-                            </div>
-                            <div class="back">
-                                <div class="strip"></div>
-                                <div class="logo">
-                                    <i class="fa fa-cc-mastercard" style="font-size:36px"></i>
-                                    <i class="fa fa-cc-visa" style="font-size:36px"></i>
-
-                                </div>
-                                <div class="ccv">
-                                    <label>CCV</label>
-                                    <div style="  font-size: 15px;">***</div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="card">
+                    <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+                        <i class="checkmark">✓</i>
                     </div>
-                    <form class="form" onsubmit="creditCardValidation(document.paymentform.cardnumber)" name="paymentform" autocomplete="off">
-                        <fieldset>
-                            <label for="card-number">Card Number</label>
-
-                            <span class="input-group-addon"><i class="fa fa-credit-card"></i> <input type="text" onkeypress="return isNumber(event)" id="cardnumber" class="input-cart-number" maxlength="16" required/></span>
-                        </fieldset>
-                        <fieldset>
-                            <label for="">Card holder</label>
-                            <input type="text" onkeypress="return allowOnlyLetters(event,this);" id="card-holder" maxlength="25" required/>
-                        </fieldset>
-                        <fieldset class="fieldset-expiration">
-                            <label for="card-expiration-month">Expiration date</label>
-                            <div class="select">
-                                <select id="card-expiration-month" required>
-            <option></option>
-            <option>01</option>
-            <option>02</option>
-            <option>03</option>
-            <option>04</option>
-            <option>05</option>
-            <option>06</option>
-            <option>07</option>
-            <option>08</option>
-            <option>09</option>
-            <option>10</option>
-            <option>11</option>
-            <option>12</option>
-          </select>
-                            </div>
-                            <div class="select">
-                                <select id="card-expiration-year" required>
-            <option></option>
-
-            <option>2022</option>
-            <option>2023</option>
-            <option>2024</option>
-            <option>2025</option>            
-            <option>2026</option>
-            <option>2027</option>
-            <option>2028</option>
-            <option>2029</option>
-            <option>2030</option>
-            <option>2031</option>
-          </select>
-                            </div>
-                        </fieldset>
-                        <fieldset class="fieldset-ccv">
-                            <label for="card-ccv">CCV</label>
-                            <input type="password" onkeypress="return isNumber(event)" id="card-ccv" maxlength="3" required />
-                        </fieldset>
-                        <button type="submit" class="pymentbtn"><i class="fa fa-lock"></i> submit</button>
-                    </form>
+                    <h1>Success</h1>
+                    <p>We received your purchase request;<br/> we'll be in touch shortly!</p>
                 </div>
-
             </main>
         </div>
     </section>

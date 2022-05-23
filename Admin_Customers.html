@@ -39,7 +39,7 @@
             <div class="dropdown">
                 <i class="fa fa-user-circle-o dropbtn"></i>
                 <div class="dropdown-content">
-                    <a href="client.html">My account</a>
+                    <a href="Admin_Orders.html">My account</a>
                     <a href="php/logout.php">Logout</a>
                 </div>
             </div>
@@ -482,13 +482,15 @@
         // table pagination
         $(document).ready(function() {
             $('#example').DataTable();
-            
+
             $.ajax({
                 url: "php/check_status.php",
                 method: "post",
-                data: {"get_name": true},
-                success: function(data){
-                   $(".print-name").text(data);
+                data: {
+                    "get_name": true
+                },
+                success: function(data) {
+                    $(".print-name").text(data);
                 }
             })
         });

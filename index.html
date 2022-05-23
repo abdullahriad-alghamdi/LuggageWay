@@ -110,7 +110,7 @@
             <input type="number" maxlength="10" placeholder="Enter your secret code" class="box" name="secret_code" required /><br />
             <p style="font-size: 12px">Used when you forgot your password. Please store it somewhere safe.</p><br />
             <label>Phone:</label>
-            <input type="tel" placeholder="Enter your phone number" class="box" name="phone"  required /><br /><br />
+            <input type="tel" placeholder="Enter your phone number" class="box" name="phone" required /><br /><br />
 
             <br />
             <br />
@@ -136,13 +136,13 @@
 
     <div class="slider">
         <span class="vid-btn active" data-src="assets\images\vid-4.mp4"></span>
-        <span class="vid-btn" data-src="assets\images\vid-5.mp4"></span>
-        <span class="vid-btn" data-src="assets\images\vid-2.mp4"></span>
-        <span class="vid-btn" data-src="assets\images\vid-1.mp4"></span>
-        <span class="vid-btn" data-src="assets\images\vid-3.mp4"></span>
+        <span class="vid-btn" data-src="assets\images\vid-5.mp4" lodaing="eager"></span>
+        <span class="vid-btn" data-src="assets\images\vid-2.mp4" lodaing="eager"></span>
+        <span class="vid-btn" data-src="assets\images\vid-1.mp4" lodaing="eager"></span>
+        <span class="vid-btn" data-src="assets\images\vid-3.mp4" lodaing="eager"></span>
     </div>
     <div class="video-container">
-        <video src="assets\images\vid-4.mp4" id="video-slider" loop autoplay muted></video>
+        <video src="assets\images\vid-4.mp4" id="video-slider" lodaing="eager" loop autoplay muted></video>
     </div>
     </section>
 
@@ -463,15 +463,17 @@
     <!-- LOGIN SYSTEM -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
             //check if loggedin
             $.ajax({
                 url: "php/check_status.php",
                 method: "post",
-                data: {"login": true},
-                success: function(data){
+                data: {
+                    "login": true
+                },
+                success: function(data) {
                     data = JSON.parse(data)
-                    if(data.loggedin){
+                    if (data.loggedin) {
                         $("#loginForm *").remove();
                         $("#loginForm").append("<p>You are already loggedin! <a href='php/logout.php'>Logout</a> <a href='" + data.url + "'>Back to dashboard</a></p>");
                     }
@@ -479,17 +481,17 @@
             })
 
             // Register
-            $("#registerForm").on("submit", function(e){
+            $("#registerForm").on("submit", function(e) {
                 e.preventDefault();
                 $.ajax({
                     url: "php/register.php",
                     method: "post",
                     data: $(this).serialize(),
-                    success: function(data){
-                        if(data == "success"){
+                    success: function(data) {
+                        if (data == "success") {
                             alert("Your account was successfully created! You will be redirected to your dashboard.");
                             location.href = "Client_MyOrders.html";
-                        }else{
+                        } else {
                             alert(data);
                         }
                     }
@@ -497,26 +499,26 @@
             })
 
             // Login
-            $("#loginForm").on("submit", function(e){
+            $("#loginForm").on("submit", function(e) {
                 e.preventDefault();
                 $.ajax({
                     url: "php/login.php",
                     method: "post",
                     data: $(this).serialize(),
-                    success: function(data){
-                        if(data == "success"){
+                    success: function(data) {
+                        if (data == "success") {
                             alert("You'r In! You will be redirected to your dashboard.");
                             let type = $("#usertype").val();
-                            if(type == "admin"){
+                            if (type == "admin") {
                                 location.href = "Admin_Orders.html";
                             }
-                            if(type == "client"){
+                            if (type == "client") {
                                 location.href = "Client_MyOrders.html";
                             }
-                            if(type == "agent"){
+                            if (type == "agent") {
                                 location.href = "Agent_MyOrders.html";
                             }
-                        }else{
+                        } else {
                             alert(data);
                         }
                     }
@@ -524,14 +526,14 @@
             })
 
             // Forgot
-            $("#forgotForm").on("submit", function(e){
+            $("#forgotForm").on("submit", function(e) {
                 e.preventDefault();
                 $.ajax({
                     url: "php/forgot.php",
                     method: "post",
                     data: $(this).serialize(),
-                    success: function(data){
-                        if(data == "success"){
+                    success: function(data) {
+                        if (data == "success") {
                             alert("Confirmed! Please change your password in next step.");
                             $("#reset-forgot-form").html(`
                                 <form action="" id="resetPassword" method="post">
@@ -542,7 +544,7 @@
                                 </form>
                             `);
                             $("#forgotForm").remove();
-                        }else{
+                        } else {
                             alert(data);
                         }
                     }
@@ -551,16 +553,16 @@
 
 
             //Reset Password
-            $(document).on("submit", "#resetPassword", function(e){
+            $(document).on("submit", "#resetPassword", function(e) {
                 e.preventDefault();
                 $.ajax({
                     url: "php/reset.php",
                     method: "post",
                     data: $(this).serialize(),
-                    success: function(data){
-                        if(data == "success"){
+                    success: function(data) {
+                        if (data == "success") {
                             alert("Password Changed! Please close the popup and login");
-                        }else{
+                        } else {
                             alert(data);
                         }
                     }
