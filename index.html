@@ -42,17 +42,17 @@
     <div class="login-form-container" id="login">
         <i class="fa fa-times" id="form-close2"></i>
 
-        <form action="/action_page.php" onsubmit="alert('Your In!')">
+        <form action="" id="loginForm" method="post">
             <h3>login</h3>
             <label for="usertype"><h4>User type:</h4></label>
-            <select id="usertype" required>
-          <option value=" INVALID ">--------</option>
-          <option>Clinet</option>
-          <option>Agent</option>
-          <option>Admin</option>
-        </select>
-            <input type="email" class="box" placeholder="Enter your email address" required />
-            <input type="password" class="box" placeholder="Enter your password" required />
+            <select id="usertype" name="type" required>
+                <option disabled selected>--------</option>
+                <option value="client">Client</option>
+                <option value="agent">Agent</option>
+                <option value="admin">Admin</option>
+            </select>
+            <input type="email" class="box" name="email" placeholder="Enter your email address" required />
+            <input type="password" class="box" name="password" placeholder="Enter your password" required />
             <input type="submit" value="login now" class="btn" />
             <input type="checkbox" id="remember" />
             <label for="remember">remember me</label>
@@ -68,12 +68,14 @@
     <!-- Forget passowrd container starts -->
     <div class="Forgetpassowrd-form-container">
         <i class="fa fa-times" id="form-close3"></i>
-
-        <form action="/action_page.php" onsubmit="alert('Your new passowrd have been sent to your email')">
-            <h3>Forget passowrd</h3>
-            <input type="email" class="box" placeholder="Enter your email address" required />
-            <input type="submit" value="Send" class="btn" />
-        </form>
+        <div id="reset-forgot-form">
+            <form action="" id="forgotForm" method="post">
+                <h3>Forget password</h3>
+                <input type="email" class="box" placeholder="Enter your email" name="email" required /> <br> <br>
+                <input type="number" maxlength="10" class="box" placeholder="Enter your secret code" name="secret_code" required /> <br> <br>
+                <input type="submit" value="Verify" class="btn" />
+            </form>
+        </div>
     </div>
     <!-- Forget passowrd container starts -->
 
@@ -82,7 +84,8 @@
     <div class="signup-form-container">
         <i class="fa fa-times" id="form-close"></i>
 
-        <form action="/action_page.php" onsubmit="alert('your account has been successfully created!')">
+        <form action="" id="registerForm" method="post">
+            <p style="color: red" class="error"></p>
             <h3>Sign-up</h3>
             <br />
             <br />
@@ -90,22 +93,24 @@
             <br />
             <br />
             <label>Name:</label>
-            <input type="text" class="box" placeholder="Enter your full name" autofocus required /><br /><br />
+            <input type="text" class="box" name="name" placeholder="Enter your full name" autofocus required /><br /><br />
             <label>Gender:</label>
-            <input type="radio" class="gender" name="gender" />
+            <input type="radio" class="gender" name="gender" value="male" required />
             <label>Male</label>
             <span class="space"></span>
-            <input type="radio" class="gender" name="gender" />
+            <input type="radio" class="gender" name="gender" value="female" required />
             <label>Female</label>
             <br />
             <br />
             <label>Email:</label>
-            <input type="email" placeholder="Enter a valid email address" class="box" id="myEmail " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$ " required /><br /><br />
+            <input type="email" placeholder="Enter a valid email address" class="box" name="email" id="myEmail " required /><br /><br />
             <label>Password:</label>
-            <input type="password" placeholder="Enter your password" class="box" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$
-            " required /><br /><br />
+            <input type="password" placeholder="Enter your password" class="box" name="password" required /><br /><br />
+            <label>Secret Code:</label>
+            <input type="number" maxlength="10" placeholder="Enter your secret code" class="box" name="secret_code" required /><br />
+            <p style="font-size: 12px">Used when you forgot your password. Please store it somewhere safe.</p><br />
             <label>Phone:</label>
-            <input type="tel" placeholder="Enter your phone number" class="box" pattern="(?:\+?0*?966)?0?5[0-9]{8} " required /><br /><br />
+            <input type="tel" placeholder="Enter your phone number" class="box" name="phone"  required /><br /><br />
 
             <br />
             <br />
@@ -453,6 +458,115 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js "></script>
     <!-- custom js file link  -->
     <script src="assets\js\script.js"></script>
+
+
+    <!-- LOGIN SYSTEM -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            //check if loggedin
+            $.ajax({
+                url: "php/check_status.php",
+                method: "post",
+                data: {"login": true},
+                success: function(data){
+                    if(data == "loggedin"){
+                        $("#loginForm *").remove();
+                        $("#loginForm").append("<p>You are already loggedin! <a href='php/logout.php'>Logout</a></p>");
+                    }
+                }
+            })
+
+            // Register
+            $("#registerForm").on("submit", function(e){
+                e.preventDefault();
+                $.ajax({
+                    url: "php/register.php",
+                    method: "post",
+                    data: $(this).serialize(),
+                    success: function(data){
+                        if(data == "success"){
+                            alert("Your account was successfully created! You will be redirected to your dashboard.");
+                            location.href = "Client_MyOrders.html";
+                        }else{
+                            alert(data);
+                        }
+                    }
+                })
+            })
+
+            // Login
+            $("#loginForm").on("submit", function(e){
+                e.preventDefault();
+                $.ajax({
+                    url: "php/login.php",
+                    method: "post",
+                    data: $(this).serialize(),
+                    success: function(data){
+                        if(data == "success"){
+                            alert("You'r In! You will be redirected to your dashboard.");
+                            let type = $("#usertype").val();
+                            if(type == "admin"){
+                                location.href = "Admin_Orders.html";
+                            }
+                            if(type == "client"){
+                                location.href = "Client_MyOrders.html";
+                            }
+                            if(type == "agent"){
+                                location.href = "Agent_MyOrders.html";
+                            }
+                        }else{
+                            alert(data);
+                        }
+                    }
+                })
+            })
+
+            // Forgot
+            $("#forgotForm").on("submit", function(e){
+                e.preventDefault();
+                $.ajax({
+                    url: "php/forgot.php",
+                    method: "post",
+                    data: $(this).serialize(),
+                    success: function(data){
+                        if(data == "success"){
+                            alert("Confirmed! Please change your password in next step.");
+                            $("#reset-forgot-form").html(`
+                                <form action="" id="resetPassword" method="post">
+                                    <h3>Reset passowrd</h3>
+                                    <input type="password" class="box" placeholder="Enter your new password" name="password" required /> <br> <br>
+                                    <input type="password" class="box" placeholder="Enter your password again." name="c_password" required /> <br> <br>
+                                    <input type="submit" value="Reset Password" class="btn" />
+                                </form>
+                            `);
+                            $("#forgotForm").remove();
+                        }else{
+                            alert(data);
+                        }
+                    }
+                })
+            })
+
+
+            //Reset Password
+            $(document).on("submit", "#resetPassword", function(e){
+                e.preventDefault();
+                $.ajax({
+                    url: "php/reset.php",
+                    method: "post",
+                    data: $(this).serialize(),
+                    success: function(data){
+                        if(data == "success"){
+                            alert("Password Changed! Please close the popup and login");
+                        }else{
+                            alert(data);
+                        }
+                    }
+                })
+            })
+        })
+    </script>
 </body>
 
 </html>
