@@ -15,4 +15,6 @@ jobs:
       with:
         server: ftp.luggageway.me
         username: luggageway@luggageway.me
-        password: ${{ secrets.ftp_password }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        protocol: ftps
+        port:  21
